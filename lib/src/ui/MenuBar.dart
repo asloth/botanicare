@@ -1,3 +1,4 @@
+import 'package:botanicare/src/ui/Constants.dart';
 import 'package:botanicare/src/ui/HomeScreen.dart';
 import 'package:botanicare/src/ui/GardenScreen.dart';
 import 'package:flutter/material.dart';
@@ -56,9 +57,9 @@ class _MenuBarState extends State<MenuBar> {
             color: Colors.white,
           ),
         ],
-        color: Color.fromRGBO(62, 212, 0, 83),
-        buttonBackgroundColor: Color.fromRGBO(62, 212, 0, 83),
-        backgroundColor: Color.fromRGBO(215, 219, 213, 86),
+        color: kPrimaryColor,
+        buttonBackgroundColor: kPrimaryColor,
+        backgroundColor: kBackgroundColor,
         animationCurve: Curves.easeInOut,
         animationDuration: Duration(milliseconds: 600),
         onTap: (index) {
