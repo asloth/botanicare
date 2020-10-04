@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "757229044750",
+    "firebase_url": "https://appbotanicare.firebaseio.com",
+    "project_id": "appbotanicare",
+    "storage_bucket": "appbotanicare.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757229044750:android:43f303028717ce1e01a85f",
+        "android_client_info": {
+          "package_name": "com.example.botanicare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757229044750-6ddk7jq8fmne18a047j4glmoc9dnqc7b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.botanicare",
+            "certificate_hash": "9552e3caf841822aaf887e052ca3b7ce5adf2eb0"
+          }
+        },
+        {
+          "client_id": "757229044750-9mf9q93sbrhmt07jch830k8tf07m58f0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLiH541-21sYFSGLrRTTbzJiWLB08Kzvg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757229044750-9mf9q93sbrhmt07jch830k8tf07m58f0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
