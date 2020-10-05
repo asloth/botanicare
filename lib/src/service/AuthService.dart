@@ -1,63 +1,42 @@
-import 'package:botanicare/src/models/UserModel.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:google_sign_in/google_sign_in.dart';
 
-enum AuthStatus {
-  Uninitialized,
-  Authenticated,
-  Authenticating,
-  Unauthenticated
-}
+// enum AuthStatus {
+//   Uninitialized,
+//   Authenticated,
+//   Authenticating,
+//   Unauthenticated
+// }
 
-class AuthService with ChangeNotifier {
+class AuthService {
   final FirebaseAuth _auth;
-  GoogleSignInAccount _googleSignInAccount;
-  UserModel _user = new UserModel();
 
-  final FirebaseFirestore _db = FirebaseFirestore.instance;
-  AuthStatus _status = AuthStatus.Uninitialized;
+  AuthService(
+    this._auth,
+  );
 
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  Stream<User> get authStateChanges => _auth.authStateChanges();
 
-  AuthService.instance() : _auth = FirebaseAuth.instance {
-    _auth.authStateChanges().listen((User firebaseUser) async {
-      if (firebaseUser == null) {
-        _status = AuthStatus.Unauthenticated;
-      } else {
-        DocumentSnapshot userSnap =
-            await _db.collection('users').doc(firebaseUser.uid).get();
-
-        _user.setFromFireStore(userSnap);
-        _status = AuthStatus.Authenticated;
-      }
-    });
+  Future<String> signIn({String email, String password}) async {
+    try {
+      await _auth.signInWithEmailAndPassword(email: email, password: password);
+      return 'Signed in';
+    } on FirebaseAuthException catch (e) {
+      return e.message;
+    }
   }
 
-  Future<DocumentSnapshot> updateUserData(User user) async {
-    DocumentReference userRef = _db.collection('users').doc(user.uid);
-
-    userRef.set({
-      'uid': user.uid,
-      'email': user.email,
-      'lastSign': DateTime.now(),
-      'photoURL': user.photoURL,
-      'displayName': user.displayName,
-    }, SetOptions(merge: true));
-
-    DocumentSnapshot userData = await userRef.get();
-
-    return userData;
+  Future<void> signOut() async {
+    await _auth.signOut();
   }
 
-  void signOut() {
-    _auth.signOut();
-    _status = AuthStatus.Unauthenticated;
-    notifyListeners();
+  Future<String> signUp({String email, String password}) async {
+    try {
+      await _auth.createUserWithEmailAndPassword(
+          email: email, password: password);
+      return 'Signed up';
+    } catch (e) {
+      return e.message;
+    }
   }
-
-  AuthStatus get status => _status;
-  UserModel get user => _user;
-  GoogleSignInAccount get googleUser => _googleSignInAccount;
 }

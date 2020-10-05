@@ -1,8 +1,11 @@
+import 'package:botanicare/src/service/AuthService.dart';
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:botanicare/src/ui/HomeScreen.dart';
 import 'package:botanicare/src/ui/GardenScreen.dart';
+import 'package:botanicare/src/ui/PerfilScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:provider/provider.dart';
 
 class MenuBar extends StatefulWidget {
   const MenuBar({Key key}) : super(key: key);
@@ -19,7 +22,7 @@ class _MenuBarState extends State<MenuBar> {
     Text('hola soy lista'),
     GardenScreen(),
     Text('hola soy alarmas'),
-    Text('hola soy perfil'),
+    PerfilScreen(),
   ];
 
   @override
