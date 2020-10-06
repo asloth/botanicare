@@ -5,12 +5,13 @@ class InputField extends StatelessWidget {
   final String hintText;
   final IconData icon;
   final TextEditingController controller;
-
+  final bool secretField;
   const InputField({
     Key key,
     this.hintText,
     this.icon = Icons.person,
     this.controller,
+    this.secretField = false,
   }) : super(key: key);
 
   @override
@@ -22,9 +23,10 @@ class InputField extends StatelessWidget {
       width: size.width * 0.8,
       decoration: BoxDecoration(
         color: kBackgroundColor2,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(16),
       ),
       child: TextField(
+        obscureText: secretField,
         controller: controller,
         cursorColor: kPrimaryColor,
         decoration: InputDecoration(
