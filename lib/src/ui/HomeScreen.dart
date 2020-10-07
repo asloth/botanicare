@@ -1,3 +1,8 @@
+import 'package:botanicare/src/ui/Constants.dart';
+import 'package:botanicare/src/ui/home/AddPlantButton.dart';
+import 'package:botanicare/src/ui/home/EmptyGarden.dart';
+import 'package:botanicare/src/ui/home/WeatherDetail.dart';
+import 'package:botanicare/src/ui/home/WeatherWidget.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,49 +11,36 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color.fromRGBO(215, 219, 213, 86),
-      padding: EdgeInsets.fromLTRB(10, 30, 10, 0),
+      color: kBackgroundColor,
+      padding: EdgeInsets.fromLTRB(kDefaultPadding, kDefaultPadding * 2,
+          kDefaultPadding, kDefaultPadding * 1.5),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
             'Clima',
             style: TextStyle(
-              color: Colors.black,
+              color: kTextColor,
               fontSize: 29,
             ),
           ),
-          Container(
-            padding: EdgeInsets.fromLTRB(0, 10, 0, 10),
-            color: Color.fromRGBO(248, 250, 247, 98),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Icon(
-                  Icons.filter_drama,
-                  color: Colors.blue,
+          WeatherWidget(),
+          WeatherDetailWidget(),
+          Row(
+            children: [
+              Text(
+                'Hoy',
+                style: TextStyle(
+                  color: kTextColor,
+                  fontSize: 29,
                 ),
-                Text(
-                  'Lluvia pesada',
-                  style: TextStyle(
-                    fontSize: 17,
-                    color: Colors.lightBlue,
-                  ),
-                ),
-                Icon(
-                  Icons.sim_card_alert,
-                  color: Colors.blue,
-                ),
-                Text(
-                  '19° C',
-                  style: TextStyle(
-                    fontSize: 17,
-                    color: Colors.blue,
-                  ),
-                )
-              ],
-            ),
-          )
+              ),
+              Spacer(),
+              AddPlantWidget(),
+            ],
+          ),
+          EmptyGardenWidget(),
         ],
       ),
     );
