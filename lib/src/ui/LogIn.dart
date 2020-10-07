@@ -1,8 +1,9 @@
 import 'package:botanicare/src/ui/Constants.dart';
+import 'package:botanicare/src/ui/login/Header.dart';
 import 'package:botanicare/src/ui/login/InputField.dart';
+import 'package:botanicare/src/ui/login/WelcomeText.dart';
 import 'package:flutter/material.dart';
 import 'package:botanicare/src/service/AuthService.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
 class LogIn extends StatelessWidget {
@@ -18,21 +19,7 @@ class LogIn extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Container(
-              height: size.height * 0.45,
-              color: kBackgroundColor2,
-              child: Padding(
-                padding: const EdgeInsets.fromLTRB(
-                  kDefaultPadding * 0.8,
-                  kDefaultPadding * 1.5,
-                  kDefaultPadding * 0.8,
-                  0,
-                ),
-                child: SvgPicture.asset(
-                  'assets/welcome-door.svg',
-                ),
-              ),
-            ),
+            Header(),
             Container(
               color: kBackgroundColor,
               height: size.height * 0.55,
@@ -45,20 +32,7 @@ class LogIn extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      bottom: kDefaultPadding / 2,
-                    ),
-                    child: Text(
-                      'Hola! Bienvenido a Botanicare',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: size.height * 0.038,
-                        fontWeight: FontWeight.bold,
-                        letterSpacing: 1,
-                      ),
-                    ),
-                  ),
+                  WelcomeText(),
                   InputField(
                     controller: emailController,
                     hintText: 'Correo',

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/Constants.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class WeatherWidget extends StatelessWidget {
   const WeatherWidget({Key key}) : super(key: key);
@@ -21,17 +22,24 @@ class WeatherWidget extends StatelessWidget {
             Icons.filter_drama,
             color: Colors.blue,
           ),
-          Text(
-            'Lluvia pesada',
-            style: TextStyle(
-              fontSize: 17,
-              color: Colors.lightBlue,
+          Padding(
+            padding:
+                const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2.5),
+            child: Text(
+              'Lluvia pesada',
+              style: TextStyle(
+                fontSize: 17,
+                color: Colors.lightBlue,
+              ),
             ),
           ),
           Spacer(),
-          Icon(
-            Icons.sim_card_alert,
-            color: Colors.black,
+          Padding(
+            padding:
+                const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2.5),
+            child: SvgPicture.asset(
+              'assets/icons/temperature.svg',
+            ),
           ),
           Text(
             '19° C',
