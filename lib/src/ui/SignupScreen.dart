@@ -10,6 +10,8 @@ class SignUp extends StatelessWidget {
   final TextEditingController newEmailController = TextEditingController();
   final TextEditingController newPasswordController = TextEditingController();
 
+  SignUp({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -31,69 +33,74 @@ class SignUp extends StatelessWidget {
                 kDefaultPadding,
                 kDefaultPadding,
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  WelcomeText(
-                    herotext: 'Únete a nosotros',
-                  ),
-                  InputField(
-                    controller: newEmailController,
-                    hintText: 'Correo',
-                    icon: Icons.mail,
-                  ),
-                  InputField(
-                    controller: newPasswordController,
-                    hintText: 'Contraseña',
-                    icon: Icons.lock,
-                    secretField: true,
-                  ),
-                  SizedBox(height: size.height * 0.03),
-                  RaisedButton(
-                    color: kPrimaryColor,
-                    padding: EdgeInsets.symmetric(
-                      vertical: kDefaultPadding * 0.7,
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    WelcomeText(
+                      herotext: 'Únete a nosotros',
                     ),
-                    onPressed: () {
-                      context.read<AuthService>().signUp(
-                            email: newEmailController.text.trim(),
-                            password: newPasswordController.text.trim(),
-                          );
-                    },
-                    child: Text(
-                      'REGISTRARSE',
-                      style: TextStyle(
-                        color: kBackgroundColor2,
-                        fontSize: 17,
-                        letterSpacing: 1,
+                    InputField(
+                      controller: newEmailController,
+                      hintText: 'Correo',
+                      icon: Icons.mail,
+                    ),
+                    InputField(
+                      controller: newPasswordController,
+                      hintText: 'Contraseña',
+                      icon: Icons.lock,
+                      secretField: true,
+                    ),
+                    SizedBox(height: size.height * 0.03),
+                    RaisedButton(
+                      color: kPrimaryColor,
+                      padding: EdgeInsets.symmetric(
+                        vertical: kDefaultPadding * 0.7,
                       ),
-                    ),
-                  ),
-                  SizedBox(height: size.height * 0.02),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        '¿Ya tienes una cuenta? ',
+                      onPressed: () {
+                        context.read<AuthService>().signUp(
+                              email: newEmailController.text.trim(),
+                              password: newPasswordController.text.trim(),
+                            );
+                        // if (flag == 'Signed up') {
+                        //   Navigator.of(context).pushNamed('/main');
+                        // }
+                      },
+                      child: Text(
+                        'REGISTRARSE',
                         style: TextStyle(
-                          fontSize: kDefaultPadding * 0.7,
+                          color: kBackgroundColor2,
+                          fontSize: 17,
+                          letterSpacing: 1,
                         ),
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).pushNamed('/login');
-                        },
-                        child: Text(
-                          ' Inicia sesión',
+                    ),
+                    SizedBox(height: size.height * 0.02),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '¿Ya tienes una cuenta? ',
                           style: TextStyle(
-                            color: kPrimaryColor,
-                            fontWeight: FontWeight.bold,
+                            fontSize: kDefaultPadding * 0.7,
                           ),
                         ),
-                      )
-                    ],
-                  )
-                ],
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pushNamed('/login');
+                          },
+                          child: Text(
+                            ' Inicia sesión',
+                            style: TextStyle(
+                              color: kPrimaryColor,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        )
+                      ],
+                    )
+                  ],
+                ),
               ),
             ),
           ],

@@ -29,67 +29,69 @@ class LogIn extends StatelessWidget {
                 kDefaultPadding,
                 kDefaultPadding,
               ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  WelcomeText(),
-                  InputField(
-                    controller: emailController,
-                    hintText: 'Correo',
-                    icon: Icons.person,
-                  ),
-                  InputField(
-                    controller: passwordController,
-                    hintText: 'Contraseña',
-                    icon: Icons.lock,
-                    secretField: true,
-                  ),
-                  SizedBox(height: size.height * 0.03),
-                  RaisedButton(
-                    color: kPrimaryColor,
-                    padding: EdgeInsets.symmetric(
-                      vertical: kDefaultPadding * 0.7,
+              child: SingleChildScrollView(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    WelcomeText(),
+                    InputField(
+                      controller: emailController,
+                      hintText: 'Correo',
+                      icon: Icons.person,
                     ),
-                    onPressed: () {
-                      context.read<AuthService>().signIn(
-                            email: emailController.text.trim(),
-                            password: passwordController.text.trim(),
-                          );
-                    },
-                    child: Text(
-                      "INGRESAR",
-                      style: TextStyle(
-                        color: kBackgroundColor2,
-                        fontSize: 17,
-                        letterSpacing: 1,
+                    InputField(
+                      controller: passwordController,
+                      hintText: 'Contraseña',
+                      icon: Icons.lock,
+                      secretField: true,
+                    ),
+                    SizedBox(height: size.height * 0.03),
+                    RaisedButton(
+                      color: kPrimaryColor,
+                      padding: EdgeInsets.symmetric(
+                        vertical: kDefaultPadding * 0.7,
                       ),
-                    ),
-                  ),
-                  SizedBox(height: size.height * 0.02),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        '¿No tienes una cuenta?',
+                      onPressed: () {
+                        context.read<AuthService>().signIn(
+                              email: emailController.text.trim(),
+                              password: passwordController.text.trim(),
+                            );
+                      },
+                      child: Text(
+                        "INGRESAR",
                         style: TextStyle(
-                          fontSize: 15,
+                          color: kBackgroundColor2,
+                          fontSize: 17,
+                          letterSpacing: 1,
                         ),
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.of(context).pushNamed('/signup');
-                        },
-                        child: Text(
-                          ' Regístrate',
+                    ),
+                    SizedBox(height: size.height * 0.02),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          '¿No tienes una cuenta?',
                           style: TextStyle(
-                            color: kPrimaryColor,
-                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
                           ),
                         ),
-                      )
-                    ],
-                  ),
-                ],
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).pushNamed('/signup');
+                          },
+                          child: Text(
+                            ' Regístrate',
+                            style: TextStyle(
+                              color: kPrimaryColor,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
