@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Header extends StatelessWidget {
-  const Header({Key key}) : super(key: key);
+  final String imgUrl;
+  const Header({
+    Key key,
+    this.imgUrl = 'assets/welcome-door.svg',
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +24,7 @@ class Header extends StatelessWidget {
           0,
         ),
         child: SvgPicture.asset(
-          'assets/welcome-door.svg',
+          imgUrl,
         ),
       ),
     );

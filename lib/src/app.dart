@@ -1,6 +1,7 @@
 import 'package:botanicare/src/service/AuthService.dart';
 import 'package:botanicare/src/ui/LogIn.dart';
 import 'package:botanicare/src/ui/MenuBar.dart';
+import 'package:botanicare/src/ui/SignupScreen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -19,6 +20,11 @@ class App extends StatelessWidget {
       ],
       child: MaterialApp(
         home: AuthenticationWrapper(),
+        routes: {
+          '/main': (context) => MenuBar(),
+          '/login': (context) => LogIn(),
+          '/signup': (context) => SignUp(),
+        },
       ),
     );
   }

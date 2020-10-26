@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/Constants.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class WeatherWidget extends StatelessWidget {
   const WeatherWidget({Key key}) : super(key: key);
@@ -37,17 +36,15 @@ class WeatherWidget extends StatelessWidget {
           Padding(
             padding:
                 const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2.5),
-            child: SvgPicture.asset(
-              'assets/icons/temperature.svg',
-            ),
+            child: Icon(Icons.ac_unit),
           ),
           Text(
-            '19° C',
+            '28° C',
             style: TextStyle(
               fontSize: 17,
               color: Colors.black,
             ),
-          )
+          ),
         ],
       ),
     );

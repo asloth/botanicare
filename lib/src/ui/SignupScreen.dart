@@ -1,14 +1,14 @@
+import 'package:botanicare/src/service/AuthService.dart';
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:botanicare/src/ui/login_signup/Header.dart';
 import 'package:botanicare/src/ui/login_signup/InputField.dart';
 import 'package:botanicare/src/ui/login_signup/WelcomeText.dart';
 import 'package:flutter/material.dart';
-import 'package:botanicare/src/service/AuthService.dart';
 import 'package:provider/provider.dart';
 
-class LogIn extends StatelessWidget {
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+class SignUp extends StatelessWidget {
+  final TextEditingController newEmailController = TextEditingController();
+  final TextEditingController newPasswordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,9 @@ class LogIn extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Header(),
+            Header(
+              imgUrl: 'assets/singup.svg',
+            ),
             Container(
               color: kBackgroundColor,
               height: size.height * 0.55,
@@ -32,14 +34,16 @@ class LogIn extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
-                  WelcomeText(),
-                  InputField(
-                    controller: emailController,
-                    hintText: 'Correo',
-                    icon: Icons.person,
+                  WelcomeText(
+                    herotext: 'Únete a nosotros',
                   ),
                   InputField(
-                    controller: passwordController,
+                    controller: newEmailController,
+                    hintText: 'Correo',
+                    icon: Icons.mail,
+                  ),
+                  InputField(
+                    controller: newPasswordController,
                     hintText: 'Contraseña',
                     icon: Icons.lock,
                     secretField: true,
@@ -51,13 +55,13 @@ class LogIn extends StatelessWidget {
                       vertical: kDefaultPadding * 0.7,
                     ),
                     onPressed: () {
-                      context.read<AuthService>().signIn(
-                            email: emailController.text.trim(),
-                            password: passwordController.text.trim(),
+                      context.read<AuthService>().signUp(
+                            email: newEmailController.text.trim(),
+                            password: newPasswordController.text.trim(),
                           );
                     },
                     child: Text(
-                      "INGRESAR",
+                      'REGISTRARSE',
                       style: TextStyle(
                         color: kBackgroundColor2,
                         fontSize: 17,
@@ -70,17 +74,17 @@ class LogIn extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        '¿No tienes una cuenta?',
+                        '¿Ya tienes una cuenta? ',
                         style: TextStyle(
-                          fontSize: 15,
+                          fontSize: kDefaultPadding * 0.7,
                         ),
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.of(context).pushNamed('/signup');
+                          Navigator.of(context).pushNamed('/login');
                         },
                         child: Text(
-                          ' Regístrate',
+                          ' Inicia sesión',
                           style: TextStyle(
                             color: kPrimaryColor,
                             fontWeight: FontWeight.bold,
@@ -88,7 +92,7 @@ class LogIn extends StatelessWidget {
                         ),
                       )
                     ],
-                  ),
+                  )
                 ],
               ),
             ),

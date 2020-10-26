@@ -23,8 +23,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  #diseño  
   curved_navigation_bar: ^0.3.4
   flutter_svg: ^0.19.0
+  flutter_custom_clippers: ^1.1.2
+  #firebase
   firebase_auth: ^0.18.1+1
   cloud_firestore: ^0.14.1+2
   provider: ^4.3.2+2
@@ -50,6 +53,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/icons/wind-solid.svg
+    - assets/icons/
     - assets/flower-pot.svg
     - assets/
   # To add assets to your application, add an assets section, like this:
