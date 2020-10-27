@@ -1,6 +1,6 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:botanicare/src/ui/HomeScreen.dart';
-import 'package:botanicare/src/ui/GardenScreen.dart';
+import 'package:botanicare/src/ui/CalculatorScreen.dart';
 import 'package:botanicare/src/ui/PerfilScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
@@ -17,8 +17,8 @@ class _MenuBarState extends State<MenuBar> {
   GlobalKey _bottomNavigationKey = GlobalKey();
   final pages = [
     HomeScreen(),
-    Text('hola soy lista'),
-    GardenScreen(),
+    CalculatorScreen(),
+    Text('hola soy garden screen'),
     Text('hola soy alarmas'),
     PerfilScreen(),
   ];
@@ -38,7 +38,7 @@ class _MenuBarState extends State<MenuBar> {
             color: Colors.white,
           ),
           Icon(
-            Icons.list,
+            Icons.attach_money,
             size: 30,
             color: Colors.white,
           ),
