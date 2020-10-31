@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:botanicare/data/data_constants.dart';
 import 'package:botanicare/src/service/AuthService.dart';
 import 'package:provider/provider.dart';
@@ -52,7 +51,8 @@ class _CityState extends State<City> {
             ClipRRect(
               borderRadius: BorderRadius.circular(15.0),
               child: TextField(
-                //onChanged: ,
+                //Llamamos a la funcion con el debouncer
+                onChanged: onchangeText,
                 decoration: InputDecoration(
                   focusedBorder: InputBorder.none,
                   border: InputBorder.none,
