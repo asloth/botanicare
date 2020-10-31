@@ -1,10 +1,12 @@
+import 'dart:convert';
+
+import 'package:botanicare/data/data_constants.dart';
 import 'package:botanicare/src/service/AuthService.dart';
 import 'package:provider/provider.dart';
+import 'package:botanicare/src/ui/comon/Debouncer.dart';
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
-import 'Header.dart';
 
 class City extends StatefulWidget {
   const City({Key key}) : super(key: key);
@@ -14,6 +16,22 @@ class City extends StatefulWidget {
 }
 
 class _CityState extends State<City> {
+  final debouncer = Debouncer();
+
+  void onchangeText(String text) {
+    debouncer.run(() {
+      requestSearch(text);
+    });
+  }
+
+  void requestSearch(String text) async {
+    //interpolacion de cadenas
+    final url = '${api}search/?query=$text';
+    final response = await http.get(url);
+    final data = jsonDecode(response.body);
+    print(data);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
