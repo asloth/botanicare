@@ -1,6 +1,8 @@
 import 'dart:convert';
+import 'dart:math';
 import 'package:botanicare/data/data_constants.dart';
 import 'package:botanicare/src/service/AuthService.dart';
+import 'package:botanicare/src/ui/login_signup/DetailCity.dart';
 import 'package:provider/provider.dart';
 import 'package:botanicare/src/ui/comon/Debouncer.dart';
 import 'package:botanicare/src/ui/Constants.dart';
@@ -16,6 +18,7 @@ class City extends StatefulWidget {
 
 class _CityState extends State<City> {
   final debouncer = Debouncer();
+  List<DetailCity> cities = [];
 
   void onchangeText(String text) {
     debouncer.run(() {
@@ -27,8 +30,11 @@ class _CityState extends State<City> {
     //interpolacion de cadenas
     final url = '${api}search/?query=$text';
     final response = await http.get(url);
-    final data = jsonDecode(response.body);
-    print(data);
+    final data = jsonDecode(response.body) as List;
+    setState(() {
+      cities = data.map((e) => DetailCity.fromJson(e)).toList();
+      print(cities);
+    });
   }
 
   @override
@@ -65,7 +71,27 @@ class _CityState extends State<City> {
                   ),
                 ),
               ),
-            )
+            ),
+            const SizedBox(
+              height: 15,
+            ),
+            Expanded(
+              child: ListView.builder(
+                  itemCount: cities.toList().length,
+                  itemBuilder: (context, index) {
+                    final city = cities[index];
+                    return ListTile(
+                      title: Text(city.title),
+                      trailing: IconButton(
+                        icon: Icon(
+                          Icons.add,
+                          color: kPrimaryColor,
+                        ),
+                        onPressed: () {},
+                      ),
+                    );
+                  }),
+            ),
           ],
         ),
       ),
