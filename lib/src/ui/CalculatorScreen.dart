@@ -17,7 +17,7 @@ class CalculatorScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
-            'Calculadora de precios',
+            'Registro de cosecha',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: kTextColor,

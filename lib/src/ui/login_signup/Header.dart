@@ -4,9 +4,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class Header extends StatelessWidget {
   final String imgUrl;
+  final backcolor;
   const Header({
     Key key,
     this.imgUrl = 'assets/welcome-door.svg',
+    this.backcolor = kBackgroundColor2,
   }) : super(key: key);
 
   @override
@@ -15,7 +17,7 @@ class Header extends StatelessWidget {
 
     return Container(
       height: size.height * 0.45,
-      color: kBackgroundColor2,
+      color: backcolor,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(
           kDefaultPadding * 0.8,

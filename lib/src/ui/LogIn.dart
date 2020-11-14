@@ -1,4 +1,5 @@
 import 'package:botanicare/src/ui/Constants.dart';
+import 'package:botanicare/src/ui/comon/HeaderShape.dart';
 import 'package:botanicare/src/ui/login_signup/Header.dart';
 import 'package:botanicare/src/ui/login_signup/InputField.dart';
 import 'package:botanicare/src/ui/login_signup/WelcomeText.dart';
@@ -15,11 +16,15 @@ class LogIn extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Scaffold(
+      backgroundColor: kBackgroundColor,
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Header(),
+            ClipPath(
+              child: Header(),
+              clipper: CustomHeaderShape(),
+            ),
             Container(
               color: kBackgroundColor,
               height: size.height * 0.55,
