@@ -1,0 +1,45 @@
+import 'dart:convert';
+import 'package:botanicare/src/ui/Weather/model/Weather.dart';
+import 'package:http/http.dart' as http;
+import 'package:botanicare/src/ui/comon/Debouncer.dart';
+import 'package:flutter/cupertino.dart';
+import 'DetailCity.dart';
+import 'package:botanicare/data/data_constants.dart';
+
+class DetailCityBloc extends ChangeNotifier {
+  final debouncer = Debouncer();
+  List<DetailCity> cities = [];
+  //bool loading = false;
+
+  void onchangeText(String text) {
+    debouncer.run(
+      () {
+        if (text.isNotEmpty) requestSearch(text);
+      },
+    );
+  }
+
+  void requestSearch(String text) async {
+    //interpolacion de cadenas
+    //loading = true;
+    //notifyListeners();
+    final url = '${api}search/?query=$text';
+    final response = await http.get(url);
+    final data = jsonDecode(response.body) as List;
+
+    cities = data.map((e) => DetailCity.fromJson(e)).toList();
+    print(cities);
+    //loading = true;
+    //notifyListeners();
+  }
+
+  void addCity(DetailCity city) async {
+    final url = '$api${city.id}';
+    final response = await http.get(url);
+    final data = jsonDecode(response.body);
+    final weatherData = data['consolidated_weather'] as List;
+    final weathers = weatherData.map((e) => Weather.fromJson(data)).toList();
+    final newCity = city.fromWeathers(weathers);
+    print(newCity.toJson());
+  }
+}
