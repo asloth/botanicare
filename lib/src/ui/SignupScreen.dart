@@ -1,12 +1,8 @@
-import 'package:botanicare/src/service/AuthService.dart';
 import 'package:botanicare/src/ui/Constants.dart';
-import 'package:botanicare/src/ui/comon/HeaderShape.dart';
 import 'package:botanicare/src/ui/login_signup/Header.dart';
-import 'package:botanicare/src/ui/login_signup/InputField.dart';
 import 'package:botanicare/src/ui/login_signup/SignUpForm.dart';
 import 'package:botanicare/src/ui/login_signup/WelcomeText.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class SignUp extends StatelessWidget {
   SignUp({Key key}) : super(key: key);

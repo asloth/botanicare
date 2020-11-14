@@ -1,5 +1,4 @@
 import 'package:botanicare/src/service/AuthService.dart';
-import 'package:botanicare/src/ui/Constants.dart';
 import 'package:botanicare/src/ui/LogIn.dart';
 import 'package:botanicare/src/ui/MenuBar.dart';
 import 'package:botanicare/src/ui/SignupScreen.dart';

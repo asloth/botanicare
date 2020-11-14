@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:botanicare/src/service/AuthService.dart';
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:botanicare/src/ui/login_signup/InputField.dart';
@@ -15,11 +17,11 @@ class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
   final TextEditingController newEmailController = TextEditingController();
   final TextEditingController newPasswordController = TextEditingController();
+  String dropdownValue;
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    String dropdownValue = 'Casero';
 
     return Form(
       key: _formKey,
@@ -34,23 +36,46 @@ class _SignUpFormState extends State<SignUpForm> {
             hintText: 'Correo',
             icon: Icons.mail,
           ),
-          DropdownButton<String>(
-            value: dropdownValue,
-            style: TextStyle(color: kTextColor),
-            items: <String>[
-              'Casero',
-              'Biohuerto',
-            ].map<DropdownMenuItem<String>>((String value) {
-              return DropdownMenuItem<String>(
-                value: value,
-                child: Text(value),
-              );
-            }).toList(),
-            onChanged: (String newValue) {
-              setState(() {
-                dropdownValue = newValue;
-              });
-            },
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 10),
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
+            width: size.width * 0.8,
+            decoration: BoxDecoration(
+              color: kBackgroundColor2,
+              borderRadius: BorderRadius.circular(16),
+            ),
+            child: DropdownButtonHideUnderline(
+              child: DropdownButton<String>(
+                icon: Icon(
+                  Icons.arrow_drop_down,
+                  color: kPrimaryColor,
+                ),
+                value: dropdownValue,
+                isExpanded: true,
+                hint: dropdownValue != null
+                    ? null
+                    : Text(
+                        'Select Value',
+                      ),
+                style: TextStyle(
+                  color: kTextColor,
+                ),
+                items: <String>[
+                  'Casero',
+                  'Biohuerto',
+                ].map((String value) {
+                  return new DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
+                onChanged: (String newValue) {
+                  setState(() {
+                    dropdownValue = newValue;
+                  });
+                },
+              ),
+            ),
           ),
           InputField(
             hintText: 'Direccion',
