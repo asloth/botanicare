@@ -10,10 +10,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Container(
       color: kBackgroundColor,
-      padding: EdgeInsets.fromLTRB(kDefaultPadding, kDefaultPadding * 2,
-          kDefaultPadding, kDefaultPadding * 1.5),
+      padding: EdgeInsets.fromLTRB(kDefaultPadding, kDefaultPadding * 1.2,
+          kDefaultPadding, kDefaultPadding * 0.9),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -22,7 +24,8 @@ class HomeScreen extends StatelessWidget {
             'Clima',
             style: TextStyle(
               color: kTextColor,
-              fontSize: 29,
+              fontSize: size.height * 0.05,
+              fontWeight: FontWeight.w600,
             ),
           ),
           WeatherWidget(),
@@ -30,10 +33,11 @@ class HomeScreen extends StatelessWidget {
           Row(
             children: [
               Text(
-                'Hoy',
+                'Mi Jardín',
                 style: TextStyle(
                   color: kTextColor,
-                  fontSize: 29,
+                  fontSize: size.height * 0.045,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
               Spacer(),
