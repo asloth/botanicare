@@ -7,18 +7,18 @@ class AddPlantWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return RaisedButton(
-      color: kBackgroundColor2,
+      color: kPrimaryColor,
       onPressed: () {},
       child: Row(
         children: [
           Icon(
             Icons.add,
-            color: kPrimaryColor,
+            color: Colors.white,
           ),
           Text(
-            'Añadir planta',
+            'Añadir',
             style: TextStyle(
-              color: kPrimaryColor,
+              color: Colors.white,
               fontSize: 15,
             ),
           )

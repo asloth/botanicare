@@ -2,8 +2,8 @@ import 'package:botanicare/src/ui/Constants.dart';
 import 'package:botanicare/src/ui/login_signup/InputField.dart';
 import 'package:flutter/material.dart';
 
-class CalculatorScreen extends StatelessWidget {
-  const CalculatorScreen({Key key}) : super(key: key);
+class BitacoraScreen extends StatelessWidget {
+  const BitacoraScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

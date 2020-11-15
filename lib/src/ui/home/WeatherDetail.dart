@@ -7,8 +7,10 @@ class WeatherDetailWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Container(
-      height: 50,
+      height: size.height * 0.085,
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         borderRadius: BorderRadius.circular(25),
@@ -20,10 +22,9 @@ class WeatherDetailWidget extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Icon(
-            Icons.wb_sunny,
-            color: Colors.yellow,
-            size: 25,
+          SvgPicture.asset(
+            'assets/icons/light.svg',
+            height: size.height * 0.055,
           ),
           RichText(
             text: TextSpan(
@@ -32,25 +33,30 @@ class WeatherDetailWidget extends StatelessWidget {
                   text: "Luz\n".toUpperCase(),
                   style: TextStyle(
                     color: kTextColor,
-                    fontSize: 11,
+                    fontSize: size.width * 0.035,
                   ),
                 ),
                 TextSpan(
                   text: "5,8k lux",
                   style: Theme.of(context).textTheme.button.copyWith(
-                        fontSize: 16,
+                        fontSize: size.width * 0.05,
                       ),
                 ),
               ],
             ),
           ),
-          IconButton(
-            icon: SvgPicture.asset(
-              "assets/icons/wind-solid.svg",
-              height: 25,
-              width: 25,
+          Container(
+            height: size.height * 0.055,
+            width: size.width * 0.1,
+            decoration: BoxDecoration(
+              color: Colors.grey,
+              borderRadius: BorderRadius.circular(5),
             ),
-            onPressed: () {},
+            padding: EdgeInsets.all(5),
+            child: SvgPicture.asset(
+              "assets/icons/wind-solid.svg",
+              color: Colors.white,
+            ),
           ),
           RichText(
             text: TextSpan(
@@ -59,22 +65,30 @@ class WeatherDetailWidget extends StatelessWidget {
                   text: "Viento\n".toUpperCase(),
                   style: TextStyle(
                     color: kTextColor,
-                    fontSize: 11,
+                    fontSize: size.width * 0.035,
                   ),
                 ),
                 TextSpan(
                   text: "10m/h",
                   style: Theme.of(context).textTheme.button.copyWith(
-                        fontSize: 16,
+                        fontSize: size.width * 0.05,
                       ),
                 ),
               ],
             ),
           ),
-          Icon(
-            Icons.opacity,
-            color: Colors.lightBlue,
-            size: 25,
+          Container(
+            height: size.height * 0.055,
+            width: size.width * 0.1,
+            decoration: BoxDecoration(
+              color: Colors.lightBlue,
+              borderRadius: BorderRadius.circular(5),
+            ),
+            padding: EdgeInsets.all(5),
+            child: Icon(
+              Icons.opacity,
+              color: Colors.white,
+            ),
           ),
           RichText(
             text: TextSpan(
@@ -83,13 +97,13 @@ class WeatherDetailWidget extends StatelessWidget {
                   text: "Humedad\n".toUpperCase(),
                   style: TextStyle(
                     color: kTextColor,
-                    fontSize: 11,
+                    fontSize: size.width * 0.035,
                   ),
                 ),
                 TextSpan(
                   text: "76%",
                   style: Theme.of(context).textTheme.button.copyWith(
-                        fontSize: 16,
+                        fontSize: size.width * 0.05,
                       ),
                 ),
               ],
