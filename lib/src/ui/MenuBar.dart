@@ -25,34 +25,39 @@ class _MenuBarState extends State<MenuBar> {
 
   @override
   Widget build(BuildContext context) {
-    // Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
 
     return Scaffold(
       body: pages[_page],
       bottomNavigationBar: CurvedNavigationBar(
         key: _bottomNavigationKey,
         index: 0,
-        height: 50.0,
+        height: size.height * 0.09,
         items: <Widget>[
           Padding(
             padding: const EdgeInsets.all(5.0),
-            child: SvgPicture.asset('assets/icons/home_outline.svg'),
+            child: SvgPicture.asset(
+              'assets/icons/home_outline.svg',
+              height: size.height * 0.035,
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(5.0),
             child: SvgPicture.asset(
               'assets/icons/leaf.svg',
+              height: size.height * 0.035,
             ),
           ),
           Padding(
             padding: const EdgeInsets.all(5.0),
             child: SvgPicture.asset(
               'assets/icons/bitacora.svg',
+              height: size.height * 0.035,
             ),
           ),
           Icon(
             Icons.person_outline,
-            size: 35,
+            size: size.height * 0.05,
             color: Colors.white,
           ),
         ],

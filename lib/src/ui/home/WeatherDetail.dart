@@ -33,13 +33,13 @@ class WeatherDetailWidget extends StatelessWidget {
                   text: "Luz\n".toUpperCase(),
                   style: TextStyle(
                     color: kTextColor,
-                    fontSize: size.width * 0.035,
+                    fontSize: size.width * 0.033,
                   ),
                 ),
                 TextSpan(
                   text: "5,8k lux",
                   style: Theme.of(context).textTheme.button.copyWith(
-                        fontSize: size.width * 0.05,
+                        fontSize: size.width * 0.045,
                       ),
                 ),
               ],
@@ -56,13 +56,13 @@ class WeatherDetailWidget extends StatelessWidget {
                   text: "Viento\n".toUpperCase(),
                   style: TextStyle(
                     color: kTextColor,
-                    fontSize: size.width * 0.035,
+                    fontSize: size.width * 0.033,
                   ),
                 ),
                 TextSpan(
                   text: "10m/h",
                   style: Theme.of(context).textTheme.button.copyWith(
-                        fontSize: size.width * 0.05,
+                        fontSize: size.width * 0.045,
                       ),
                 ),
               ],
@@ -79,13 +79,13 @@ class WeatherDetailWidget extends StatelessWidget {
                   text: "Humedad\n".toUpperCase(),
                   style: TextStyle(
                     color: kTextColor,
-                    fontSize: size.width * 0.035,
+                    fontSize: size.width * 0.033,
                   ),
                 ),
                 TextSpan(
                   text: "76%",
                   style: Theme.of(context).textTheme.button.copyWith(
-                        fontSize: size.width * 0.05,
+                        fontSize: size.width * 0.045,
                       ),
                 ),
               ],
