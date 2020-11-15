@@ -25,10 +25,16 @@ class InputField extends StatelessWidget {
         color: kBackgroundColor2,
         borderRadius: BorderRadius.circular(16),
       ),
-      child: TextField(
+      child: TextFormField(
         obscureText: secretField,
         controller: controller,
         cursorColor: kPrimaryColor,
+        validator: (value) {
+          if (value.isEmpty) {
+            return 'Complete los campos';
+          }
+          return null;
+        },
         decoration: InputDecoration(
           icon: Icon(
             icon,
