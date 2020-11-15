@@ -45,18 +45,9 @@ class WeatherDetailWidget extends StatelessWidget {
               ],
             ),
           ),
-          Container(
+          SvgPicture.asset(
+            'assets/icons/wind-solid.svg',
             height: size.height * 0.055,
-            width: size.width * 0.1,
-            decoration: BoxDecoration(
-              color: Colors.grey,
-              borderRadius: BorderRadius.circular(5),
-            ),
-            padding: EdgeInsets.all(5),
-            child: SvgPicture.asset(
-              "assets/icons/wind-solid.svg",
-              color: Colors.white,
-            ),
           ),
           RichText(
             text: TextSpan(
@@ -77,18 +68,9 @@ class WeatherDetailWidget extends StatelessWidget {
               ],
             ),
           ),
-          Container(
+          SvgPicture.asset(
+            'assets/icons/humidity.svg',
             height: size.height * 0.055,
-            width: size.width * 0.1,
-            decoration: BoxDecoration(
-              color: Colors.lightBlue,
-              borderRadius: BorderRadius.circular(5),
-            ),
-            padding: EdgeInsets.all(5),
-            child: Icon(
-              Icons.opacity,
-              color: Colors.white,
-            ),
           ),
           RichText(
             text: TextSpan(
