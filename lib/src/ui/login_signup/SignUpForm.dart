@@ -94,10 +94,12 @@ class _SignUpFormState extends State<SignUpForm> {
               vertical: kDefaultPadding * 0.7,
             ),
             onPressed: () {
-              context.read<AuthService>().signUp(
-                    email: newEmailController.text.trim(),
-                    password: newPasswordController.text.trim(),
-                  );
+              if (_formKey.currentState.validate()) {
+                context.read<AuthService>().signUp(
+                      email: newEmailController.text.trim(),
+                      password: newPasswordController.text.trim(),
+                    );
+              }
               // if (flag == 'Signed up') {
               //   Navigator.of(context).pushNamed('/main');
               // }
