@@ -1,9 +1,9 @@
-import 'package:botanicare/src/ui/Weather/City.dart';
+import 'package:botanicare/src/ui/Weather/DetailCity.dart';
 
 abstract class StoreRepository {
-  Future<void> saveCity(City city);
-  Future<void> saveCities(List<City> cities);
-  Future<List<City>> getCities();
+  Future<void> saveCity(DetailCity detailcity);
+  //Future<void> saveCities(List<City> cities);
+  Future<List<DetailCity>> getCities();
   //Future<DateTime> getLastUpdate();
   //Future<void> saveLastUpdate();
   //Future<void> deleteCity(City city);
