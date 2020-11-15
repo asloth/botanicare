@@ -1,4 +1,6 @@
 import 'dart:convert';
+import 'dart:html';
+import 'package:botanicare/data/Repository/store_impl.dart';
 import 'package:botanicare/src/ui/Weather/model/Weather.dart';
 import 'package:http/http.dart' as http;
 import 'package:botanicare/src/ui/comon/Debouncer.dart';
@@ -8,6 +10,7 @@ import 'package:botanicare/data/data_constants.dart';
 
 class DetailCityBloc extends ChangeNotifier {
   final debouncer = Debouncer();
+  final storage = StoreImpl();
   List<DetailCity> cities = [];
   //bool loading = false;
 
