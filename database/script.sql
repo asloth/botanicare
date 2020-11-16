@@ -1,15 +1,8 @@
-CREATE TABLE USERTYPE
-(
-    id serial NOT NULL PRIMARY KEY,
-    description text NOT NULL,
-    name text NOT NULL
-);
 
 CREATE TABLE ORCHARDTYPE
 (
     id serial NOT NULL PRIMARY KEY ,
-    name text NOT NULL,
-    description text NOT NULL,
+    name text NOT NULL
 );
 
 CREATE TABLE USER
@@ -23,7 +16,7 @@ CREATE TABLE USER
     ub text NOT NULL,
     woeid int NOT NULL,
     photo text NOT NULL,
-    idUserType integer NOT NULL REFERENCES USERTYPE
+    idOrchardType integer NOT NULL REFERENCES ORCHARDTYPE
 );
 
 CREATE TABLE VEGETABLETYPE
@@ -42,7 +35,7 @@ CREATE TABLE VEGETABLE
     quantity integer NULL,
     metrics text NULL,
     other text NULL,
-    number int NOT NULL,
+    --number int NOT NULL,
     state boolean NOT NULL,
     idVegetableType integer NOT NULL REFERENCES VEGETABLETYPE,
     idUser integer NOT NULL REFERENCES USER
