@@ -1,5 +1,5 @@
 import 'package:botanicare/src/ui/Constants.dart';
-import 'package:botanicare/src/ui/perfil/Btn_Modificar.dart';
+import 'package:botanicare/src/ui/perfil/Modificar.dart';
 import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/perfil/header.dart';
 import 'package:botanicare/src/ui/perfil/Foto.dart';
@@ -10,6 +10,8 @@ class PerfilScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Container(
       color: kBackgroundColor,
       padding: EdgeInsets.fromLTRB(
@@ -22,7 +24,9 @@ class PerfilScreen extends StatelessWidget {
             backcolor: kBackgroundColor,
           ),
           Foto(),
-          Nombre()
+          Nombre(),
+          SizedBox(height: size.height * 0.03),
+          Modificar(),
         ],
       ),
     );
