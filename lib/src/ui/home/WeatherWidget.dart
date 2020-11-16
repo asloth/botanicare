@@ -6,7 +6,10 @@ class WeatherWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Container(
+      height: size.height * 0.085,
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         borderRadius: BorderRadius.circular(25),
@@ -27,7 +30,7 @@ class WeatherWidget extends StatelessWidget {
             child: Text(
               'Lluvia pesada',
               style: TextStyle(
-                fontSize: 17,
+                fontSize: size.height * 0.03,
                 color: Colors.lightBlue,
               ),
             ),
@@ -41,7 +44,7 @@ class WeatherWidget extends StatelessWidget {
           Text(
             '28° C',
             style: TextStyle(
-              fontSize: 17,
+              fontSize: size.height * 0.03,
               color: Colors.black,
             ),
           ),

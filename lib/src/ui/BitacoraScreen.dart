@@ -2,8 +2,8 @@ import 'package:botanicare/src/ui/Constants.dart';
 import 'package:botanicare/src/ui/login_signup/InputField.dart';
 import 'package:flutter/material.dart';
 
-class CalculatorScreen extends StatelessWidget {
-  const CalculatorScreen({Key key}) : super(key: key);
+class BitacoraScreen extends StatelessWidget {
+  const BitacoraScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,8 +11,8 @@ class CalculatorScreen extends StatelessWidget {
 
     return Container(
       color: kBackgroundColor,
-      padding: EdgeInsets.fromLTRB(kDefaultPadding, kDefaultPadding * 2,
-          kDefaultPadding, kDefaultPadding * 1.5),
+      padding: EdgeInsets.fromLTRB(kDefaultPadding, kDefaultPadding * 1.2,
+          kDefaultPadding, kDefaultPadding * 0.9),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [

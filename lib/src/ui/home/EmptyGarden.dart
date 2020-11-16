@@ -7,26 +7,30 @@ class EmptyGardenWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return Container(
-      padding: EdgeInsets.symmetric(vertical: kDefaultPadding * 2),
+      padding: EdgeInsets.symmetric(
+        vertical: kDefaultPadding * 2,
+      ),
       color: kBackgroundColor2,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SvgPicture.asset(
             'assets/flower-pot.svg',
-            height: 130,
+            height: size.height * 0.2,
           ),
           Text(
             'Todavía no tienes plantas',
             style: TextStyle(
-              fontSize: 20,
+              fontSize: size.height * 0.036,
             ),
           ),
           Text(
             'Agrega tu planta ahora',
             style: TextStyle(
-              fontSize: 20,
+              fontSize: size.height * 0.034,
             ),
           ),
         ],

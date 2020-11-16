@@ -6,20 +6,22 @@ class AddPlantWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+
     return RaisedButton(
-      color: kBackgroundColor2,
+      color: kPrimaryColor,
       onPressed: () {},
       child: Row(
         children: [
           Icon(
             Icons.add,
-            color: kPrimaryColor,
+            color: Colors.white,
           ),
           Text(
-            'Añadir planta',
+            'Añadir',
             style: TextStyle(
-              color: kPrimaryColor,
-              fontSize: 15,
+              color: Colors.white,
+              fontSize: size.width * 0.05,
             ),
           )
         ],
