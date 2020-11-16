@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23">
+  <g id="Elipse_65" data-name="Elipse 65" fill="#3ba8fc" stroke="#3ba8fc" stroke-width="1">
+    <circle cx="11.5" cy="11.5" r="11.5" stroke="none"/>
+    <circle cx="11.5" cy="11.5" r="11" fill="none"/>
+  </g>
+  <path id="Icon_awesome-calendar-day" data-name="Icon awesome-calendar-day" d="M0,9.81a1.037,1.037,0,0,0,1.056,1.015H8.8A1.037,1.037,0,0,0,9.861,9.81V4.059H0ZM1.409,5.751a.346.346,0,0,1,.352-.338H3.874a.346.346,0,0,1,.352.338V7.78a.346.346,0,0,1-.352.338H1.761a.346.346,0,0,1-.352-.338Zm7.4-4.4H7.748V.338A.346.346,0,0,0,7.4,0h-.7a.346.346,0,0,0-.352.338V1.353H3.522V.338A.346.346,0,0,0,3.169,0h-.7a.346.346,0,0,0-.352.338V1.353H1.056A1.037,1.037,0,0,0,0,2.368V3.383H9.861V2.368A1.037,1.037,0,0,0,8.8,1.353Z" transform="translate(6 7)" fill="#fff"/>
+</svg>
+
