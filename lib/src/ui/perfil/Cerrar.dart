@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:botanicare/src/service/AuthService.dart';
 
-class Modificar extends StatelessWidget {
+class Cerrar extends StatelessWidget {
   final String imgUrl;
-  const Modificar({
+  const Cerrar({
     Key key,
-    this.imgUrl = 'assets/Grupo 200.svg',
+    this.imgUrl = 'assets/Cerrar.svg',
   }) : super(key: key);
 
   @override
@@ -26,26 +28,18 @@ class Modificar extends StatelessWidget {
           ),
           FlatButton(
             child: new Text(
-              'Modificar',
+              'Cerrar Sesión',
               style: TextStyle(
-                color: Color(0xFF291C84),
+                color: Color(0xFFFF6724),
                 fontSize: 20,
               ),
             ),
-            onPressed: null,
+            onPressed: () {
+              context.read<AuthService>().signOut();
+            },
           ),
         ],
       ),
     );
   }
 }
-
-/*IconButton(icon: Icon(Icons.edit), onPressed: null),
-crossAxisAlignment: CrossAxisAlignment.stretch,
-
-child: IconButton(
-  icon: Icon(Icons.edit),
-  iconSize: 48,
-  color: Color(0xFF291C84),
-  onPressed: () {},
-),*/
