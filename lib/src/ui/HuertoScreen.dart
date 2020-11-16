@@ -16,7 +16,7 @@ class HuertoScreen extends StatelessWidget {
         height: size.height,
         padding: EdgeInsets.fromLTRB(
           kDefaultPadding * 0.5,
-          kDefaultPadding * 1.2,
+          kDefaultPadding * 1.3,
           kDefaultPadding * 0.5,
           kDefaultPadding * 0.9,
         ),

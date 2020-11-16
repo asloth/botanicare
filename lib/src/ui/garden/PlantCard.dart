@@ -1,5 +1,6 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class PlantCard extends StatelessWidget {
   final String plantNickname, imgUrl, station, plantName, seedtime;
@@ -20,12 +21,11 @@ class PlantCard extends StatelessWidget {
       margin: EdgeInsets.symmetric(
         horizontal: 10.0,
       ),
-      height: 130,
       padding: EdgeInsets.all(9.0),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         borderRadius: BorderRadius.all(
-          Radius.circular(5),
+          Radius.circular(15),
         ),
         boxShadow: [
           kDefaultShadow,
@@ -44,7 +44,7 @@ class PlantCard extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontSize: size.height * 0.035,
+                        fontSize: size.height * 0.033,
                       ),
                     ),
                     TextSpan(
@@ -52,7 +52,7 @@ class PlantCard extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.grey,
                         fontWeight: FontWeight.bold,
-                        fontSize: size.height * 0.025,
+                        fontSize: size.height * 0.023,
                       ),
                     ),
                   ],
@@ -80,51 +80,73 @@ class PlantCard extends StatelessWidget {
             thickness: 1,
             height: 8,
           ),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: RichText(
-              text: TextSpan(
-                children: [
-                  TextSpan(
-                    text: 'Hortaliza:',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600,
-                      fontSize: size.height * 0.027,
-                    ),
-                  ),
-                  TextSpan(
-                    text: plantName,
-                    style: TextStyle(
-                      color: kTextColor,
-                    ),
-                  )
-                ],
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 5,
+                  vertical: 2.0,
+                ),
+                child: SvgPicture.asset(
+                  'assets/icons/orange-leaf.svg',
+                ),
               ),
-            ),
+              RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: 'Hortaliza: ',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w600,
+                        fontSize: size.height * 0.024,
+                      ),
+                    ),
+                    TextSpan(
+                      text: plantName,
+                      style: TextStyle(
+                        color: kTextColor,
+                        fontSize: size.height * 0.024,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ],
           ),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: RichText(
-              text: TextSpan(
-                children: [
-                  TextSpan(
-                    text: 'Fecha de siembra:',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w600,
-                      fontSize: size.height * 0.027,
-                    ),
-                  ),
-                  TextSpan(
-                    text: seedtime,
-                    style: TextStyle(
-                      color: kTextColor,
-                    ),
-                  )
-                ],
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 5,
+                  vertical: 2.0,
+                ),
+                child: SvgPicture.asset(
+                  'assets/icons/blue-calendar.svg',
+                ),
               ),
-            ),
+              RichText(
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: 'Fecha de siembra: ',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w600,
+                        fontSize: size.height * 0.024,
+                      ),
+                    ),
+                    TextSpan(
+                      text: seedtime,
+                      style: TextStyle(
+                        color: kTextColor,
+                        fontSize: size.height * 0.024,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+            ],
           ),
         ],
       ),

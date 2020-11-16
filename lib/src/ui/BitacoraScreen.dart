@@ -16,13 +16,18 @@ class BitacoraScreen extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text(
-            'Registro de cosecha',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: kTextColor,
-              fontSize: kDefaultPadding * 1.2,
-              fontWeight: FontWeight.bold,
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              vertical: 10.0,
+            ),
+            child: Text(
+              'Registro de cosecha',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: kTextColor,
+                fontSize: kDefaultPadding * 1.2,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
           SizedBox(height: size.height * 0.03),
