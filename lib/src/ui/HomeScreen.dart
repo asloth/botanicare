@@ -17,7 +17,8 @@ class HomeScreen extends StatelessWidget {
       padding: EdgeInsets.fromLTRB(kDefaultPadding, kDefaultPadding * 1.2,
           kDefaultPadding, kDefaultPadding * 0.9),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment
+            .spaceEvenly, //Esta linea aun se quitar[a en el futuro pero por el momento se ha dejado
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
