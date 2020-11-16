@@ -6,7 +6,11 @@ class Nombre extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.fromLTRB(
-          kDefaultPadding, kDefaultPadding * 0.5, kDefaultPadding, 0),
+        kDefaultPadding,
+        kDefaultPadding * 0.5,
+        kDefaultPadding,
+        0,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
