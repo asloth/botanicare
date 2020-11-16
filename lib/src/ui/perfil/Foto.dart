@@ -13,8 +13,8 @@ class Foto extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 200.0,
-      height: 200.0,
+      width: 180.0,
+      height: 180.0,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         color: backcolor,
@@ -26,3 +26,5 @@ class Foto extends StatelessWidget {
     );
   }
 }
+
+/*this.imgUrl = 'assets/Elipse 74.svg', */
