@@ -12,7 +12,7 @@ const double kDefaultPadding = 20.0;
 
 //creando una sombra por defecto
 const kDefaultShadow = BoxShadow(
-  offset: Offset(0, 15),
-  blurRadius: 27,
+  offset: Offset(9, 15),
+  blurRadius: 10,
   color: Colors.black12, // Black color with 12% opacity
 );

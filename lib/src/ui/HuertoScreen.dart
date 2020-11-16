@@ -14,21 +14,36 @@ class HuertoScreen extends StatelessWidget {
     return Background(
       child: Container(
         height: size.height,
-        padding: EdgeInsets.fromLTRB(kDefaultPadding, kDefaultPadding * 1.2,
-            kDefaultPadding, kDefaultPadding * 0.9),
+        padding: EdgeInsets.fromLTRB(
+          kDefaultPadding * 0.5,
+          kDefaultPadding * 1.2,
+          kDefaultPadding * 0.5,
+          kDefaultPadding * 0.9,
+        ),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Text(
-                'Mi huerto',
-                style: TextStyle(
-                  color: kTextColor,
-                  fontSize: size.height * 0.05,
-                  fontWeight: FontWeight.w600,
+              Padding(
+                padding: const EdgeInsets.symmetric(
+                  vertical: 10.0,
+                ),
+                child: Text(
+                  'Mi huerto',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: kTextColor,
+                    fontSize: size.height * 0.05,
+                    fontWeight: FontWeight.w600,
+                  ),
                 ),
               ),
-              PlantCard(),
+              PlantCard(
+                plantNickname: 'Sophie',
+                plantName: 'Bonsai',
+                seedtime: '18/12/2020',
+                station: 'Primavera-Verano',
+              ),
             ],
           ),
         ),
