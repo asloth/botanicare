@@ -33,7 +33,7 @@ class _MenuBarState extends State<MenuBar> {
       bottomNavigationBar: CurvedNavigationBar(
         key: _bottomNavigationKey,
         index: 0,
-        height: size.height * 0.09,
+        height: 55,
         items: <Widget>[
           Padding(
             padding: const EdgeInsets.all(5.0),

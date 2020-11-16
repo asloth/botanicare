@@ -24,7 +24,7 @@ class WeatherDetailWidget extends StatelessWidget {
         children: [
           SvgPicture.asset(
             'assets/icons/light.svg',
-            height: size.height * 0.055,
+            height: size.height * 0.045,
           ),
           RichText(
             text: TextSpan(
@@ -39,7 +39,7 @@ class WeatherDetailWidget extends StatelessWidget {
                 TextSpan(
                   text: "5,8k lux",
                   style: Theme.of(context).textTheme.button.copyWith(
-                        fontSize: size.width * 0.045,
+                        fontSize: size.width * 0.04,
                       ),
                 ),
               ],
@@ -47,7 +47,7 @@ class WeatherDetailWidget extends StatelessWidget {
           ),
           SvgPicture.asset(
             'assets/icons/wind-solid.svg',
-            height: size.height * 0.055,
+            height: size.height * 0.045,
           ),
           RichText(
             text: TextSpan(
@@ -62,7 +62,7 @@ class WeatherDetailWidget extends StatelessWidget {
                 TextSpan(
                   text: "10m/h",
                   style: Theme.of(context).textTheme.button.copyWith(
-                        fontSize: size.width * 0.045,
+                        fontSize: size.width * 0.04,
                       ),
                 ),
               ],
@@ -70,7 +70,7 @@ class WeatherDetailWidget extends StatelessWidget {
           ),
           SvgPicture.asset(
             'assets/icons/humidity.svg',
-            height: size.height * 0.055,
+            height: size.height * 0.045,
           ),
           RichText(
             text: TextSpan(
@@ -85,7 +85,7 @@ class WeatherDetailWidget extends StatelessWidget {
                 TextSpan(
                   text: "76%",
                   style: Theme.of(context).textTheme.button.copyWith(
-                        fontSize: size.width * 0.045,
+                        fontSize: size.width * 0.04,
                       ),
                 ),
               ],
