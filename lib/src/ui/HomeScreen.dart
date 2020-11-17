@@ -15,8 +15,12 @@ class HomeScreen extends StatelessWidget {
     return SafeArea(
       child: Container(
         color: kBackgroundColor,
-        padding: EdgeInsets.fromLTRB(kDefaultPadding, kDefaultPadding * 1.2,
-            kDefaultPadding, kDefaultPadding * 0.9),
+        padding: EdgeInsets.fromLTRB(
+          kDefaultPadding,
+          0,
+          kDefaultPadding,
+          kDefaultPadding * 0.9,
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment
               .spaceEvenly, //Esta linea aun se quitar[a en el futuro pero por el momento se ha dejado

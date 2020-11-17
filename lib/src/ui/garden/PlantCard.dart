@@ -6,8 +6,8 @@ class PlantCard extends StatelessWidget {
   final String plantNickname, imgUrl, station, plantName, seedtime;
   const PlantCard({
     Key key,
-    @required this.plantNickname,
     this.imgUrl,
+    @required this.plantNickname,
     @required this.station,
     @required this.plantName,
     @required this.seedtime,
@@ -21,7 +21,8 @@ class PlantCard extends StatelessWidget {
       margin: EdgeInsets.symmetric(
         horizontal: 10.0,
       ),
-      padding: EdgeInsets.all(9.0),
+      height: 200,
+      padding: EdgeInsets.all(15.0),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         borderRadius: BorderRadius.all(

@@ -1,6 +1,9 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:botanicare/src/ui/login_signup/InputField.dart';
 import 'package:flutter/material.dart';
+import 'package:botanicare/src/ui/comon/BackBitacora.dart';
+import 'package:botanicare/src/ui/bitacora/BitacoraHistoria.dart';
+//import 'package:botanicare/src/ui/garden/PlantCard.dart';
 
 class BitacoraScreen extends StatelessWidget {
   const BitacoraScreen({Key key}) : super(key: key);
@@ -10,41 +13,40 @@ class BitacoraScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return SafeArea(
-      child: Container(
-        color: kBackgroundColor,
-        padding: EdgeInsets.fromLTRB(kDefaultPadding, kDefaultPadding * 1.2,
-            kDefaultPadding, kDefaultPadding * 0.9),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Padding(
-              padding: const EdgeInsets.symmetric(
-                vertical: 10.0,
+      child: SingleChildScrollView(
+        child: BackBitacora(
+          child: Container(
+            height: size.height,
+            color: kBackgroundColor,
+            padding: EdgeInsets.fromLTRB(
+              kDefaultPadding,
+              25,
+              kDefaultPadding,
+              kDefaultPadding * 0.9,
+            ),
+            child: SingleChildScrollView(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Text(
+                    'Bitácora',
+                    style: TextStyle(
+                      color: kTextColor,
+                      fontSize: size.height * 0.05,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  SizedBox(height: size.height * 0.02),
+                  InputField(
+                    hintText: 'Ingrese un nombre para buscar...',
+                    icon: Icons.search,
+                  ),
+                  SizedBox(height: size.height * 0.02),
+                  BitacoraHistoria(),
+                ],
               ),
-              child: Text(
-                'Registro de cosecha',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: kTextColor,
-                  fontSize: kDefaultPadding * 1.2,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
             ),
-            SizedBox(height: size.height * 0.03),
-            InputField(
-              hintText: 'valor 1',
-              icon: Icons.room_service,
-            ),
-            InputField(
-              hintText: 'valor 1',
-              icon: Icons.room_service,
-            ),
-            InputField(
-              hintText: 'valor 1',
-              icon: Icons.room_service,
-            ),
-          ],
+          ),
         ),
       ),
     );

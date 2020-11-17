@@ -2,9 +2,9 @@ import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class Background extends StatelessWidget {
+class BackBitacora extends StatelessWidget {
   final Widget child;
-  const Background({
+  const BackBitacora({
     Key key,
     @required this.child,
   }) : super(key: key);
@@ -23,7 +23,7 @@ class Background extends StatelessWidget {
             top: 1,
             left: size.width - 120,
             child: SvgPicture.asset(
-              'assets/decorating-plant.svg',
+              'assets/Arbol_Izq.svg',
             ),
           ),
           child,

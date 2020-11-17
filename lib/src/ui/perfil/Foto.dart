@@ -24,7 +24,7 @@ class Foto extends StatelessWidget {
         children: <Widget>[
           Positioned(
             top: 5,
-            left: size.width - 290,
+            left: size.width - 310,
             child: SvgPicture.asset(
               'assets/Botanicare.svg',
             ),

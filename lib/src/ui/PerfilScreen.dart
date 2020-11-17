@@ -30,7 +30,7 @@ class PerfilScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                SizedBox(height: size.height * 0.08),
+                SizedBox(height: size.height * 0.15),
                 Foto(),
                 SizedBox(height: size.height * 0.01),
                 Nombre(),
@@ -49,38 +49,3 @@ class PerfilScreen extends StatelessWidget {
     );
   }
 }
-
-/*
-      child: SingleChildScrollView(
-        child: Container(
-          color: kBackgroundColor,
-          padding: EdgeInsets.fromLTRB(
-            kDefaultPadding,
-            kDefaultPadding * 0.5,
-            kDefaultPadding,
-            0,
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              /*Header(
-                imgUrl: 'assets/Grupo 378.svg',
-                backcolor: kBackgroundColor,
-              ),*/
-              Foto(),
-              Nombre(),
-              SizedBox(height: size.height * 0.03),
-              Modificar(),
-              SizedBox(height: size.height * 0.02),
-              Ayuda(),
-              SizedBox(height: size.height * 0.02),
-              Cerrar(),
-              SizedBox(height: size.height * 0.05),
-            ],
-          ),
-        ),
-      ),
-
-
-
-*/
