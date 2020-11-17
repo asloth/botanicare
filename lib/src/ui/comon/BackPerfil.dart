@@ -20,7 +20,7 @@ class BackPerfil extends StatelessWidget {
       child: Stack(
         children: <Widget>[
           Positioned(
-            top: -103,
+            top: -130,
             left: size.width - 400,
             child: SvgPicture.asset(
               'assets/Header_Perfil.svg',

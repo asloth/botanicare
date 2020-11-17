@@ -16,31 +16,33 @@ class PerfilScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return BackPerfil(
-      child: Container(
-        height: size.height,
-        padding: EdgeInsets.fromLTRB(
-          kDefaultPadding * 0.5,
-          kDefaultPadding * 1.3,
-          kDefaultPadding * 0.5,
-          kDefaultPadding * 0.9,
-        ),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              SizedBox(height: size.height * 0.15),
-              Foto(),
-              SizedBox(height: size.height * 0.01),
-              Nombre(),
-              SizedBox(height: size.height * 0.03),
-              Modificar(),
-              SizedBox(height: size.height * 0.02),
-              Ayuda(),
-              SizedBox(height: size.height * 0.02),
-              Cerrar(),
-              SizedBox(height: size.height * 0.05),
-            ],
+    return SafeArea(
+      child: BackPerfil(
+        child: Container(
+          height: size.height,
+          padding: EdgeInsets.fromLTRB(
+            kDefaultPadding * 0.9,
+            kDefaultPadding * 1.3,
+            kDefaultPadding * 0.9,
+            kDefaultPadding * 0.9,
+          ),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                SizedBox(height: size.height * 0.08),
+                Foto(),
+                SizedBox(height: size.height * 0.01),
+                Nombre(),
+                SizedBox(height: size.height * 0.03),
+                Modificar(),
+                SizedBox(height: size.height * 0.02),
+                Ayuda(),
+                SizedBox(height: size.height * 0.02),
+                Cerrar(),
+                SizedBox(height: size.height * 0.05),
+              ],
+            ),
           ),
         ),
       ),
