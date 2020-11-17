@@ -22,7 +22,7 @@ class PerfilScreen extends StatelessWidget {
           height: size.height,
           padding: EdgeInsets.fromLTRB(
             kDefaultPadding * 0.9,
-            kDefaultPadding * 1.3,
+            0,
             kDefaultPadding * 0.9,
             kDefaultPadding * 0.9,
           ),
