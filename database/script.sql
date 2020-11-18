@@ -23,7 +23,7 @@ CREATE TABLE VEGETABLETYPE
 (
     id serial NOT NULL PRIMARY KEY,
     name text NOT NULL,
-    state boolean NOT NULL
+    --state boolean NOT NULL
 );
 
 CREATE TABLE VEGETABLE
