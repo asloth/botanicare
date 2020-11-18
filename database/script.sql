@@ -5,7 +5,7 @@ CREATE TABLE ORCHARDTYPE
     name text NOT NULL
 );
 
-CREATE TABLE USER
+CREATE TABLE USERS
 (
     id serial NOT NULL PRIMARY KEY,
     username text NOT NULL,
@@ -38,7 +38,7 @@ CREATE TABLE VEGETABLE
     --number int NOT NULL,
     state boolean NOT NULL,
     idVegetableType integer NOT NULL REFERENCES VEGETABLETYPE,
-    idUser integer NOT NULL REFERENCES USER
+    idUser integer NOT NULL REFERENCES USERs
 );
 
 CREATE TABLE ACTIVITY
