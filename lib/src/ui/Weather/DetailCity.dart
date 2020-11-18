@@ -16,7 +16,7 @@ class DetailCity {
   Map<String, dynamic> toJson() => {
         "title": title,
         "woeid": id,
-        "weathers": weathers.map((e) => e.toJson()),
+        "weathers": weathers.map((e) => e.toJson()).toList(),
       };
 
   factory DetailCity.fromJson(Map<String, dynamic> map) {

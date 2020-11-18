@@ -1,6 +1,7 @@
 import 'dart:convert';
-import 'dart:html';
+//import 'dart:html';
 import 'package:botanicare/data/Repository/store_impl.dart';
+import 'package:botanicare/data/Repository/store_repository.dart';
 import 'package:botanicare/src/ui/Weather/model/Weather.dart';
 import 'package:http/http.dart' as http;
 import 'package:botanicare/src/ui/comon/Debouncer.dart';
@@ -10,7 +11,7 @@ import 'package:botanicare/data/data_constants.dart';
 
 class DetailCityBloc extends ChangeNotifier {
   final debouncer = Debouncer();
-  final storage = StoreImpl();
+  final StoreRepository storage = StoreImpl();
   List<DetailCity> cities = [];
   //bool loading = false;
 
@@ -43,6 +44,9 @@ class DetailCityBloc extends ChangeNotifier {
     final weatherData = data['consolidated_weather'] as List;
     final weathers = weatherData.map((e) => Weather.fromJson(data)).toList();
     final newCity = city.fromWeathers(weathers);
+    storage.saveCity(newCity);
+
+    notifyListeners();
     print(newCity.toJson());
   }
 }

@@ -46,6 +46,9 @@ class StoreImpl extends StoreRepository {
     list.add(detailcity);
     SharedPreferences prefers = await SharedPreferences.getInstance();
     //int counter = {prefers.getInt('counter') ?? 0} + 1;
-    prefers.setStringList(keyCities, list.map((e) => jsonEncode(e)).toList());
+    prefers.setStringList(
+      keyCities,
+      list.map((e) => jsonEncode(e.toJson())).toList(),
+    );
   }
 }
