@@ -1,13 +1,20 @@
 import 'package:botanicare/src/ui/Constants.dart';
+import 'package:botanicare/src/ui/Weather/DetailCity.dart';
 import 'package:botanicare/src/ui/home/AddPlantButton.dart';
 import 'package:botanicare/src/ui/home/EmptyGarden.dart';
 import 'package:botanicare/src/ui/home/WeatherDetail.dart';
 import 'package:botanicare/src/ui/home/WeatherWidget.dart';
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key key}) : super(key: key);
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({Key key, this.city}) : super(key: key);
+  final DetailCity city;
 
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;

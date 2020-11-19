@@ -9,7 +9,7 @@ import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 
 class City extends StatefulWidget {
-  //const City({Key key}) : super(key: key);
+  const City({Key key}) : super(key: key);
 
   City._();
 
