@@ -46,6 +46,14 @@
         "5":{
             "name":"Flor",
             "state":true
+        },
+        "6":{
+            "name":"Hortaliza",
+            "state":true
+        },
+        "7":{
+            "name":"Fruta",
+            "state":true
         }
     },
     "VEGETABLE":{
