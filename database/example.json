@@ -1,0 +1,148 @@
+{
+    "ORCHARDTYPE":{
+        "1":{
+            "name":"Huerto urbano",
+            "state":true
+        },
+        "2":{
+            "name":"Cultivo casero",
+            "state":true
+        }    
+    },
+    "USER":{
+        "1":{
+        "username":"Panchitdevita",
+        "email": "panchito@gmail.com",
+        "address": "los pinos 123",
+        "password": "carroslocossiii",
+        "ub": "lim",
+        "woeid": "123",
+        "photo": "c:/carpetita",
+        "ORCHARDTYPE":{"id":"1","name":"Cultivo casero"},
+        "VEGETABLE":
+        {
+            "1":{"name":"Lechuga Serrana"},
+            "2":{"name":"Yuca Costeña"}
+        }
+        
+    },
+    "VEGETABLETYPE":{
+        "1":{
+            "name":"Hortaliza",
+            "state":true
+        },
+        "2":{
+            "name":"Tuberculo",
+            "state":true
+        }
+    },
+    "VEGETABLE":{
+        "1":{
+            "name":"Lechuga Serrana",
+            "nick":"Lechuga",
+            "sowingtime": "Verano",
+            "quantity": "2",
+            "metrics":"Balde",
+            "other":"Taper",
+            "state":true,
+            "VEGETABLETYPE":{"id":"1","name":"Hortaliza"},
+            "ACTIVITY":{
+                "1": {"name":"Fertilización"},
+                "2": {"name":"Fertilización"}
+        },
+            "PRODUCTION":{"id":"1"},
+            "ECONOMIC":{"id":"1"},
+            "CALENDAR":{"id":"1"}
+        },
+        "2":{
+            "name":"Yuca Costeña",
+            "nick":"Yuca",
+            "sowingtime": "Verano",
+            "quantity": "2",
+            "metrics":"Balde",
+            "other":"Taper",
+            "state":true,
+            "VEGETABLETYPE":{"id":"2","name":"Tuberculo"},
+            "ACTIVITY":{"id":"2"},
+            "PRODUCTION":{"id":"2"},
+            "ECONOMIC":{"id":"2"},
+            "CALENDAR":{"id":"2"}
+        }
+    },
+    "ACTIVITY":{
+        "1":{
+            "name":"Fertilización",
+            "input":"Compost",
+            "quantity":"3",
+            "metrics":"Kilos",
+            "cost":"3.3",
+            "did":"20/11/2020",
+            "VEGETABLE":{"id":"1","name":"Lechuga Serrana"}
+        },
+        "2":{
+            "name":"Fertilización",
+            "input":"Compost",
+            "quantity":"3",
+            "metrics":"Kilos",
+            "cost":"3.3",
+            "did":"20/11/2020",
+            "VEGETABLE":{"id":"2","name":"Yuca Costeña"}
+        }
+    },
+    "PRODUCTION":{
+        "1":{
+            "harvest":"20/12/2020",
+            "consumption":"15",
+            "sale":"30",
+            "metrics":"metros cuadrados",
+            "totalProduction":"45",
+            "totalCompost":"3",
+            "OthersActivities": "ninguna",
+            "VEGETABLE":{"id":"1","name":"Lechuga Serrana"}
+        },
+        "2":{
+            "harvest":"20/12/2020",
+            "consumption":"15",
+            "sale":"30",
+            "metrics":"metros cuadrados",
+            "totalProduction":"45",
+            "totalCompost":"3",
+            "OthersActivities": "ninguna",
+            "VEGETABLE":{"id":"2","name":"Yuca Costeña"}
+        }
+    },
+    "ECONOMIC":{
+        "1":{
+            "price":"1",
+            "consumption":"15",
+            "sale":"30",
+            "saving":"15",
+            "profit":"30",
+            "VEGETABLE":{"id":"1","name":"Lechuga Serrana"}
+        },
+        "2":{
+            "price":"1",
+            "consumption":"15",
+            "sale":"30",
+            "saving":"15",
+            "profit":"30",
+            "VEGETABLE":{"id":"2","name":"Yuca Costeña"}
+        }
+    },
+    "CALENDAR":{
+        "1":{
+            "ground": "20/12/2020",
+            "sowing": "20/12/2020",
+            "harvest":"20/12/2020",
+            "VEGETABLE":{"id":"1","name":"Lechuga Serrana"}
+        },
+        "2":{
+            "ground": "20/12/2020",
+            "sowing": "20/12/2020",
+            "harvest":"20/12/2020",
+            "VEGETABLE":{"id":"2","name":"Yuca Costeña"}
+        }
+
+       }   
+    }
+}
