@@ -19,9 +19,15 @@ class HortalizaScreen extends StatelessWidget {
             height: size.height,
             padding: EdgeInsets.fromLTRB(
               kDefaultPadding,
-              25,
+              10,
               kDefaultPadding,
               kDefaultPadding * 0.9,
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Header(),
+              ],
             ),
           ),
         ),

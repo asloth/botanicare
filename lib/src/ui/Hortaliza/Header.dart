@@ -1,4 +1,5 @@
 import 'package:botanicare/src/ui/Constants.dart';
+import 'package:botanicare/src/ui/HomeScreen.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -8,10 +9,29 @@ class Header extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return Container(
-      //olor: Colors.white,
-      color: kPrimaryColor,
-      height: size.height - 500,
+    return FlatButton(
+      color: Colors.white,
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => HomeScreen()),
+        );
+      },
+      child: Row(
+        children: [
+          Icon(
+            Icons.add,
+            color: Colors.black,
+          ),
+          Text(
+            'Añadir',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: size.width * 0.05,
+            ),
+          )
+        ],
+      ),
     );
   }
 }
