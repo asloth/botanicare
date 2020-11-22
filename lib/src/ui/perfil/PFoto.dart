@@ -10,7 +10,6 @@ class PFoto extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return SvgPicture.asset(imgUrl);
   }
 }

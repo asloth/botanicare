@@ -17,35 +17,34 @@ class BitacoraScreen extends StatelessWidget {
         child: BackBitacora(
           child: Container(
             height: size.height,
-            color: kBackgroundColor,
             padding: EdgeInsets.fromLTRB(
               kDefaultPadding,
               25,
               kDefaultPadding,
               kDefaultPadding * 0.9,
             ),
-            child: SingleChildScrollView(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: <Widget>[
-                  Text(
-                    'Bitácora',
-                    style: TextStyle(
-                      color: kTextColor,
-                      fontSize: size.height * 0.05,
-                      fontWeight: FontWeight.w600,
-                    ),
+            //child: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                Text(
+                  'Bitácora',
+                  style: TextStyle(
+                    color: kTextColor,
+                    fontSize: size.height * 0.05,
+                    fontWeight: FontWeight.w600,
                   ),
-                  SizedBox(height: size.height * 0.02),
-                  InputField(
-                    hintText: 'Ingrese un nombre para buscar...',
-                    icon: Icons.search,
-                  ),
-                  SizedBox(height: size.height * 0.02),
-                  BitacoraHistoria(),
-                ],
-              ),
+                ),
+                SizedBox(height: size.height * 0.02),
+                InputField(
+                  hintText: 'Ingrese un nombre para buscar...',
+                  icon: Icons.search,
+                ),
+                SizedBox(height: size.height * 0.02),
+                BitacoraHistoria(),
+                SizedBox(height: size.height * 0.02),
+              ],
             ),
+            //),
           ),
         ),
       ),

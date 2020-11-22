@@ -2,9 +2,9 @@ import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class BackPerfil extends StatelessWidget {
+class BackAnimation extends StatelessWidget {
   final Widget child;
-  const BackPerfil({
+  const BackAnimation({
     Key key,
     @required this.child,
   }) : super(key: key);
@@ -17,19 +17,18 @@ class BackPerfil extends StatelessWidget {
       color: kBackgroundColor,
       width: double.infinity,
       height: size.height,
-      child: SingleChildScrollView(
-        child: Stack(
-          children: <Widget>[
-            Positioned(
-              top: -130,
-              left: size.width - 400,
-              child: SvgPicture.asset(
-                'assets/Header_Perfil.svg',
-              ),
+      child: Stack(
+        children: <Widget>[
+          Positioned(
+            top: 0,
+            left: size.width - 395,
+            child: SvgPicture.asset(
+              'assets/Superior.svg',
+              width: size.width + 5,
             ),
-            child,
-          ],
-        ),
+          ),
+          child,
+        ],
       ),
     );
   }

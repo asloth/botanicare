@@ -1,5 +1,3 @@
-import 'package:botanicare/src/ui/Weather/City.dart';
-
 import 'model/Weather.dart';
 
 class DetailCity {

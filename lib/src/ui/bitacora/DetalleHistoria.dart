@@ -1,6 +1,5 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class DetalleHistoria extends StatelessWidget {
   final String nombHortaliza, actividad, cantidad, metrica;

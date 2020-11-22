@@ -6,7 +6,7 @@ class BackBitacora extends StatelessWidget {
   final Widget child;
   const BackBitacora({
     Key key,
-    @required this.child,
+    this.child,
   }) : super(key: key);
 
   @override
@@ -17,17 +17,19 @@ class BackBitacora extends StatelessWidget {
       color: kBackgroundColor,
       width: double.infinity,
       height: size.height,
-      child: Stack(
-        children: <Widget>[
-          Positioned(
-            top: 1,
-            left: size.width - 120,
-            child: SvgPicture.asset(
-              'assets/Arbol_Izq.svg',
+      child: SingleChildScrollView(
+        child: Stack(
+          children: <Widget>[
+            Positioned(
+              top: 1,
+              left: size.width - 100,
+              child: SvgPicture.asset(
+                'assets/Arbol_Izq.svg',
+              ),
             ),
-          ),
-          child,
-        ],
+            child,
+          ],
+        ),
       ),
     );
   }

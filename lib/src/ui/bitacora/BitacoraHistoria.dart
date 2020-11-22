@@ -1,18 +1,17 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/bitacora/DetalleHistoria.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class BitacoraHistoria extends StatelessWidget {
   final String imgUrl, nombHortaliza, actividad, cantidad, metrica, fecha;
   const BitacoraHistoria({
     Key key,
     this.imgUrl,
-    @required this.nombHortaliza,
-    @required this.actividad,
-    @required this.cantidad,
-    @required this.metrica,
-    @required this.fecha,
+    this.nombHortaliza,
+    this.actividad,
+    this.cantidad,
+    this.metrica,
+    this.fecha,
   }) : super(key: key);
 
   @override
