@@ -1,22 +1,25 @@
 import 'package:botanicare/src/ui/Constants.dart';
-import 'package:botanicare/src/ui/HortalizaScreen.dart';
 import 'package:flutter/material.dart';
 
-class AddPlantWidget extends StatelessWidget {
-  const AddPlantWidget({Key key}) : super(key: key);
+class Header extends StatelessWidget {
+  const Header({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return RaisedButton(
+    return Container(
+      //olor: Colors.white,
       color: kPrimaryColor,
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => HortalizaScreen()),
-        );
-      },
+      height: size.height - 500,
+    );
+  }
+}
+
+/*
+RaisedButton(
+      color: kPrimaryColor,
+      onPressed: () {},
       child: Row(
         children: [
           Icon(
@@ -24,7 +27,7 @@ class AddPlantWidget extends StatelessWidget {
             color: Colors.white,
           ),
           Text(
-            'Añadir',
+            'Añadir Hortaliza',
             style: TextStyle(
               color: Colors.white,
               fontSize: size.width * 0.05,
@@ -32,6 +35,5 @@ class AddPlantWidget extends StatelessWidget {
           )
         ],
       ),
-    );
-  }
-}
+    ); 
+*/

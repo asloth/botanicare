@@ -3,7 +3,6 @@ import 'package:botanicare/src/ui/login_signup/InputField.dart';
 import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/comon/BackBitacora.dart';
 import 'package:botanicare/src/ui/bitacora/BitacoraHistoria.dart';
-//import 'package:botanicare/src/ui/garden/PlantCard.dart';
 
 class BitacoraScreen extends StatelessWidget {
   const BitacoraScreen({Key key}) : super(key: key);
