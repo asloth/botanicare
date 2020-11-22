@@ -1,4 +1,3 @@
-import 'package:botanicare/src/ui/Constants.dart';
 import 'package:botanicare/src/ui/HomeScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -20,14 +19,15 @@ class Header extends StatelessWidget {
       child: Row(
         children: [
           Icon(
-            Icons.add,
+            Icons.arrow_back_ios,
             color: Colors.black,
           ),
+          SizedBox(width: size.width * 0.02),
           Text(
-            'Añadir',
+            'Añadir Hortaliza',
             style: TextStyle(
               color: Colors.black,
-              fontSize: size.width * 0.05,
+              fontSize: size.width * 0.06,
             ),
           )
         ],
