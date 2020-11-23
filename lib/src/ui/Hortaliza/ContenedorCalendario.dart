@@ -4,11 +4,9 @@ import 'package:botanicare/src/ui/Hortaliza/HeaderCalendario.dart';
 import 'package:botanicare/src/ui/Hortaliza/FechaSiembra.dart';
 import 'package:botanicare/src/ui/Hortaliza/FechaTerreno.dart';
 import 'package:botanicare/src/ui/Hortaliza/BtnCalcular.dart';
+import 'package:botanicare/src/ui/Hortaliza/FechaProbable.dart';
 
 class ContenedorCalendario extends StatelessWidget {
-  final TextEditingController cantidadController = TextEditingController();
-  final TextEditingController metricaController = TextEditingController();
-  final TextEditingController otroController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     //Size size = MediaQuery.of(context).size;
@@ -16,7 +14,7 @@ class ContenedorCalendario extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: 320,
-        height: 400,
+        height: 435,
         margin: EdgeInsets.symmetric(horizontal: 10),
         padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
         decoration: BoxDecoration(
@@ -35,6 +33,7 @@ class ContenedorCalendario extends StatelessWidget {
             FechaTerreno(),
             FechaSiembra(),
             BtnCalcular(),
+            FechaProbable(),
           ],
         ),
       ),
