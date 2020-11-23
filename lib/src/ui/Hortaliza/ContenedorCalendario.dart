@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/Hortaliza/HeaderCalendario.dart';
 import 'package:botanicare/src/ui/Hortaliza/FechaSiembra.dart';
 import 'package:botanicare/src/ui/Hortaliza/FechaTerreno.dart';
+import 'package:botanicare/src/ui/Hortaliza/BtnCalcular.dart';
 
 class ContenedorCalendario extends StatelessWidget {
   final TextEditingController cantidadController = TextEditingController();
@@ -28,11 +29,12 @@ class ContenedorCalendario extends StatelessWidget {
           ],
         ),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             HeaderCalendario(),
             FechaTerreno(),
             FechaSiembra(),
+            BtnCalcular(),
           ],
         ),
       ),
