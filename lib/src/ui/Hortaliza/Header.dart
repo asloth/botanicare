@@ -11,7 +11,7 @@ class Header extends StatelessWidget {
     return FlatButton(
       color: Colors.white,
       onPressed: () {
-        Navigator.push(
+        Navigator.pop(
           context,
           MaterialPageRoute(builder: (context) => HomeScreen()),
         );
@@ -35,25 +35,3 @@ class Header extends StatelessWidget {
     );
   }
 }
-
-/*
-RaisedButton(
-      color: kPrimaryColor,
-      onPressed: () {},
-      child: Row(
-        children: [
-          Icon(
-            Icons.add,
-            color: Colors.white,
-          ),
-          Text(
-            'Añadir Hortaliza',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: size.width * 0.05,
-            ),
-          )
-        ],
-      ),
-    ); 
-*/
