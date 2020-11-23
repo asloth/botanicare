@@ -6,6 +6,8 @@ import 'package:botanicare/src/ui/Hortaliza/Header.dart';
 import 'package:botanicare/src/ui/Hortaliza/ContenedorArea.dart';
 import 'package:botanicare/src/ui/Hortaliza/Nombre.dart';
 import 'package:botanicare/src/ui/Hortaliza/TipoHortaliza.dart';
+import 'package:botanicare/src/ui/Hortaliza/Apodo.dart';
+import 'package:botanicare/src/ui/Hortaliza/Epoca.dart';
 
 class PerfilScreen extends StatelessWidget {
   const PerfilScreen({
@@ -36,6 +38,10 @@ class PerfilScreen extends StatelessWidget {
                   Nombre(),
                   SizedBox(height: size.height * 0.02),
                   TipoHortaliza(),
+                  SizedBox(height: size.height * 0.02),
+                  Apodo(),
+                  SizedBox(height: size.height * 0.02),
+                  Epoca(),
                   SizedBox(height: size.height * 0.03),
                   ContenedorArea(),
                 ],
