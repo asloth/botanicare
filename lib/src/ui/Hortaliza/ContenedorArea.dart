@@ -13,31 +13,33 @@ class ContenedorArea extends StatelessWidget {
   Widget build(BuildContext context) {
     //Size size = MediaQuery.of(context).size;
 
-    return Container(
-      width: 320,
-      height: 270,
-      padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
-      decoration: BoxDecoration(
-        color: kBackgroundColor2,
-        borderRadius: BorderRadius.all(
-          Radius.circular(15),
-        ),
-        boxShadow: [
-          kDefaultShadow,
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          HeaderArea(),
-          Row(
-            children: [
-              Cantidad(),
-              Metrica(),
-            ],
+    return SingleChildScrollView(
+      child: Container(
+        width: 320,
+        height: 270,
+        padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
+        decoration: BoxDecoration(
+          color: kBackgroundColor2,
+          borderRadius: BorderRadius.all(
+            Radius.circular(15),
           ),
-          Otro(),
-        ],
+          boxShadow: [
+            kDefaultShadow,
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            HeaderArea(),
+            Row(
+              children: [
+                Cantidad(),
+                Metrica(),
+              ],
+            ),
+            Otro(),
+          ],
+        ),
       ),
     );
   }
