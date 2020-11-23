@@ -15,7 +15,7 @@ class Cantidad extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 15, horizontal: 1),
+      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
       width: size.width * 0.4,
       child: Column(
