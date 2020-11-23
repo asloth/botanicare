@@ -42,9 +42,3 @@ class ContenedorArea extends StatelessWidget {
     );
   }
 }
-
-/*
-const ContenedorArea({
-    Key key,
-  }) : super(key: key);
-*/

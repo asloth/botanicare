@@ -1,9 +1,10 @@
 import 'dart:ui';
 import 'package:botanicare/src/ui/Constants.dart';
+import 'package:flutter/material.dart';
+import 'package:botanicare/src/ui/comon/BackBlanco.dart';
 import 'package:botanicare/src/ui/Hortaliza/Header.dart';
 import 'package:botanicare/src/ui/Hortaliza/ContenedorArea.dart';
-import 'package:botanicare/src/ui/comon/BackBlanco.dart';
-import 'package:flutter/material.dart';
+import 'package:botanicare/src/ui/Hortaliza/Nombre.dart';
 
 class PerfilScreen extends StatelessWidget {
   const PerfilScreen({
@@ -30,6 +31,8 @@ class PerfilScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Header(),
+                  SizedBox(height: size.height * 0.03),
+                  Nombre(),
                   SizedBox(height: size.height * 0.03),
                   ContenedorArea(),
                 ],
