@@ -1,11 +1,11 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
-import 'package:botanicare/src/ui/Hortaliza/InputFieldNume.dart';
+import 'package:botanicare/src/ui/Hortaliza/InputLargo.dart';
 
-class Cantidad extends StatelessWidget {
+class Otro extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;
-  const Cantidad({
+  const Otro({
     Key key,
     this.hintText,
     this.controller,
@@ -15,28 +15,25 @@ class Cantidad extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 8, horizontal: 0),
-      padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-      width: size.width * 0.4,
+      //margin: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      width: size.width * 0.9,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Cantidad',
+            'Otro',
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: kNegro,
               fontSize: size.width * 0.045,
             ),
           ),
-          InputFieldNume(
-            hintText: '0',
+          InputLargo(
+            hintText: 'Ingrese otra métrica',
           ),
         ],
       ),
     );
   }
 }
-
-/*
-*/

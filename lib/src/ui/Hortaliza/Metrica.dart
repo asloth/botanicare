@@ -15,7 +15,7 @@ class Metrica extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 0),
+      margin: EdgeInsets.symmetric(vertical: 8, horizontal: 0),
       padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       width: size.width * 0.4,
       child: Column(

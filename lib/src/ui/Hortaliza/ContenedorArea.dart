@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/Hortaliza/HeaderArea.dart';
 import 'package:botanicare/src/ui/Hortaliza/Cantidad.dart';
 import 'package:botanicare/src/ui/Hortaliza/Metrica.dart';
+import 'package:botanicare/src/ui/Hortaliza/Otro.dart';
 
 class ContenedorArea extends StatelessWidget {
   final TextEditingController cantidadController = TextEditingController();
@@ -14,7 +15,7 @@ class ContenedorArea extends StatelessWidget {
 
     return Container(
       width: 320,
-      height: 500,
+      height: 270,
       padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
@@ -35,6 +36,7 @@ class ContenedorArea extends StatelessWidget {
               Metrica(),
             ],
           ),
+          Otro(),
         ],
       ),
     );

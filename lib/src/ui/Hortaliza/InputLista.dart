@@ -22,7 +22,7 @@ class _ListaState extends State<InputLista> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Container(
-            margin: EdgeInsets.symmetric(vertical: 15, horizontal: 0),
+            margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
             padding: EdgeInsets.symmetric(horizontal: 15, vertical: 1),
             width: size.width * 0.3,
             decoration: BoxDecoration(
