@@ -1,8 +1,8 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 
-class BtnCalcularAmarillo extends StatelessWidget {
-  const BtnCalcularAmarillo({
+class BtnCancelar extends StatelessWidget {
+  const BtnCancelar({
     Key key,
   }) : super(key: key);
 
@@ -13,20 +13,25 @@ class BtnCalcularAmarillo extends StatelessWidget {
     return Container(
       width: 100,
       height: 40,
+      margin: EdgeInsets.symmetric(vertical: 40),
       padding: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
-        color: kAmarillo,
+        color: kBackgroundColor2,
         borderRadius: BorderRadius.all(
           Radius.circular(15),
+        ),
+        border: Border.all(
+          color: kVerde,
+          width: 1,
         ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            'Calcular',
+            'Cancelar',
             style: TextStyle(
-              color: Colors.white,
+              color: kVerde,
               fontSize: size.width * 0.04,
             ),
           ),

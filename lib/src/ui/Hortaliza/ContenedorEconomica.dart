@@ -1,10 +1,12 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/Hortaliza/HeaderEconomica.dart';
-import 'package:botanicare/src/ui/Hortaliza/FechaSiembra.dart';
-import 'package:botanicare/src/ui/Hortaliza/FechaTerreno.dart';
-import 'package:botanicare/src/ui/Hortaliza/FechaProbable.dart';
+import 'package:botanicare/src/ui/Hortaliza/PrecioVentaUni.dart';
 import 'package:botanicare/src/ui/Hortaliza/BtnCalcularAmarillo.dart';
+import 'package:botanicare/src/ui/Hortaliza/CostoConsu.dart';
+import 'package:botanicare/src/ui/Hortaliza/CostoVent.dart';
+import 'package:botanicare/src/ui/Hortaliza/Ahorro.dart';
+import 'package:botanicare/src/ui/Hortaliza/Ganancia.dart';
 
 class ContenedorEconomica extends StatelessWidget {
   @override
@@ -14,7 +16,7 @@ class ContenedorEconomica extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: 320,
-        height: 435,
+        height: 440,
         margin: EdgeInsets.symmetric(horizontal: 10),
         padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
         decoration: BoxDecoration(
@@ -30,10 +32,20 @@ class ContenedorEconomica extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             HeaderEconomica(),
-            FechaTerreno(),
-            FechaSiembra(),
+            PrecioVentaUni(),
             BtnCalcularAmarillo(),
-            FechaProbable(),
+            Row(
+              children: [
+                CostoConsu(),
+                CostoVent(),
+              ],
+            ),
+            Row(
+              children: [
+                Ahorro(),
+                Ganancia(),
+              ],
+            ),
           ],
         ),
       ),
