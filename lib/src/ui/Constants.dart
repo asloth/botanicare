@@ -10,6 +10,7 @@ const kModifyIconColor = Color(0xFF291C84);
 const kVerde = Color(0xFF66B821);
 const kGrey = Color(0xFFEEEBEB);
 const kNegro = Color(0xFF63675F);
+const kNaranja = Color(0xFFFF6724);
 
 //padding
 const double kDefaultPadding = 20.0;

@@ -1,11 +1,10 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
-import 'package:botanicare/src/ui/Hortaliza/HeaderArea.dart';
-import 'package:botanicare/src/ui/Hortaliza/Cantidad.dart';
-import 'package:botanicare/src/ui/Hortaliza/Metrica.dart';
-import 'package:botanicare/src/ui/Hortaliza/Otro.dart';
+import 'package:botanicare/src/ui/Hortaliza/HeaderCalendario.dart';
+import 'package:botanicare/src/ui/Hortaliza/FechaSiembra.dart';
+import 'package:botanicare/src/ui/Hortaliza/FechaTerreno.dart';
 
-class ContenedorArea extends StatelessWidget {
+class ContenedorCalendario extends StatelessWidget {
   final TextEditingController cantidadController = TextEditingController();
   final TextEditingController metricaController = TextEditingController();
   final TextEditingController otroController = TextEditingController();
@@ -16,7 +15,7 @@ class ContenedorArea extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: 320,
-        height: 270,
+        height: 400,
         margin: EdgeInsets.symmetric(horizontal: 10),
         padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
         decoration: BoxDecoration(
@@ -31,14 +30,9 @@ class ContenedorArea extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            HeaderArea(),
-            Row(
-              children: [
-                Cantidad(),
-                Metrica(),
-              ],
-            ),
-            Otro(),
+            HeaderCalendario(),
+            FechaTerreno(),
+            FechaSiembra(),
           ],
         ),
       ),
