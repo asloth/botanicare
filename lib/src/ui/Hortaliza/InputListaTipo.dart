@@ -1,14 +1,14 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 
-class InputLista extends StatefulWidget {
-  InputLista({Key key}) : super(key: key);
+class InputListaTipo extends StatefulWidget {
+  InputListaTipo({Key key}) : super(key: key);
 
   @override
   _ListaState createState() => _ListaState();
 }
 
-class _ListaState extends State<InputLista> {
+class _ListaState extends State<InputListaTipo> {
   final _formKey = GlobalKey<FormState>();
   String dropdownValue;
 
@@ -26,7 +26,7 @@ class _ListaState extends State<InputLista> {
             padding: EdgeInsets.symmetric(horizontal: 15, vertical: 1),
             width: size.width * 0.3,
             decoration: BoxDecoration(
-              color: kGrey,
+              color: kBackgroundColor2,
               borderRadius: BorderRadius.circular(16),
               border: Border.all(
                 color: Color(0xFFBDC1BB),
@@ -50,11 +50,14 @@ class _ListaState extends State<InputLista> {
                   color: kTextColor,
                 ),
                 items: <String>[
-                  'kg',
-                  'm',
-                  'Bolsa Grande',
-                  'Bolsa Pequeña',
-                  'Balde',
+                  'Hoja',
+                  'Vainas',
+                  'Tallos y peciolos',
+                  'Flores',
+                  'Frutos',
+                  'Bulbos',
+                  'Tubérculos',
+                  'Raíces',
                 ].map((String value) {
                   return new DropdownMenuItem<String>(
                     value: value,

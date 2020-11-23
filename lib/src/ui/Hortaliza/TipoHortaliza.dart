@@ -1,11 +1,11 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
-import 'package:botanicare/src/ui/Hortaliza/InputLargoBlanco.dart';
+import 'package:botanicare/src/ui/Hortaliza/InputListaTipo.dart';
 
-class Nombre extends StatelessWidget {
+class TipoHortaliza extends StatelessWidget {
   final String hintText;
   final TextEditingController controller;
-  const Nombre({
+  const TipoHortaliza({
     Key key,
     this.hintText,
     this.controller,
@@ -22,7 +22,7 @@ class Nombre extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Nombre de la Hortaliza',
+            'Tipo de Hortaliza',
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: kNegro,
@@ -30,9 +30,7 @@ class Nombre extends StatelessWidget {
             ),
           ),
           SizedBox(height: size.height * 0.01),
-          InputLargoBlanco(
-            hintText: 'Ingrese el nombre de su hortaliza',
-          ),
+          InputListaTipo(),
         ],
       ),
     );
