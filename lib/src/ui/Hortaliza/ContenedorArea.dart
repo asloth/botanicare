@@ -1,7 +1,7 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/Hortaliza/HeaderArea.dart';
-import 'package:botanicare/src/ui/Hortaliza/InputField.dart';
+import 'package:botanicare/src/ui/Hortaliza/Cantidad.dart';
 
 class ContenedorArea extends StatelessWidget {
   final TextEditingController cantidadController = TextEditingController();
@@ -28,6 +28,7 @@ class ContenedorArea extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           HeaderArea(),
+          Cantidad(),
         ],
       ),
     );

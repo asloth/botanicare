@@ -8,6 +8,8 @@ const kBackgroundColor = Color(0xFFEEEBEB);
 const kBackgroundColor2 = Color(0xFFFFFFFF);
 const kModifyIconColor = Color(0xFF291C84);
 const kVerde = Color(0xFF66B821);
+const kGrey = Color(0xFFEEEBEB);
+const kNegro = Color(0xFF63675F);
 
 //padding
 const double kDefaultPadding = 20.0;
