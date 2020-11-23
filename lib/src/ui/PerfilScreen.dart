@@ -25,7 +25,7 @@ class PerfilScreen extends StatelessWidget {
       child: SingleChildScrollView(
         child: BackBlanco(
           child: Container(
-            height: size.height * 3,
+            height: size.height * 5,
             padding: EdgeInsets.fromLTRB(
               kDefaultPadding * 0.9,
               10,

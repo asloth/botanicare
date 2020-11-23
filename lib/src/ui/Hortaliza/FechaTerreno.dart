@@ -30,7 +30,7 @@ class FechaTerreno extends StatelessWidget {
             ),
           ),
           InputLargo(
-            hintText: 'Fecha de preparación',
+            hintText: 'Ingresa la fecha',
           ),
         ],
       ),

@@ -1,10 +1,14 @@
 import 'package:botanicare/src/ui/Constants.dart';
+import 'package:botanicare/src/ui/Hortaliza/ProdConsumo.dart';
+import 'package:botanicare/src/ui/Hortaliza/ProdVenta.dart';
 import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/Hortaliza/HeaderProduccion.dart';
-import 'package:botanicare/src/ui/Hortaliza/FechaSiembra.dart';
-import 'package:botanicare/src/ui/Hortaliza/FechaTerreno.dart';
+import 'package:botanicare/src/ui/Hortaliza/FechaCosecha.dart';
+import 'package:botanicare/src/ui/Hortaliza/MetricaProd.dart';
 import 'package:botanicare/src/ui/Hortaliza/BtnCalcularCeleste.dart';
-import 'package:botanicare/src/ui/Hortaliza/FechaProbable.dart';
+import 'package:botanicare/src/ui/Hortaliza/TotalProd.dart';
+import 'package:botanicare/src/ui/Hortaliza/TotalConsu.dart';
+import 'package:botanicare/src/ui/Hortaliza/ListaActivi.dart';
 
 class ContenedorProduccion extends StatelessWidget {
   @override
@@ -14,7 +18,7 @@ class ContenedorProduccion extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: 320,
-        height: 435,
+        height: 821,
         margin: EdgeInsets.symmetric(horizontal: 10),
         padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
         decoration: BoxDecoration(
@@ -30,10 +34,18 @@ class ContenedorProduccion extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             HeaderProduccion(),
-            FechaTerreno(),
-            FechaSiembra(),
+            FechaCosecha(),
+            Row(
+              children: [
+                ProdConsumo(),
+                ProdVenta(),
+              ],
+            ),
+            MetricaProd(),
             BtnCalcularCeleste(),
-            FechaProbable(),
+            TotalProd(),
+            TotalConsu(),
+            ListaActivi(),
           ],
         ),
       ),

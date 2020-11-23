@@ -29,7 +29,7 @@ class FechaSiembra extends StatelessWidget {
             ),
           ),
           InputLargo(
-            hintText: 'Fecha de siembra',
+            hintText: 'Ingresa la fecha',
           ),
         ],
       ),
