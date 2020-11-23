@@ -1,9 +1,8 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
-import 'package:botanicare/src/ui/HomeScreen.dart';
 
-class BtnCalcular extends StatelessWidget {
-  const BtnCalcular({
+class BtnCalcularCeleste extends StatelessWidget {
+  const BtnCalcularCeleste({
     Key key,
   }) : super(key: key);
 
@@ -17,7 +16,7 @@ class BtnCalcular extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 10),
       padding: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
-        color: kNaranja,
+        color: kCeleste,
         borderRadius: BorderRadius.all(
           Radius.circular(15),
         ),

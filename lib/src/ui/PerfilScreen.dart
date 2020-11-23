@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:botanicare/src/ui/Constants.dart';
-import 'package:botanicare/src/ui/Hortaliza/ContenedorCalendario.dart';
+import 'package:botanicare/src/ui/Hortaliza/ContenedorEconomica.dart';
 import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/comon/BackBlanco.dart';
 import 'package:botanicare/src/ui/Hortaliza/Header.dart';
@@ -9,6 +9,8 @@ import 'package:botanicare/src/ui/Hortaliza/Nombre.dart';
 import 'package:botanicare/src/ui/Hortaliza/TipoHortaliza.dart';
 import 'package:botanicare/src/ui/Hortaliza/Apodo.dart';
 import 'package:botanicare/src/ui/Hortaliza/Epoca.dart';
+import 'package:botanicare/src/ui/Hortaliza/ContenedorCalendario.dart';
+import 'package:botanicare/src/ui/Hortaliza/ContenedorProduccion.dart';
 
 class PerfilScreen extends StatelessWidget {
   const PerfilScreen({
@@ -46,6 +48,10 @@ class PerfilScreen extends StatelessWidget {
                 ContenedorArea(),
                 SizedBox(height: size.height * 0.03),
                 ContenedorCalendario(),
+                SizedBox(height: size.height * 0.03),
+                ContenedorProduccion(),
+                SizedBox(height: size.height * 0.03),
+                ContenedorEconomica(),
               ],
             ),
           ),

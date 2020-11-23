@@ -11,6 +11,8 @@ const kVerde = Color(0xFF66B821);
 const kGrey = Color(0xFFEEEBEB);
 const kNegro = Color(0xFF63675F);
 const kNaranja = Color(0xFFFF6724);
+const kCeleste = Color(0xFF3BA8FC);
+const kAmarillo = Color(0xFFECC918);
 
 //padding
 const double kDefaultPadding = 20.0;

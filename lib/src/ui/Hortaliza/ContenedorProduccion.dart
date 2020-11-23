@@ -1,12 +1,12 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
-import 'package:botanicare/src/ui/Hortaliza/HeaderCalendario.dart';
+import 'package:botanicare/src/ui/Hortaliza/HeaderProduccion.dart';
 import 'package:botanicare/src/ui/Hortaliza/FechaSiembra.dart';
 import 'package:botanicare/src/ui/Hortaliza/FechaTerreno.dart';
-import 'package:botanicare/src/ui/Hortaliza/BtnCalcularNaranja.dart';
+import 'package:botanicare/src/ui/Hortaliza/BtnCalcularCeleste.dart';
 import 'package:botanicare/src/ui/Hortaliza/FechaProbable.dart';
 
-class ContenedorCalendario extends StatelessWidget {
+class ContenedorProduccion extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Size size = MediaQuery.of(context).size;
@@ -29,10 +29,10 @@ class ContenedorCalendario extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            HeaderCalendario(),
+            HeaderProduccion(),
             FechaTerreno(),
             FechaSiembra(),
-            BtnCalcularNaranja(),
+            BtnCalcularCeleste(),
             FechaProbable(),
           ],
         ),
