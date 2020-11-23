@@ -24,6 +24,7 @@ class BitacoraScreen extends StatelessWidget {
             ),
             //child: SingleChildScrollView(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 Text(
                   'Bitácora',

@@ -1,19 +1,19 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/Hortaliza/HeaderArea.dart';
+import 'package:botanicare/src/ui/Hortaliza/InputField.dart';
 
 class ContenedorArea extends StatelessWidget {
-  const ContenedorArea({
-    Key key,
-  }) : super(key: key);
-
+  final TextEditingController cantidadController = TextEditingController();
+  final TextEditingController metricaController = TextEditingController();
+  final TextEditingController otroController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     //Size size = MediaQuery.of(context).size;
 
     return Container(
       width: 320,
-      height: 200,
+      height: 500,
       padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
@@ -25,7 +25,7 @@ class ContenedorArea extends StatelessWidget {
         ],
       ),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           HeaderArea(),
         ],
@@ -33,3 +33,9 @@ class ContenedorArea extends StatelessWidget {
     );
   }
 }
+
+/*
+const ContenedorArea({
+    Key key,
+  }) : super(key: key);
+*/
