@@ -28,7 +28,7 @@ class WeatherWidget extends StatelessWidget {
             padding:
                 const EdgeInsets.symmetric(horizontal: kDefaultPadding / 2.5),
             child: Text(
-              'Lluvia pesada',
+              'Mayormente soleado',
               style: TextStyle(
                 fontSize: size.height * 0.03,
                 color: Colors.lightBlue,
@@ -42,7 +42,7 @@ class WeatherWidget extends StatelessWidget {
             child: Icon(Icons.ac_unit),
           ),
           Text(
-            '28° C',
+            '25° C',
             style: TextStyle(
               fontSize: size.height * 0.03,
               color: Colors.black,
