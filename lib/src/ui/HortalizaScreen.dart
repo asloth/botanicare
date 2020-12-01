@@ -19,31 +19,33 @@ class HortalizaScreen extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return SafeArea(
-      child: SingleChildScrollView(
-        child: BackBlanco(
-          child: Container(
-            height: size.height * 1.2,
-            padding: EdgeInsets.fromLTRB(
-              kDefaultPadding * 0.9,
-              10,
-              kDefaultPadding * 0.9,
-              kDefaultPadding * 0.9,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Header(),
-                SizedBox(height: size.height * 0.03),
-                Nombre(),
-                SizedBox(height: size.height * 0.02),
-                TipoHortaliza(),
-                SizedBox(height: size.height * 0.02),
-                Apodo(),
-                SizedBox(height: size.height * 0.02),
-                Epoca(),
-                SizedBox(height: size.height * 0.03),
-                ContenedorArea(),
-              ],
+      child: Scaffold(
+        body: SingleChildScrollView(
+          child: BackBlanco(
+            child: Container(
+              height: size.height * 1.2,
+              padding: EdgeInsets.fromLTRB(
+                kDefaultPadding * 0.9,
+                10,
+                kDefaultPadding * 0.9,
+                kDefaultPadding * 0.9,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Header(),
+                  SizedBox(height: size.height * 0.03),
+                  Nombre(),
+                  SizedBox(height: size.height * 0.02),
+                  TipoHortaliza(),
+                  SizedBox(height: size.height * 0.02),
+                  Apodo(),
+                  SizedBox(height: size.height * 0.02),
+                  Epoca(),
+                  SizedBox(height: size.height * 0.03),
+                  ContenedorArea(),
+                ],
+              ),
             ),
           ),
         ),

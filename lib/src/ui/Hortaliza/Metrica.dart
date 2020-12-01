@@ -17,7 +17,7 @@ class Metrica extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 8, horizontal: 0),
       padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      width: size.width * 0.4,
+      width: size.width * 0.35,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

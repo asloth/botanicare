@@ -30,7 +30,7 @@ class WeatherWidget extends StatelessWidget {
             child: Text(
               'Mayormente soleado',
               style: TextStyle(
-                fontSize: size.height * 0.02,
+                fontSize: size.height * 0.023,
                 color: Colors.lightBlue,
               ),
             ),

@@ -24,7 +24,7 @@ class EmptyGardenWidget extends StatelessWidget {
           Text(
             'Todavía no tienes plantas',
             style: TextStyle(
-              fontSize: size.height * 0.036,
+              fontSize: size.height * 0.03,
             ),
           ),
           Text(
