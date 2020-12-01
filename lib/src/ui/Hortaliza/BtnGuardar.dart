@@ -13,7 +13,7 @@ class BtnGuardar extends StatelessWidget {
     return Container(
       width: 100,
       height: 40,
-      margin: EdgeInsets.symmetric(vertical: 40),
+      margin: EdgeInsets.symmetric(vertical: 20),
       padding: EdgeInsets.all(10.0),
       decoration: BoxDecoration(
         color: kVerde,
@@ -29,7 +29,7 @@ class BtnGuardar extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Text(
-            'Cancelar',
+            'Guardar',
             style: TextStyle(
               color: Colors.white,
               fontSize: size.width * 0.04,

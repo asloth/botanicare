@@ -27,7 +27,7 @@ class Header extends StatelessWidget {
             'Añadir Hortaliza',
             style: TextStyle(
               color: Colors.black,
-              fontSize: size.width * 0.06,
+              fontSize: size.width * 0.05,
             ),
           )
         ],

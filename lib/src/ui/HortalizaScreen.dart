@@ -8,6 +8,9 @@ import 'package:botanicare/src/ui/Hortaliza/Nombre.dart';
 import 'package:botanicare/src/ui/Hortaliza/TipoHortaliza.dart';
 import 'package:botanicare/src/ui/Hortaliza/Apodo.dart';
 import 'package:botanicare/src/ui/Hortaliza/Epoca.dart';
+import 'package:botanicare/src/ui/Hortaliza/CrearHorta.dart';
+import 'package:botanicare/src/ui/Hortaliza/BtnGuardar.dart';
+import 'package:botanicare/src/ui/Hortaliza/BtnCancelar.dart';
 
 class HortalizaScreen extends StatelessWidget {
   const HortalizaScreen({
@@ -26,7 +29,7 @@ class HortalizaScreen extends StatelessWidget {
               height: size.height * 1.2,
               padding: EdgeInsets.fromLTRB(
                 kDefaultPadding * 0.9,
-                10,
+                20,
                 kDefaultPadding * 0.9,
                 kDefaultPadding * 0.9,
               ),
@@ -44,6 +47,15 @@ class HortalizaScreen extends StatelessWidget {
                   Epoca(),
                   SizedBox(height: size.height * 0.03),
                   ContenedorArea(),
+                  //SizedBox(height: size.height * 0.03),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      BtnCancelar(),
+                      SizedBox(width: size.width * 0.04),
+                      BtnGuardar(),
+                    ],
+                  ),
                 ],
               ),
             ),

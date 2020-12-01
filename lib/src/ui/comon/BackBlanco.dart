@@ -21,11 +21,11 @@ class BackBlanco extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             Positioned(
-              top: 1,
-              left: size.width - 420,
+              top: 10,
+              left: size.width - 410,
               child: SvgPicture.asset(
                 'assets/SuperiorBlanco.svg',
-                width: size.width + 5,
+                width: size.width + 8,
               ),
             ),
             child,
