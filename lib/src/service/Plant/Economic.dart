@@ -24,7 +24,7 @@ class RegisterEconomic {
         .catchError((error) => print("Error al añadir Economía : $error"));
   }
 
-  Future<void> updateProducction(
+  Future<void> updateEconomic(
       Double price,
       Double consumption,
       Double sale,

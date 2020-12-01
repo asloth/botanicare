@@ -16,10 +16,10 @@ class ModifyPlant {
       String metrics,
       String other,
       String type,
-      bool state) {
+      bool state,
+      String id) {
     return vegetable
-        .doc(
-            '1') //asi esta en el ejemplo pero cuando vas a la funcion te dice que es para ver si el documento esta vacio
+        .doc(id)
         .update({
           'name': name,
           'nick': nick,

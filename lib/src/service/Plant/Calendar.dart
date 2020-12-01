@@ -22,7 +22,7 @@ class RegisterCalendar {
         .catchError((error) => print("Error al añadir Calendar: $error"));
   }
 
-  Future<void> updateProducction(DateTime ground, DateTime sowing,
+  Future<void> updateCalendar(DateTime ground, DateTime sowing,
       DateTime harvest, int vegetable, String id) {
     return calendar
         .doc(id)
