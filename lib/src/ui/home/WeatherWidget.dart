@@ -42,7 +42,7 @@ class WeatherWidget extends StatelessWidget {
             child: Icon(Icons.ac_unit),
           ),
           Text(
-            '25° C',
+            '25°C',
             style: TextStyle(
               fontSize: size.height * 0.02,
               color: Colors.black,
