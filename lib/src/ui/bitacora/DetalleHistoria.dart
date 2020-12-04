@@ -32,7 +32,7 @@ class DetalleHistoria extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(5, 4, 5, 2),
+                  padding: const EdgeInsets.fromLTRB(5, 4, 8, 2),
                   /*symmetric(
                   horizontal: 5,
                   vertical: 10.0,
@@ -49,79 +49,15 @@ class DetalleHistoria extends StatelessWidget {
                         text: 'Hortaliza: ',
                         style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w400,
                           fontSize: size.height * 0.024,
                         ),
                       ),
                       TextSpan(
-                        text: nombHortaliza,
+                        text: 'Sophia', //nombHortaliza,
                         style: TextStyle(
                           color: kTextColor,
-                          fontSize: size.height * 0.024,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(5, 4, 5, 0),
-                  child: Icon(
-                    Icons.circle,
-                    size: 8,
-                  ),
-                ),
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: 'Actividad: ',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600,
-                          fontSize: size.height * 0.024,
-                        ),
-                      ),
-                      TextSpan(
-                        text: actividad,
-                        style: TextStyle(
-                          color: kTextColor,
-                          fontSize: size.height * 0.024,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(5, 4, 5, 0),
-                  child: Icon(
-                    Icons.circle,
-                    size: 8,
-                  ),
-                ),
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: 'Cantidad: ',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600,
-                          fontSize: size.height * 0.024,
-                        ),
-                      ),
-                      TextSpan(
-                        text: actividad,
-                        style: TextStyle(
-                          color: kTextColor,
-                          fontSize: size.height * 0.024,
+                          fontSize: size.height * 0.021,
                         ),
                       ),
                     ],

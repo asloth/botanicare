@@ -2,6 +2,7 @@ import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/comon/BackDescripcion.dart';
 import 'package:botanicare/src/ui/DescripcionHortaliza/Header.dart';
+import 'package:botanicare/src/ui/DescripcionHortaliza/DetalleCard.dart';
 
 class DescripcionScreen extends StatelessWidget {
   const DescripcionScreen({Key key}) : super(key: key);
@@ -26,6 +27,7 @@ class DescripcionScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Header(),
+                  DetalleCard(),
                 ],
               ),
             ),

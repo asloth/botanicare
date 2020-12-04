@@ -28,7 +28,7 @@ class HortalizaScreen extends StatelessWidget {
               height: size.height * 1.2,
               padding: EdgeInsets.fromLTRB(
                 kDefaultPadding * 0.9,
-                20,
+                10,
                 kDefaultPadding * 0.9,
                 kDefaultPadding * 0.9,
               ),

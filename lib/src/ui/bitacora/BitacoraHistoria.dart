@@ -23,7 +23,7 @@ class BitacoraHistoria extends StatelessWidget {
         horizontal: 10.0,
       ),
       height: size.height - 330,
-      padding: EdgeInsets.fromLTRB(25, 10, 25, 0),
+      padding: EdgeInsets.fromLTRB(25, 20, 25, 0),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         borderRadius: BorderRadius.all(
@@ -43,11 +43,12 @@ class BitacoraHistoria extends StatelessWidget {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: '$fecha\n',
+                        text: 'Martes - 01/11/2020',
+                        //text: '$fecha\n',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
-                          fontSize: size.height * 0.033,
+                          fontSize: size.height * 0.028,
                         ),
                       ),
                     ],
