@@ -13,9 +13,9 @@ class DetalleCard extends StatelessWidget {
 
     return Container(
       margin: EdgeInsets.symmetric(
-        vertical: 30.0,
+        vertical: 40.0,
+        horizontal: 6,
       ),
-      width: 320,
       padding: EdgeInsets.all(15.0),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
@@ -64,7 +64,7 @@ class DetalleCard extends StatelessWidget {
               ),
               FloatingActionButton(
                 child: Icon(Icons.edit),
-                elevation: 25.0,
+                elevation: 15.0,
                 backgroundColor: kVerde,
                 onPressed: () {},
               ),

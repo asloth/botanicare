@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/comon/BackDescripcion.dart';
 import 'package:botanicare/src/ui/DescripcionHortaliza/Header.dart';
 import 'package:botanicare/src/ui/DescripcionHortaliza/DetalleCard.dart';
-import 'package:botanicare/src/ui/bitacora/BitacoraHistoria.dart';
+import 'package:botanicare/src/ui/HortalizaScreen.dart';
+import 'package:botanicare/src/ui/DescripcionHortaliza/BitácoraScreen.dart';
 
 class DescripcionScreen extends StatelessWidget {
   const DescripcionScreen({Key key}) : super(key: key);
@@ -19,17 +20,29 @@ class DescripcionScreen extends StatelessWidget {
             child: Container(
               height: size.height,
               padding: EdgeInsets.fromLTRB(
-                kDefaultPadding * 1.43,
-                08,
+                kDefaultPadding * 1.48,
+                10,
                 kDefaultPadding * 1.43,
                 kDefaultPadding * 0.9,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: <Widget>[
+                children: [
                   Header(),
                   DetalleCard(),
-                  Row(
+                  BitacoraScreen(),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/* 
+Row(
                     children: [
                       Padding(
                         padding: const EdgeInsets.fromLTRB(2, 4, 150, 3),
@@ -51,12 +64,4 @@ class DescripcionScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                ],
-              ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
+*/
