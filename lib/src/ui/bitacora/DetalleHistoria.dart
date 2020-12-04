@@ -19,7 +19,7 @@ class DetalleHistoria extends StatelessWidget {
       margin: EdgeInsets.symmetric(
         horizontal: 10.0,
       ),
-      height: 90,
+      height: 110,
       padding: const EdgeInsets.fromLTRB(15, 8, 5, 10),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
@@ -32,37 +32,107 @@ class DetalleHistoria extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(5, 4, 8, 2),
-                  /*symmetric(
-                  horizontal: 5,
-                  vertical: 10.0,
-                ),*/
+                  padding: const EdgeInsets.fromLTRB(2, 4, 8, 2),
                   child: Icon(
                     Icons.circle,
                     size: 8,
                   ),
                 ),
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: 'Hortaliza: ',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w400,
-                          fontSize: size.height * 0.024,
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 4, 8, 3),
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Hortaliza: ',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                            fontSize: size.height * 0.024,
+                          ),
                         ),
-                      ),
-                      TextSpan(
-                        text: 'Sophia', //nombHortaliza,
-                        style: TextStyle(
-                          color: kTextColor,
-                          fontSize: size.height * 0.021,
+                        TextSpan(
+                          text: 'Sophia', //nombHortaliza,
+                          style: TextStyle(
+                            color: kTextColor,
+                            fontSize: size.height * 0.021,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 4, 8, 2),
+                  child: Icon(
+                    Icons.circle,
+                    size: 8,
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 4, 8, 3),
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Actividad: ',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                            fontSize: size.height * 0.024,
+                          ),
+                        ),
+                        TextSpan(
+                          text: 'Compost', //nombHortaliza,
+                          style: TextStyle(
+                            color: kTextColor,
+                            fontSize: size.height * 0.021,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 4, 8, 2),
+                  child: Icon(
+                    Icons.circle,
+                    size: 8,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 4, 8, 3),
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Cantidad: ',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                            fontSize: size.height * 0.024,
+                          ),
+                        ),
+                        TextSpan(
+                          text: '3 kg', //nombHortaliza,
+                          style: TextStyle(
+                            color: kVerde,
+                            fontWeight: FontWeight.w500,
+                            fontSize: size.height * 0.021,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                )
               ],
             ),
           ],

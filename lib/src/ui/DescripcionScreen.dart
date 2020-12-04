@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/comon/BackDescripcion.dart';
 import 'package:botanicare/src/ui/DescripcionHortaliza/Header.dart';
 import 'package:botanicare/src/ui/DescripcionHortaliza/DetalleCard.dart';
+import 'package:botanicare/src/ui/bitacora/BitacoraHistoria.dart';
 
 class DescripcionScreen extends StatelessWidget {
   const DescripcionScreen({Key key}) : super(key: key);
@@ -18,16 +19,38 @@ class DescripcionScreen extends StatelessWidget {
             child: Container(
               height: size.height,
               padding: EdgeInsets.fromLTRB(
-                kDefaultPadding * 0.9,
-                10,
-                kDefaultPadding * 0.9,
+                kDefaultPadding * 1.43,
+                08,
+                kDefaultPadding * 1.43,
                 kDefaultPadding * 0.9,
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
                   Header(),
                   DetalleCard(),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(2, 4, 150, 3),
+                        child: Text(
+                          'Bitácora',
+                          textAlign: TextAlign.left,
+                          style: TextStyle(
+                            color: kTextColor,
+                            fontSize: size.height * 0.04,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                      FloatingActionButton(
+                        child: Icon(Icons.add),
+                        elevation: 20.0,
+                        backgroundColor: kVerde,
+                        onPressed: () {},
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),

@@ -27,7 +27,7 @@ class Header extends StatelessWidget {
             'Descripción',
             style: TextStyle(
               color: Colors.black,
-              fontSize: size.width * 0.05,
+              fontSize: size.width * 0.06,
             ),
           )
         ],

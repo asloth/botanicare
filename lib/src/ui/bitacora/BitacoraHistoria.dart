@@ -39,21 +39,24 @@ class BitacoraHistoria extends StatelessWidget {
           children: [
             Row(
               children: [
-                RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: 'Martes - 01/11/2020',
-                        //text: '$fecha\n',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: size.height * 0.028,
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 0, 8, 10),
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Martes - 01/11/2020',
+                          //text: '$fecha\n',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: size.height * 0.028,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
+                )
               ],
             ),
             Divider(
