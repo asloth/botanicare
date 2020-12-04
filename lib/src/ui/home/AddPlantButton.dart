@@ -1,6 +1,6 @@
 import 'package:botanicare/src/ui/Constants.dart';
-import 'package:botanicare/src/ui/HortalizaScreen.dart';
 import 'package:flutter/material.dart';
+import 'package:botanicare/src/ui/HortalizaScreen.dart';
 
 class AddPlantWidget extends StatelessWidget {
   const AddPlantWidget({Key key}) : super(key: key);
@@ -11,6 +11,7 @@ class AddPlantWidget extends StatelessWidget {
 
     return RaisedButton(
       color: kPrimaryColor,
+      elevation: 15,
       onPressed: () {
         Navigator.push(
           context,

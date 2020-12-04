@@ -1,4 +1,4 @@
-import 'package:botanicare/src/ui/HomeScreen.dart';
+import 'package:botanicare/src/ui/HuertoScreen.dart';
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
@@ -11,9 +11,9 @@ class Header extends StatelessWidget {
     return FlatButton(
       color: Colors.white,
       onPressed: () {
-        Navigator.push(
+        Navigator.pop(
           context,
-          MaterialPageRoute(builder: (context) => HomeScreen()),
+          MaterialPageRoute(builder: (context) => HuertoScreen()),
         );
       },
       child: Row(
@@ -27,7 +27,7 @@ class Header extends StatelessWidget {
             'Descripción',
             style: TextStyle(
               color: Colors.black,
-              fontSize: size.width * 0.06,
+              fontSize: size.width * 0.05,
             ),
           )
         ],

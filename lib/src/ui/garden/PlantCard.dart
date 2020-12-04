@@ -1,6 +1,7 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:botanicare/src/ui/DescripcionScreen.dart';
 
 class PlantCard extends StatelessWidget {
   final String plantNickname, imgUrl, station, plantName, seedtime;
@@ -60,6 +61,19 @@ class PlantCard extends StatelessWidget {
                 ),
               ),
               Spacer(),
+              IconButton(
+                icon: Icon(
+                  Icons.info_outline,
+                  color: kPrimaryColor,
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DescripcionScreen()),
+                  );
+                },
+              ),
               IconButton(
                 icon: Icon(
                   Icons.favorite_border,
