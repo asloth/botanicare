@@ -23,7 +23,7 @@ class BitacoraHistoria extends StatelessWidget {
         horizontal: 10.0,
       ),
       height: size.height * 0.4,
-      padding: EdgeInsets.fromLTRB(25, 20, 25, 0),
+      padding: EdgeInsets.fromLTRB(25, 20, 20, 10),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         borderRadius: BorderRadius.all(
@@ -58,6 +58,7 @@ class BitacoraHistoria extends StatelessWidget {
               thickness: 1,
               height: 8,
             ),
+            DetalleHistoria(),
             DetalleHistoria(),
           ],
         ),

@@ -1,5 +1,6 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
+import 'package:botanicare/src/ui/HomeScreen.dart';
 
 class DetalleHistoria extends StatelessWidget {
   final String nombHortaliza, actividad, cantidad, metrica;
@@ -18,7 +19,7 @@ class DetalleHistoria extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(
         horizontal: 10.0,
-        vertical: 15,
+        vertical: 8,
       ),
       height: 85,
       padding: const EdgeInsets.fromLTRB(15, 2, 0, 10),
@@ -67,8 +68,16 @@ class DetalleHistoria extends StatelessWidget {
                   icon: Icon(
                     Icons.remove_circle_outline,
                     color: kPrimaryColor,
+                    size: 30,
                   ),
-                  onPressed: null,
+                  onPressed: () {
+                    Navigator.pop(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => HomeScreen(),
+                      ),
+                    );
+                  },
                 ),
               ],
             ),
@@ -82,7 +91,7 @@ class DetalleHistoria extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(2, 0, 8, 3),
+                  padding: const EdgeInsets.fromLTRB(2, 0, 15, 0),
                   child: RichText(
                     text: TextSpan(
                       children: [

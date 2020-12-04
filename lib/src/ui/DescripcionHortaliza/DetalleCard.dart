@@ -1,6 +1,7 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:botanicare/src/ui/HomeScreen.dart';
 
 class DetalleCard extends StatelessWidget {
   const DetalleCard({
@@ -66,7 +67,14 @@ class DetalleCard extends StatelessWidget {
                 child: Icon(Icons.edit),
                 elevation: 15.0,
                 backgroundColor: kVerde,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomeScreen(),
+                    ),
+                  );
+                },
               ),
             ],
           ),

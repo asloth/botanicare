@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/comon/BackDescripcion.dart';
 import 'package:botanicare/src/ui/DescripcionHortaliza/Header.dart';
 import 'package:botanicare/src/ui/DescripcionHortaliza/DetalleCard.dart';
-import 'package:botanicare/src/ui/HortalizaScreen.dart';
 import 'package:botanicare/src/ui/DescripcionHortaliza/BitácoraScreen.dart';
 
 class DescripcionScreen extends StatelessWidget {
