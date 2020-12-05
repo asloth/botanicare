@@ -14,27 +14,27 @@ class DescripcionScreen extends StatelessWidget {
 
     return SafeArea(
       child: Scaffold(
-        body: SingleChildScrollView(
-          child: BackDescripcion(
-            child: Container(
-              height: size.height,
-              padding: EdgeInsets.fromLTRB(
-                kDefaultPadding * 1.48,
-                10,
-                kDefaultPadding * 1.43,
-                kDefaultPadding * 0.9,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  Header(),
-                  DetalleCard(),
-                  BitacoraScreen(),
-                ],
-              ),
+        //body: SingleChildScrollView(
+        body: BackDescripcion(
+          child: Container(
+            height: size.height,
+            padding: EdgeInsets.fromLTRB(
+              kDefaultPadding * 1.48,
+              10,
+              kDefaultPadding * 1.43,
+              kDefaultPadding * 0.9,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Header(),
+                DetalleCard(),
+                BitacoraScreen(),
+              ],
             ),
           ),
         ),
+        //),
       ),
     );
   }

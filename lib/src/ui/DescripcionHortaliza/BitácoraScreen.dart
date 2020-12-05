@@ -9,7 +9,33 @@ class BitacoraScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return SafeArea(
+    return Container(
+      margin: EdgeInsets.symmetric(
+        horizontal: 10.0,
+      ),
+      height: size.height / 2,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            children: [
+              Text(
+                'Bitácora',
+                style: TextStyle(
+                  color: kTextColor,
+                  fontSize: size.height * 0.04,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              SizedBox(width: size.width * 0.35),
+            ],
+          ),
+          SizedBox(height: size.height * 0.035),
+          BitacoraHistoria(),
+        ],
+      ),
+    );
+    /*return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -30,6 +56,6 @@ class BitacoraScreen extends StatelessWidget {
           BitacoraHistoria(),
         ],
       ),
-    );
+    );*/
   }
 }
