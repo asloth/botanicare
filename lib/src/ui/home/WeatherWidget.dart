@@ -60,6 +60,7 @@ class WeatherWidget extends StatelessWidget {
             child: Icon(Icons.ac_unit),
           ),
           Text(
+            //city.weathers.length.toString(),
             '18°C',
             //weather.theTemp.toString(),
             //'21',
