@@ -26,7 +26,7 @@ class PrecioVentaUni extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: kNegro,
-              fontSize: size.width * 0.045,
+              fontSize: size.width * 0.04,
             ),
           ),
           InputLargoNume(

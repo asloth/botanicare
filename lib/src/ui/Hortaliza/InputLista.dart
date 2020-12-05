@@ -25,6 +25,7 @@ class InputLista extends StatelessWidget {
             margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
             padding: EdgeInsets.symmetric(horizontal: 10, vertical: 1),
             width: size.width * 0.3,
+            height: size.height * 0.06,
             decoration: BoxDecoration(
               color: kGrey,
               borderRadius: BorderRadius.circular(16),

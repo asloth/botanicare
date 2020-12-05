@@ -15,8 +15,8 @@ class ProdVenta extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 10),
-      width: size.width * 0.35,
+      padding: EdgeInsets.fromLTRB(20, 5, 15, 20),
+      width: size.width * 0.4,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -25,7 +25,7 @@ class ProdVenta extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: kNegro,
-              fontSize: size.width * 0.045,
+              fontSize: size.width * 0.04,
             ),
           ),
           InputFieldNume(

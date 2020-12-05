@@ -28,7 +28,7 @@ class ModificarHortalizaScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: BackBlanco(
             child: Container(
-              height: size.height * 3.4,
+              height: size.height * 3.6,
               padding: EdgeInsets.fromLTRB(
                 kDefaultPadding * 0.9,
                 10,
@@ -40,7 +40,6 @@ class ModificarHortalizaScreen extends StatelessWidget {
                   Header(),
                   SizedBox(height: size.height * 0.03),
                   Nombre(),
-                  SizedBox(height: size.height * 0.02),
                   //TipoHortaliza(),
                   SizedBox(height: size.height * 0.02),
                   Apodo(),

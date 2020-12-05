@@ -23,7 +23,7 @@ class ContenedorArea extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: 320,
-        height: 270,
+        height: 260,
         margin: EdgeInsets.symmetric(horizontal: 10),
         padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
         decoration: BoxDecoration(
