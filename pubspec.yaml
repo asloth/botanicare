@@ -40,12 +40,16 @@ dependencies:
   shared_preferences: ^0.5.8
 
 dev_dependencies:
+  flutter_launcher_icons: ^0.7.4
   flutter_test:
     sdk: flutter
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
-
+flutter_icons:
+  image_path: 'assets/Icono_App.png'
+  android: true
+  ios: true
 # The following section is specific to Flutter.
 flutter:
   # The following line ensures that the Material Icons font is
