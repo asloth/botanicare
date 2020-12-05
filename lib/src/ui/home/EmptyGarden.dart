@@ -170,6 +170,55 @@ class EmptyGardenWidget extends StatelessWidget {
                 ],
               ),
             ),
+            Container(
+              margin: EdgeInsets.symmetric(
+                horizontal: 05.0,
+              ),
+              width: size.width * 0.4,
+              height: size.height * 0.35,
+              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+              decoration: BoxDecoration(
+                color: kGrey,
+                border: Border.all(color: Colors.grey),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(15),
+                ),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Container(
+                    child: SvgPicture.asset(
+                      'assets/Planta.svg',
+                      width: size.width * 0.3,
+                    ),
+                  ),
+                  Divider(
+                    color: Colors.grey,
+                    thickness: 1,
+                    height: 8,
+                  ),
+                  SizedBox(height: size.height * 0.01),
+                  Text(
+                    'Buenas Tardes',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: kTextColor,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 16,
+                    ),
+                  ),
+                  Text(
+                    'Todo el año',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: kTextColor,
+                      fontSize: 12,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

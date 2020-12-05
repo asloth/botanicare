@@ -4,6 +4,7 @@ import 'package:botanicare/src/ui/Constants.dart';
 import 'package:botanicare/src/ui/login_signup/InputField.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:botanicare/src/ui/LogIn.dart';
 
 class SignUpForm extends StatefulWidget {
   SignUpForm({Key key}) : super(key: key);
@@ -21,6 +22,36 @@ class _SignUpFormState extends State<SignUpForm> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
+    Future<void> _showMyDialog() async {
+      return showDialog<void>(
+        context: context,
+        barrierDismissible: false, // user must tap button!
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Registro exitoso'),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  Text('Felicidades por Registrarte!'),
+                ],
+              ),
+            ),
+            actions: <Widget>[
+              TextButton(
+                child: Text('Gracias'),
+                onPressed: () {
+                  Navigator.pop(
+                    context,
+                    MaterialPageRoute(builder: (context) => LogIn()),
+                  );
+                },
+              ),
+            ],
+          );
+        },
+      );
+    }
 
     return Form(
       key: _formKey,
@@ -98,6 +129,7 @@ class _SignUpFormState extends State<SignUpForm> {
                       email: newEmailController.text.trim(),
                       password: newPasswordController.text.trim(),
                     );
+                _showMyDialog();
               }
               // if (flag == 'Signed up') {
               //   Navigator.of(context).pushNamed('/main');
