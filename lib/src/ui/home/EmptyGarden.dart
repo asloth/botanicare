@@ -11,7 +11,7 @@ class EmptyGardenWidget extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      padding: EdgeInsets.fromLTRB(15, 25, 20, 25),
+      padding: EdgeInsets.fromLTRB(15, 25, 20, 20),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         borderRadius: BorderRadius.all(
@@ -25,11 +25,11 @@ class EmptyGardenWidget extends StatelessWidget {
           children: [
             Container(
               margin: EdgeInsets.symmetric(
-                horizontal: 10.0,
+                horizontal: 05.0,
               ),
-              width: size.width * 0.4,
-              height: size.height * 0.3,
-              padding: EdgeInsets.fromLTRB(25, 0, 25, 10),
+              width: size.width * 0.42,
+              height: size.height * 0.31,
+              padding: EdgeInsets.fromLTRB(25, 0, 25, 5),
               decoration: BoxDecoration(
                 color: kGrey,
                 border: Border.all(color: Colors.grey),
@@ -38,7 +38,7 @@ class EmptyGardenWidget extends StatelessWidget {
                 ),
               ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     child: SvgPicture.asset(
@@ -75,9 +75,9 @@ class EmptyGardenWidget extends StatelessWidget {
               margin: EdgeInsets.symmetric(
                 horizontal: 10.0,
               ),
-              width: size.width * 0.4,
-              height: size.height * 0.3,
-              padding: EdgeInsets.fromLTRB(25, 0, 25, 10),
+              width: size.width * 0.42,
+              height: size.height * 0.31,
+              padding: EdgeInsets.fromLTRB(25, 0, 25, 5),
               decoration: BoxDecoration(
                 color: kGrey,
                 border: Border.all(color: Colors.grey),
@@ -86,7 +86,7 @@ class EmptyGardenWidget extends StatelessWidget {
                 ),
               ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     child: SvgPicture.asset(
@@ -123,9 +123,9 @@ class EmptyGardenWidget extends StatelessWidget {
               margin: EdgeInsets.symmetric(
                 horizontal: 10.0,
               ),
-              width: size.width * 0.4,
-              height: size.height * 0.3,
-              padding: EdgeInsets.fromLTRB(25, 0, 25, 10),
+              width: size.width * 0.42,
+              height: size.height * 0.31,
+              padding: EdgeInsets.fromLTRB(25, 0, 25, 5),
               decoration: BoxDecoration(
                 color: kGrey,
                 border: Border.all(color: Colors.grey),
@@ -134,7 +134,7 @@ class EmptyGardenWidget extends StatelessWidget {
                 ),
               ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
                     child: SvgPicture.asset(

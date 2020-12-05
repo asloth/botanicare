@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment
-              .spaceEvenly, //Esta linea aun se quitar[a en el futuro pero por el momento se ha dejado
+              .spaceEvenly, //Esta linea aun se quitara en el futuro pero por el momento se ha dejado
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
