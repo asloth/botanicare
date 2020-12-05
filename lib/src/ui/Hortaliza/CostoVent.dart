@@ -17,7 +17,7 @@ class CostoVent extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20),
       padding: EdgeInsets.symmetric(horizontal: 10),
-      width: size.width * 0.4,
+      width: size.width * 0.35,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

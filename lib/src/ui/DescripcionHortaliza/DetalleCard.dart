@@ -2,6 +2,7 @@ import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:botanicare/src/ui/HomeScreen.dart';
+import 'package:botanicare/src/ui/ModificarHortalizaScreen.dart';
 
 class DetalleCard extends StatelessWidget {
   const DetalleCard({
@@ -68,10 +69,10 @@ class DetalleCard extends StatelessWidget {
                 elevation: 15.0,
                 backgroundColor: kVerde,
                 onPressed: () {
-                  Navigator.pop(
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => HomeScreen(),
+                      builder: (context) => ModificarHortalizaScreen(),
                     ),
                   );
                 },
