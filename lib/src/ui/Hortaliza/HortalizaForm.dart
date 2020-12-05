@@ -24,25 +24,25 @@ class _HortalizaFormState extends State<HortalizaForm> {
   final TextEditingController metrics = TextEditingController();
   final TextEditingController other = TextEditingController();
   int dropdownValue;
-  int selectedSeason;
+  String selectedSeason;
   final TextEditingController cantidad = TextEditingController();
 
-  List<DropdownMenuItem<int>> seasonsList = [];
+  List<DropdownMenuItem<String>> seasonsList = [];
   List<DropdownMenuItem<int>> typeList = [];
 
   void loadSeasonsList() {
     seasonsList = [];
     seasonsList.add(new DropdownMenuItem(
       child: new Text('Primavera - Verano'),
-      value: 1,
+      value: 'Primavera - Verano',
     ));
     seasonsList.add(new DropdownMenuItem(
       child: new Text('Otoño - Invierno'),
-      value: 2,
+      value: 'Otoño - Invierno',
     ));
     seasonsList.add(new DropdownMenuItem(
       child: new Text('Todo el año'),
-      value: 3,
+      value: 'Todo el año',
     ));
   }
 
@@ -106,6 +106,7 @@ class _HortalizaFormState extends State<HortalizaForm> {
               TextButton(
                 child: Text('Gracias'),
                 onPressed: () {
+                  Navigator.of(context).pop();
                   Navigator.of(context).pop();
                 },
               ),
@@ -218,14 +219,14 @@ class _HortalizaFormState extends State<HortalizaForm> {
                     ),
                   ),
                   child: DropdownButtonHideUnderline(
-                    child: DropdownButton<int>(
+                    child: DropdownButton<String>(
                       icon: Icon(
                         Icons.arrow_drop_down,
                         color: Color(0xFFBDC1BB),
                       ),
                       value: selectedSeason,
                       isExpanded: true,
-                      hint: dropdownValue != null
+                      hint: selectedSeason != null
                           ? null
                           : Text(
                               'Selecciona',

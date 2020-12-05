@@ -1,10 +1,12 @@
+import 'package:botanicare/src/service/Plant/RegisterPlant.dart';
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:botanicare/src/ui/DescripcionScreen.dart';
+import 'package:provider/provider.dart';
 
 class PlantCard extends StatelessWidget {
-  final String plantNickname, imgUrl, station, plantName, seedtime;
+  final String plantNickname, imgUrl, station, plantName, seedtime, uid;
   const PlantCard({
     Key key,
     this.imgUrl,
@@ -12,11 +14,40 @@ class PlantCard extends StatelessWidget {
     @required this.station,
     @required this.plantName,
     @required this.seedtime,
+    @required this.uid,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
+    Future<void> _showMyDialog() async {
+      return showDialog<void>(
+        context: context,
+        barrierDismissible: false, // user must tap button!
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Eliminacion exitosa'),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  Text(
+                      'Sentimos que hayas perdido una planta. Mejor suerte a la proxima!'),
+                ],
+              ),
+            ),
+            actions: <Widget>[
+              TextButton(
+                child: Text('Gracias'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        },
+      );
+    }
 
     return Container(
       margin: EdgeInsets.symmetric(
@@ -85,7 +116,12 @@ class PlantCard extends StatelessWidget {
                   Icons.remove_circle_outline,
                   color: kPrimaryColor,
                 ),
-                onPressed: null,
+                onPressed: () {
+                  context.read<Plant>().deletePlant(
+                        id: uid,
+                      );
+                  _showMyDialog();
+                },
               ),
             ],
           ),
