@@ -22,7 +22,6 @@ class PlantCard extends StatelessWidget {
       margin: EdgeInsets.symmetric(
         horizontal: 10.0,
       ),
-      height: 160,
       padding: EdgeInsets.fromLTRB(20, 5, 10, 10),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
@@ -141,7 +140,7 @@ class PlantCard extends StatelessWidget {
                 text: TextSpan(
                   children: [
                     TextSpan(
-                      text: 'Fecha de siembra: ',
+                      text: 'Cantidad ',
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w600,

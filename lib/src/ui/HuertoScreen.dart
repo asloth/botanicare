@@ -46,16 +46,22 @@ class HuertoScreen extends StatelessWidget {
                       );
                     }
                     List<DocumentSnapshot> docs = snapshot.data.docs;
-                    return ListView.builder(
-                      itemBuilder: (context, index) {
-                        Map<String, dynamic> data = docs[index].data();
-                        return PlantCard(
-                          plantNickname: data['nick'],
-                          plantName: data['name'],
-                          seedtime: data['quantity'],
-                          station: data['sowingtime'],
-                        );
-                      },
+                    return SizedBox(
+                      height: 700.0,
+                      child: ListView.builder(
+                        itemCount: docs.length,
+                        scrollDirection: Axis.vertical,
+                        shrinkWrap: true,
+                        itemBuilder: (context, index) {
+                          Map<String, dynamic> data = docs[index].data();
+                          return new PlantCard(
+                            plantNickname: data['nick'],
+                            plantName: data['name'],
+                            seedtime: data['quantity'],
+                            station: data['sowingtime'],
+                          );
+                        },
+                      ),
                     );
                   },
                 ),
