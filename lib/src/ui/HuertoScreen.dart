@@ -57,6 +57,8 @@ class HuertoScreen extends StatelessWidget {
                         itemBuilder: (context, index) {
                           Map<String, dynamic> data = docs[index].data();
                           return new PlantCard(
+                            type: data['vegetabletype'].toString(),
+                            cant: data['quantity'].toString(),
                             uid: docs[index].id,
                             plantNickname: data['nick'],
                             plantName: data['name'],

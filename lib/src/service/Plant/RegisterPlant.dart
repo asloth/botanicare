@@ -17,7 +17,7 @@ class Plant {
       String sowingtime,
       String metrics,
       String other,
-      int type}) async {
+      String type}) async {
     try {
       await vegetable
           .add({
