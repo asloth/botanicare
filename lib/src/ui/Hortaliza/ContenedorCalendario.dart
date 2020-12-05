@@ -1,4 +1,6 @@
 import 'package:botanicare/src/ui/Constants.dart';
+import 'package:botanicare/src/ui/Hortaliza/InputLargoNaranja.dart';
+import 'package:botanicare/src/ui/HuertoScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/Hortaliza/HeaderCalendario.dart';
 import 'package:botanicare/src/ui/Hortaliza/FechaSiembra.dart';
@@ -7,9 +9,10 @@ import 'package:botanicare/src/ui/Hortaliza/BtnCalcularNaranja.dart';
 import 'package:botanicare/src/ui/Hortaliza/FechaProbable.dart';
 
 class ContenedorCalendario extends StatelessWidget {
+  TextEditingController controllernaraja = TextEditingController();
   @override
   Widget build(BuildContext context) {
-    //Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
 
     return SingleChildScrollView(
       child: Container(
@@ -45,11 +48,50 @@ class ContenedorCalendario extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  BtnCalcularNaranja(),
+                  RaisedButton(
+                    color: kNaranja,
+                    elevation: 15,
+                    onPressed: () {
+                      controllernaraja =
+                          TextEditingController(text: '10/12/2020');
+                    },
+                    child: Row(
+                      children: [
+                        Text(
+                          'Calcular',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: size.width * 0.04,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
-            FechaProbable(),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 15),
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              width: size.width * 0.9,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Fecha Probable de Cosecha',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: kNaranja,
+                      fontSize: size.width * 0.04,
+                    ),
+                  ),
+                  InputLargoNaranja(
+                    controller: controllernaraja,
+                    hintText: '',
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),

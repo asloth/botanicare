@@ -37,6 +37,36 @@ class Plant {
     }
   }
 
+  Future<void> updateplant({
+    String id,
+    String name,
+    String nick,
+    String quantity,
+    String sowingtime,
+    String metrics,
+    String other,
+    String type,
+  }) async {
+    try {
+      await vegetable
+          .doc(id)
+          .update({
+            'name': name,
+            'nick': nick,
+            'quantity': quantity,
+            'metrics': metrics,
+            'sowingtime': sowingtime,
+            'other': other,
+            'state': true,
+            'vegetabletype': type, //acá no estoy segura
+          })
+          .then((value) => print("Actualización exitosa"))
+          .catchError((error) => print("Error al actualizar: $error"));
+    } on FirebaseException catch (e) {
+      print(e.message);
+    }
+  }
+
   Future<void> deletePlant({String id}) async {
     try {
       await vegetable

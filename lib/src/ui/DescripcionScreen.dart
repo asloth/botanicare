@@ -12,11 +12,13 @@ class DescripcionScreen extends StatelessWidget {
   final String season;
   final String cant;
   final String name;
+  final String id;
 
   const DescripcionScreen({
     Key key,
     this.nick,
     this.name,
+    this.id,
     this.season,
     this.type,
     this.cant,
@@ -30,6 +32,7 @@ class DescripcionScreen extends StatelessWidget {
       child: Scaffold(
         //body: SingleChildScrollView(
         body: BackDescripcion(
+          id: id,
           child: Container(
             height: size.height,
             padding: EdgeInsets.fromLTRB(
