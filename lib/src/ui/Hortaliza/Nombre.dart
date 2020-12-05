@@ -31,7 +31,8 @@ class Nombre extends StatelessWidget {
           ),
           SizedBox(height: size.height * 0.01),
           InputLargoBlanco(
-            hintText: 'Ingrese el nombre de su hortaliza',
+            controller: controller,
+            hintText: hintText,
           ),
         ],
       ),

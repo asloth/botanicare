@@ -31,6 +31,7 @@ class Otro extends StatelessWidget {
           ),
           InputLargo(
             hintText: 'Ingrese otra métrica',
+            controller: controller,
           ),
         ],
       ),

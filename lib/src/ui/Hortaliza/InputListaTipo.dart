@@ -2,16 +2,19 @@ import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 
 class InputListaTipo extends StatefulWidget {
-  InputListaTipo({Key key}) : super(key: key);
+  InputListaTipo({
+    Key key,
+    this.typeList,
+  }) : super(key: key);
 
+  final List<DropdownMenuItem<int>> typeList;
   @override
   _ListaState createState() => _ListaState();
 }
 
 class _ListaState extends State<InputListaTipo> {
   final _formKey = GlobalKey<FormState>();
-  String dropdownValue;
-
+  int dropdownValue;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -34,7 +37,7 @@ class _ListaState extends State<InputListaTipo> {
               ),
             ),
             child: DropdownButtonHideUnderline(
-              child: DropdownButton<String>(
+              child: DropdownButton(
                 icon: Icon(
                   Icons.arrow_drop_down,
                   color: Color(0xFFBDC1BB),
@@ -49,22 +52,8 @@ class _ListaState extends State<InputListaTipo> {
                 style: TextStyle(
                   color: kTextColor,
                 ),
-                items: <String>[
-                  'Hoja',
-                  'Vainas',
-                  'Tallos y peciolos',
-                  'Flores',
-                  'Frutos',
-                  'Bulbos',
-                  'Tubérculos',
-                  'Raíces',
-                ].map((String value) {
-                  return new DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
-                onChanged: (String newValue) {
+                items: widget.typeList,
+                onChanged: (newValue) {
                   setState(() {
                     dropdownValue = newValue;
                   });

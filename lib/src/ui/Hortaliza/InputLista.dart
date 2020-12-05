@@ -1,17 +1,17 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 
-class InputLista extends StatefulWidget {
-  InputLista({Key key}) : super(key: key);
+class InputLista extends StatelessWidget {
+  final String hintText;
+  final TextEditingController controller;
 
-  @override
-  _ListaState createState() => _ListaState();
-}
+  InputLista({
+    Key key,
+    this.hintText,
+    this.controller,
+  }) : super(key: key);
 
-class _ListaState extends State<InputLista> {
   final _formKey = GlobalKey<FormState>();
-  String dropdownValue;
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -33,39 +33,18 @@ class _ListaState extends State<InputLista> {
                 width: 1,
               ),
             ),
-            child: DropdownButtonHideUnderline(
-              child: DropdownButton<String>(
-                icon: Icon(
-                  Icons.arrow_drop_down,
-                  color: Color(0xFFBDC1BB),
-                ),
-                value: dropdownValue,
-                isExpanded: true,
-                hint: dropdownValue != null
-                    ? null
-                    : Text(
-                        'Selecciona',
-                      ),
-                style: TextStyle(
-                  color: kTextColor,
-                ),
-                items: <String>[
-                  'kg',
-                  'm',
-                  'Bolsa Grande',
-                  'Bolsa Pequeña',
-                  'Balde',
-                ].map((String value) {
-                  return new DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
-                onChanged: (String newValue) {
-                  setState(() {
-                    dropdownValue = newValue;
-                  });
-                },
+            child: TextFormField(
+              controller: controller,
+              cursorColor: kPrimaryColor,
+              validator: (value) {
+                if (value.isEmpty) {
+                  return 'Complete los campos';
+                }
+                return null;
+              },
+              decoration: InputDecoration(
+                hintText: hintText,
+                border: InputBorder.none,
               ),
             ),
           ),
