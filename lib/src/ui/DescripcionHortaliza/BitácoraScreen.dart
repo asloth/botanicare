@@ -1,6 +1,7 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:botanicare/src/ui/DescripcionHortaliza/BitácoraHistoria.dart';
+import 'package:botanicare/src/ui/HuertoScreen.dart';
 
 class BitacoraScreen extends StatelessWidget {
   const BitacoraScreen({Key key}) : super(key: key);
@@ -27,10 +28,23 @@ class BitacoraScreen extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              SizedBox(width: size.width * 0.35),
+              SizedBox(width: size.width * 0.4),
+              IconButton(
+                icon: Icon(
+                  Icons.add_circle,
+                  color: kVerde,
+                  size: 50,
+                ),
+                onPressed: () {
+                  Navigator.pop(
+                    context,
+                    MaterialPageRoute(builder: (context) => HuertoScreen()),
+                  );
+                },
+              ),
             ],
           ),
-          SizedBox(height: size.height * 0.035),
+          SizedBox(height: size.height * 0.03),
           BitacoraHistoria(),
         ],
       ),
