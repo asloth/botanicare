@@ -46,6 +46,23 @@ class BackDescripcion extends StatelessWidget {
               },
             ),
           ),
+          Positioned(
+            top: 265,
+            left: size.width - 110,
+            child: FloatingActionButton(
+              child: Icon(Icons.add),
+              elevation: 15.0,
+              backgroundColor: kVerde,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ModificarHortalizaScreen(),
+                  ),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );
