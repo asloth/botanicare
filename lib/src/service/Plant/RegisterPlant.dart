@@ -19,7 +19,7 @@ class RegisterPlant {
           'metrics': metrics,
           'other': other,
           'state': true,
-          'VEGETABLETYPE': type, //acá no estoy segura
+          'VEGETABLETYPE': type,
         })
         .then((value) => print("Planta añadida"))
         .catchError((error) => print("Error al añadir planta: $error"));
