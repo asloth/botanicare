@@ -14,7 +14,7 @@ class Plant {
       {String name,
       String nick,
       String quantity,
-      int sowingtime,
+      String sowingtime,
       String metrics,
       String other,
       int type}) async {
@@ -25,7 +25,7 @@ class Plant {
             'nick': nick,
             'quantity': quantity,
             'metrics': metrics,
-            'sowingtime': metrics,
+            'sowingtime': sowingtime,
             'other': other,
             'state': true,
             'vegetabletype': type, //acá no estoy segura
@@ -33,6 +33,18 @@ class Plant {
           .then((value) => print("Planta añadida"))
           .catchError((error) => print("Error al añadir planta: $error"));
     } on FirebaseException catch (e) {
+      print(e.message);
+    }
+  }
+
+  Future<void> deletePlant({String id}) async {
+    try {
+      await vegetable
+          .doc(id)
+          .delete()
+          .then((value) => print("Planta eliminada"))
+          .catchError((error) => print("Error al eliminar planta: $error"));
+    } catch (e) {
       print(e.message);
     }
   }

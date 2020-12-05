@@ -7,12 +7,4 @@ class DeletePlant {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
   CollectionReference vegetable =
       FirebaseFirestore.instance.collection('vegetable');
-
-  Future<void> deletePlant(String id) {
-    return vegetable
-        .doc(id)
-        .delete()
-        .then((value) => print("Planta eliminada"))
-        .catchError((error) => print("Error al eliminar planta: $error"));
-  }
 }

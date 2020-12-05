@@ -48,13 +48,16 @@ class HuertoScreen extends StatelessWidget {
                     List<DocumentSnapshot> docs = snapshot.data.docs;
                     return SizedBox(
                       height: 700.0,
-                      child: ListView.builder(
+                      child: ListView.separated(
+                        separatorBuilder: (context, index) =>
+                            SizedBox(height: size.height * 0.03),
                         itemCount: docs.length,
                         scrollDirection: Axis.vertical,
                         shrinkWrap: true,
                         itemBuilder: (context, index) {
                           Map<String, dynamic> data = docs[index].data();
                           return new PlantCard(
+                            uid: docs[index].id,
                             plantNickname: data['nick'],
                             plantName: data['name'],
                             seedtime: data['quantity'],
