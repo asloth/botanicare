@@ -6,14 +6,23 @@ import 'package:botanicare/src/ui/DescripcionScreen.dart';
 import 'package:provider/provider.dart';
 
 class PlantCard extends StatelessWidget {
-  final String plantNickname, imgUrl, station, plantName, seedtime, uid;
+  final String plantNickname,
+      imgUrl,
+      station,
+      plantName,
+      seedtime,
+      uid,
+      type,
+      cant;
   const PlantCard({
     Key key,
     this.imgUrl,
     @required this.plantNickname,
     @required this.station,
+    @required this.cant,
     @required this.plantName,
     @required this.seedtime,
+    @required this.type,
     @required this.uid,
   }) : super(key: key);
 
@@ -100,17 +109,23 @@ class PlantCard extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => DescripcionScreen()),
+                        builder: (context) => DescripcionScreen(
+                              cant: cant,
+                              name: plantName,
+                              nick: plantNickname,
+                              season: station,
+                              type: type,
+                            )),
                   );
                 },
               ),
-              IconButton(
-                icon: Icon(
-                  Icons.favorite_border,
-                  color: kPrimaryColor,
-                ),
-                onPressed: null,
-              ),
+              // IconButton(
+              //   icon: Icon(
+              //     Icons.favorite_border,
+              //     color: kPrimaryColor,
+              //   ),
+              //   onPressed: null,
+              // ),
               IconButton(
                 icon: Icon(
                   Icons.remove_circle_outline,

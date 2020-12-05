@@ -1,3 +1,5 @@
+import 'dart:typed_data';
+
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -5,8 +7,19 @@ import 'package:botanicare/src/ui/HomeScreen.dart';
 import 'package:botanicare/src/ui/ModificarHortalizaScreen.dart';
 
 class DetalleCard extends StatelessWidget {
+  final String nick;
+  final String type;
+  final String season;
+  final String cant;
+  final String name;
+
   const DetalleCard({
     Key key,
+    this.nick,
+    this.name,
+    this.season,
+    this.type,
+    this.cant,
   }) : super(key: key);
 
   @override
@@ -51,7 +64,7 @@ class DetalleCard extends StatelessWidget {
                         ),
                       ),
                       TextSpan(
-                        text: 'Sophia', //nombHortaliza,
+                        text: nick, //nombHortaliza,
                         style: TextStyle(
                           color: kTextColor,
                           fontSize: size.height * 0.02,
@@ -86,7 +99,7 @@ class DetalleCard extends StatelessWidget {
                         ),
                       ),
                       TextSpan(
-                        text: 'Frutos', //nombHortaliza,
+                        text: type, //nombHortaliza,
                         style: TextStyle(
                           color: kTextColor,
                           fontSize: size.height * 0.02,
@@ -121,7 +134,7 @@ class DetalleCard extends StatelessWidget {
                         ),
                       ),
                       TextSpan(
-                        text: 'Primavera - Verano', //nombHortaliza,
+                        text: season, //nombHortaliza,
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: size.height * 0.02,
@@ -148,7 +161,7 @@ class DetalleCard extends StatelessWidget {
                   text: TextSpan(
                     children: [
                       TextSpan(
-                        text: 'Área de siembra: ',
+                        text: 'Cantidad: ',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w500,
@@ -156,7 +169,7 @@ class DetalleCard extends StatelessWidget {
                         ),
                       ),
                       TextSpan(
-                        text: '2m', //nombHortaliza,
+                        text: cant, //nombHortaliza,
                         style: TextStyle(
                           color: Colors.black,
                           fontSize: size.height * 0.02,

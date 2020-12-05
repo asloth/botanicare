@@ -23,12 +23,12 @@ class _HortalizaFormState extends State<HortalizaForm> {
   final TextEditingController nick = TextEditingController();
   final TextEditingController metrics = TextEditingController();
   final TextEditingController other = TextEditingController();
-  int dropdownValue;
+  String dropdownValue;
   String selectedSeason;
   final TextEditingController cantidad = TextEditingController();
 
   List<DropdownMenuItem<String>> seasonsList = [];
-  List<DropdownMenuItem<int>> typeList = [];
+  List<DropdownMenuItem<String>> typeList = [];
 
   void loadSeasonsList() {
     seasonsList = [];
@@ -50,35 +50,35 @@ class _HortalizaFormState extends State<HortalizaForm> {
     typeList = [];
     typeList.add(new DropdownMenuItem(
       child: new Text('Hoja'),
-      value: 1,
+      value: 'Hoja',
     ));
     typeList.add(new DropdownMenuItem(
       child: new Text('Vainas'),
-      value: 2,
+      value: 'Vainas',
     ));
     typeList.add(new DropdownMenuItem(
       child: new Text('Tallos y peciolos'),
-      value: 3,
+      value: 'Tallos y peciolos',
     ));
     typeList.add(new DropdownMenuItem(
       child: new Text('Flores'),
-      value: 4,
+      value: 'Flores',
     ));
     typeList.add(new DropdownMenuItem(
       child: new Text('Frutos'),
-      value: 5,
+      value: 'Frutos',
     ));
     typeList.add(new DropdownMenuItem(
       child: new Text('Bulbos'),
-      value: 6,
+      value: 'Bulbos',
     ));
     typeList.add(new DropdownMenuItem(
       child: new Text('Tuberculos'),
-      value: 7,
+      value: 'Tuberculos',
     ));
     typeList.add(new DropdownMenuItem(
       child: new Text('Raices'),
-      value: 8,
+      value: 'Raices',
     ));
   }
 
