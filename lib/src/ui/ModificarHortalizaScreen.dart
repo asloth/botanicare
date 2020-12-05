@@ -6,13 +6,9 @@ import 'package:botanicare/src/ui/comon/BackBlanco.dart';
 import 'package:botanicare/src/ui/Hortaliza/HeaderModificar.dart';
 import 'package:botanicare/src/ui/Hortaliza/ContenedorArea.dart';
 import 'package:botanicare/src/ui/Hortaliza/Nombre.dart';
-import 'package:botanicare/src/ui/Hortaliza/TipoHortaliza.dart';
 import 'package:botanicare/src/ui/Hortaliza/Apodo.dart';
 import 'package:botanicare/src/ui/Hortaliza/Epoca.dart';
 import 'package:botanicare/src/ui/Hortaliza/ContenedorCalendario.dart';
-import 'package:botanicare/src/ui/Hortaliza/ContenedorProduccion.dart';
-import 'package:botanicare/src/ui/Hortaliza/BtnCancelar.dart';
-import 'package:botanicare/src/ui/Hortaliza/BtnGuardar.dart';
 
 class ModificarHortalizaScreen extends StatelessWidget {
   const ModificarHortalizaScreen({
@@ -28,7 +24,7 @@ class ModificarHortalizaScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: BackBlanco(
             child: Container(
-              height: size.height * 3.6,
+              height: size.height * 2.2,
               padding: EdgeInsets.fromLTRB(
                 kDefaultPadding * 0.9,
                 10,
@@ -50,8 +46,8 @@ class ModificarHortalizaScreen extends StatelessWidget {
                   SizedBox(height: size.height * 0.05),
                   ContenedorCalendario(),
                   SizedBox(height: size.height * 0.05),
-                  ContenedorProduccion(),
-                  SizedBox(height: size.height * 0.05),
+                  /*ContenedorProduccion(),
+                  SizedBox(height: size.height * 0.05),*/
                   ContenedorEconomica(),
                   SizedBox(height: size.height * 0.05),
                   Row(

@@ -16,7 +16,7 @@ class Ganancia extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
-      width: size.width * 0.4,
+      width: size.width * 0.35,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

@@ -22,7 +22,7 @@ class BackDescripcion extends StatelessWidget {
         children: <Widget>[
           Positioned(
             top: 2,
-            right: size.width - 380,
+            right: size.width - 435,
             child: SvgPicture.asset(
               'assets/DescripciónHortaliza.svg',
               width: size.width + 20,
