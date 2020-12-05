@@ -30,6 +30,13 @@ class ModificarHortalizaScreen extends StatefulWidget {
 class _ModificarHortalizaScreenState extends State<ModificarHortalizaScreen> {
   Map<String, dynamic> docc;
   final _formKey = GlobalKey<FormState>();
+  TextEditingController name;
+  TextEditingController nick;
+  TextEditingController metrics = TextEditingController(text: '-');
+  TextEditingController other;
+  String dropdownValue;
+  TextEditingController cantidad;
+  String selectedSeason;
 
   Future<void> getData(String id) async {
     await FirebaseFirestore.instance
@@ -38,9 +45,15 @@ class _ModificarHortalizaScreenState extends State<ModificarHortalizaScreen> {
         .get()
         .then((DocumentSnapshot documentSnapshot) {
       if (documentSnapshot.exists) {
-        print(documentSnapshot.data());
         this.docc = documentSnapshot.data();
-        print(docc);
+        setState(() {
+          name = TextEditingController(text: docc['name']);
+          nick = TextEditingController(text: docc['nick']);
+          other = TextEditingController(text: docc['other']);
+          dropdownValue = docc['vegetabletype'];
+          selectedSeason = docc['sowingtime'];
+          cantidad = TextEditingController(text: docc['quantity']);
+        });
       }
     });
   }
@@ -102,18 +115,37 @@ class _ModificarHortalizaScreenState extends State<ModificarHortalizaScreen> {
 
   @override
   Widget build(BuildContext context) {
-    getData(widget.id);
     loadTypeList();
     loadSeasonsList();
     Size size = MediaQuery.of(context).size;
-    TextEditingController name = TextEditingController(text: docc['name']);
-    TextEditingController nick = TextEditingController(text: docc['nick']);
-    TextEditingController metrics = TextEditingController(text: '-');
-    TextEditingController other = TextEditingController(text: docc['other']);
-    String dropdownValue = docc['vegetabletype'];
-    String selectedSeason = docc['sowingtime'];
-    TextEditingController cantidad =
-        TextEditingController(text: docc['quantity']);
+    getData(widget.id);
+
+    Future<void> _showMyDialog() async {
+      return showDialog<void>(
+        context: context,
+        barrierDismissible: false, // user must tap button!
+        builder: (BuildContext context) {
+          return AlertDialog(
+            title: Text('Actualizacion exitosa'),
+            content: SingleChildScrollView(
+              child: ListBody(
+                children: <Widget>[
+                  Text('Felicidades por tu planta!'),
+                ],
+              ),
+            ),
+            actions: <Widget>[
+              TextButton(
+                child: Text('Gracias'),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
+          );
+        },
+      );
+    }
 
     return SafeArea(
       child: Scaffold(
@@ -308,6 +340,7 @@ class _ModificarHortalizaScreenState extends State<ModificarHortalizaScreen> {
                                   sowingtime: selectedSeason,
                                   type: dropdownValue,
                                 );
+                            _showMyDialog();
                           },
                           child: Row(
                             children: [

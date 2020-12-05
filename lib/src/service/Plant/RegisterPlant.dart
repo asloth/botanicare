@@ -54,7 +54,7 @@ class Plant {
             'name': name,
             'nick': nick,
             'quantity': quantity,
-            'metrics': metrics,
+            'metrics': '-',
             'sowingtime': sowingtime,
             'other': other,
             'state': true,
