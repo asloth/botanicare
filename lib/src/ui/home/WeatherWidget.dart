@@ -23,8 +23,8 @@ class WeatherWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     setCity();
-    final bloc = DetailCityBloc();
-    bloc.addCity(city);
+    //final bloc = DetailCityBloc();
+    //bloc.addCity(city);
     Size size = MediaQuery.of(context).size;
     return Container(
       height: size.height * 0.085,
