@@ -16,18 +16,16 @@ class DetalleHistoria extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      margin: EdgeInsets.symmetric(
-        horizontal: 0.0,
-      ),
-      height: 100,
-      padding: const EdgeInsets.fromLTRB(15, 8, 5, 10),
+      margin: EdgeInsets.fromLTRB(0, 15, 0, 0),
+      height: 95,
+      padding: const EdgeInsets.fromLTRB(15, 8, 5, 8),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         border: Border.all(color: Colors.grey),
       ),
       child: SingleChildScrollView(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Row(
               children: [
@@ -39,7 +37,7 @@ class DetalleHistoria extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(2, 4, 8, 3),
+                  padding: const EdgeInsets.fromLTRB(2, 4, 8, 2),
                   child: RichText(
                     text: TextSpan(
                       children: [
@@ -48,14 +46,14 @@ class DetalleHistoria extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w500,
-                            fontSize: size.height * 0.024,
+                            fontSize: size.height * 0.02,
                           ),
                         ),
                         TextSpan(
                           text: 'Sophia', //nombHortaliza,
                           style: TextStyle(
                             color: kTextColor,
-                            fontSize: size.height * 0.021,
+                            fontSize: size.height * 0.02,
                           ),
                         ),
                       ],
@@ -74,7 +72,7 @@ class DetalleHistoria extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(2, 4, 8, 3),
+                  padding: const EdgeInsets.fromLTRB(2, 4, 8, 2),
                   child: RichText(
                     text: TextSpan(
                       children: [
@@ -83,14 +81,14 @@ class DetalleHistoria extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w500,
-                            fontSize: size.height * 0.024,
+                            fontSize: size.height * 0.02,
                           ),
                         ),
                         TextSpan(
                           text: 'Compost', //nombHortaliza,
                           style: TextStyle(
                             color: kTextColor,
-                            fontSize: size.height * 0.021,
+                            fontSize: size.height * 0.02,
                           ),
                         ),
                       ],
@@ -109,7 +107,7 @@ class DetalleHistoria extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(2, 4, 8, 3),
+                  padding: const EdgeInsets.fromLTRB(2, 4, 8, 2),
                   child: RichText(
                     text: TextSpan(
                       children: [
@@ -118,7 +116,7 @@ class DetalleHistoria extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.w500,
-                            fontSize: size.height * 0.024,
+                            fontSize: size.height * 0.02,
                           ),
                         ),
                         TextSpan(
@@ -126,7 +124,7 @@ class DetalleHistoria extends StatelessWidget {
                           style: TextStyle(
                             color: kVerde,
                             fontWeight: FontWeight.w500,
-                            fontSize: size.height * 0.021,
+                            fontSize: size.height * 0.02,
                           ),
                         ),
                       ],

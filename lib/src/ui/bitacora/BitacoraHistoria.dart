@@ -23,7 +23,7 @@ class BitacoraHistoria extends StatelessWidget {
         horizontal: 10.0,
       ),
       height: size.height - 330,
-      padding: EdgeInsets.fromLTRB(25, 20, 25, 0),
+      padding: EdgeInsets.fromLTRB(25, 0, 25, 25),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         borderRadius: BorderRadius.all(
@@ -40,12 +40,12 @@ class BitacoraHistoria extends StatelessWidget {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(2, 0, 8, 10),
+                  padding: const EdgeInsets.fromLTRB(2, 20, 8, 5),
                   child: RichText(
                     text: TextSpan(
                       children: [
                         TextSpan(
-                          text: 'Martes - 01/11/2020',
+                          text: 'Viernes - 04/12/2020',
                           //text: '$fecha\n',
                           style: TextStyle(
                             color: Colors.black,
@@ -64,8 +64,39 @@ class BitacoraHistoria extends StatelessWidget {
               thickness: 1,
               height: 8,
             ),
-            SizedBox(height: size.height * 0.02),
-            DetalleHistoria()
+            DetalleHistoria(),
+            DetalleHistoria(),
+            DetalleHistoria(),
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(2, 20, 8, 5),
+                  child: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Martes - 01/12/2020',
+                          //text: '$fecha\n',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: size.height * 0.028,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
+            Divider(
+              color: Colors.grey,
+              thickness: 1,
+              height: 8,
+            ),
+            DetalleHistoria(),
+            DetalleHistoria(),
+            DetalleHistoria(),
           ],
         ),
       ),
