@@ -18,7 +18,6 @@ class DetalleHistoria extends StatelessWidget {
 
     return Container(
       margin: EdgeInsets.symmetric(
-        horizontal: 10.0,
         vertical: 8,
       ),
       height: 85,

@@ -19,8 +19,8 @@ class BitacoraHistoria extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      height: size.height * 0.4,
-      padding: EdgeInsets.fromLTRB(25, 20, 20, 10),
+      height: size.height * 0.45,
+      padding: EdgeInsets.fromLTRB(20, 20, 20, 10),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         borderRadius: BorderRadius.all(

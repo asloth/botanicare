@@ -22,7 +22,7 @@ class BackDescripcion extends StatelessWidget {
         children: <Widget>[
           Positioned(
             top: 2,
-            left: size.width - 410,
+            right: size.width - 380,
             child: SvgPicture.asset(
               'assets/DescripciónHortaliza.svg',
               width: size.width + 20,
@@ -30,8 +30,8 @@ class BackDescripcion extends StatelessWidget {
           ),
           child,
           Positioned(
-            top: 112,
-            left: size.width - 110,
+            top: 108,
+            left: size.width - 100,
             child: FloatingActionButton(
               child: Icon(Icons.edit),
               elevation: 15.0,
@@ -46,6 +46,7 @@ class BackDescripcion extends StatelessWidget {
               },
             ),
           ),
+          /*
           Positioned(
             top: 265,
             left: size.width - 110,
@@ -54,7 +55,7 @@ class BackDescripcion extends StatelessWidget {
               elevation: 15.0,
               backgroundColor: kVerde,
               onPressed: () {
-                Navigator.push(
+                Navigator.pop(
                   context,
                   MaterialPageRoute(
                     builder: (context) => ModificarHortalizaScreen(),
@@ -62,7 +63,7 @@ class BackDescripcion extends StatelessWidget {
                 );
               },
             ),
-          ),
+          ),*/
         ],
       ),
     );

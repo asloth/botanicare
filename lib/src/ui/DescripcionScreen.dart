@@ -20,9 +20,9 @@ class DescripcionScreen extends StatelessWidget {
           child: Container(
             height: size.height,
             padding: EdgeInsets.fromLTRB(
-              kDefaultPadding * 1.48,
+              kDefaultPadding * 0.9,
               10,
-              kDefaultPadding * 1.43,
+              kDefaultPadding * 0.9,
               kDefaultPadding * 0.9,
             ),
             child: Column(

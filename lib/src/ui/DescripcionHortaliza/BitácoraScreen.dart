@@ -13,9 +13,9 @@ class BitacoraScreen extends StatelessWidget {
       margin: EdgeInsets.symmetric(
         horizontal: 10.0,
       ),
-      height: size.height / 2,
+      height: size.height / 1.8,
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Row(
             children: [

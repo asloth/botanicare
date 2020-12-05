@@ -14,7 +14,7 @@ class DetalleCard extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      margin: EdgeInsets.fromLTRB(6, 40, 6, 20),
+      margin: EdgeInsets.fromLTRB(6, 40, 6, 30),
       padding: EdgeInsets.all(15.0),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
