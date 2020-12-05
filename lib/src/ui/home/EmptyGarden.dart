@@ -21,16 +21,17 @@ class EmptyGardenWidget extends StatelessWidget {
             'assets/flower-pot.svg',
             height: size.height * 0.2,
           ),
+          SizedBox(height: size.height * 0.03),
           Text(
             'Todavía no tienes plantas',
             style: TextStyle(
-              fontSize: size.height * 0.03,
+              fontSize: size.height * 0.025,
             ),
           ),
           Text(
             'Agrega tu planta ahora',
             style: TextStyle(
-              fontSize: size.height * 0.034,
+              fontSize: size.height * 0.025,
             ),
           ),
         ],
