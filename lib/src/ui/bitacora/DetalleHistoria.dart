@@ -17,9 +17,9 @@ class DetalleHistoria extends StatelessWidget {
 
     return Container(
       margin: EdgeInsets.symmetric(
-        horizontal: 10.0,
+        horizontal: 0.0,
       ),
-      height: 110,
+      height: 100,
       padding: const EdgeInsets.fromLTRB(15, 8, 5, 10),
       decoration: BoxDecoration(
         color: kBackgroundColor2,

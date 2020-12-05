@@ -31,7 +31,7 @@ class Cerrar extends StatelessWidget {
               'Cerrar Sesión',
               style: TextStyle(
                 color: Color(0xFFFF6724),
-                fontSize: 20,
+                fontSize: 18,
               ),
             ),
             onPressed: () {

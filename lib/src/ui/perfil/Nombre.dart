@@ -19,7 +19,7 @@ class Nombre extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               color: kTextColor,
-              fontSize: 29,
+              fontSize: 21,
             ),
           ),
         ],
