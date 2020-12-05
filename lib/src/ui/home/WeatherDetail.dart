@@ -60,7 +60,7 @@ class WeatherDetailWidget extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text: "13km/h",
+                  text: "14km/h",
                   style: Theme.of(context).textTheme.button.copyWith(
                         fontSize: size.width * 0.03,
                       ),
@@ -83,7 +83,7 @@ class WeatherDetailWidget extends StatelessWidget {
                   ),
                 ),
                 TextSpan(
-                  text: "88%",
+                  text: "86%",
                   style: Theme.of(context).textTheme.button.copyWith(
                         fontSize: size.width * 0.03,
                       ),
