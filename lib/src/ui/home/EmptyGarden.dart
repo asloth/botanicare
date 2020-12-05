@@ -11,7 +11,7 @@ class EmptyGardenWidget extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      padding: EdgeInsets.fromLTRB(15, 25, 20, 20),
+      padding: EdgeInsets.fromLTRB(15, 20, 20, 20),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         borderRadius: BorderRadius.all(
@@ -21,15 +21,15 @@ class EmptyGardenWidget extends StatelessWidget {
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
               margin: EdgeInsets.symmetric(
                 horizontal: 05.0,
               ),
-              width: size.width * 0.42,
-              height: size.height * 0.31,
-              padding: EdgeInsets.fromLTRB(25, 0, 25, 5),
+              width: size.width * 0.4,
+              height: size.height * 0.35,
+              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
               decoration: BoxDecoration(
                 color: kGrey,
                 border: Border.all(color: Colors.grey),
@@ -43,6 +43,7 @@ class EmptyGardenWidget extends StatelessWidget {
                   Container(
                     child: SvgPicture.asset(
                       'assets/Planta.svg',
+                      width: size.width * 0.3,
                     ),
                   ),
                   Divider(
@@ -57,7 +58,7 @@ class EmptyGardenWidget extends StatelessWidget {
                     style: TextStyle(
                       color: kTextColor,
                       fontWeight: FontWeight.w600,
-                      fontSize: 18,
+                      fontSize: 16,
                     ),
                   ),
                   Text(
@@ -65,7 +66,7 @@ class EmptyGardenWidget extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: kTextColor,
-                      fontSize: 13,
+                      fontSize: 12,
                     ),
                   ),
                 ],
@@ -73,11 +74,11 @@ class EmptyGardenWidget extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.symmetric(
-                horizontal: 10.0,
+                horizontal: 05.0,
               ),
-              width: size.width * 0.42,
-              height: size.height * 0.31,
-              padding: EdgeInsets.fromLTRB(25, 0, 25, 5),
+              width: size.width * 0.4,
+              height: size.height * 0.35,
+              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
               decoration: BoxDecoration(
                 color: kGrey,
                 border: Border.all(color: Colors.grey),
@@ -91,6 +92,7 @@ class EmptyGardenWidget extends StatelessWidget {
                   Container(
                     child: SvgPicture.asset(
                       'assets/Planta.svg',
+                      width: size.width * 0.3,
                     ),
                   ),
                   Divider(
@@ -105,7 +107,7 @@ class EmptyGardenWidget extends StatelessWidget {
                     style: TextStyle(
                       color: kTextColor,
                       fontWeight: FontWeight.w600,
-                      fontSize: 18,
+                      fontSize: 16,
                     ),
                   ),
                   Text(
@@ -113,7 +115,7 @@ class EmptyGardenWidget extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: kTextColor,
-                      fontSize: 13,
+                      fontSize: 12,
                     ),
                   ),
                 ],
@@ -121,11 +123,11 @@ class EmptyGardenWidget extends StatelessWidget {
             ),
             Container(
               margin: EdgeInsets.symmetric(
-                horizontal: 10.0,
+                horizontal: 05.0,
               ),
-              width: size.width * 0.42,
-              height: size.height * 0.31,
-              padding: EdgeInsets.fromLTRB(25, 0, 25, 5),
+              width: size.width * 0.4,
+              height: size.height * 0.35,
+              padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
               decoration: BoxDecoration(
                 color: kGrey,
                 border: Border.all(color: Colors.grey),
@@ -139,6 +141,7 @@ class EmptyGardenWidget extends StatelessWidget {
                   Container(
                     child: SvgPicture.asset(
                       'assets/Planta.svg',
+                      width: size.width * 0.3,
                     ),
                   ),
                   Divider(
@@ -148,20 +151,20 @@ class EmptyGardenWidget extends StatelessWidget {
                   ),
                   SizedBox(height: size.height * 0.01),
                   Text(
-                    'Mi Violet',
+                    'Petunia',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: kTextColor,
                       fontWeight: FontWeight.w600,
-                      fontSize: 18,
+                      fontSize: 16,
                     ),
                   ),
                   Text(
-                    'Otoño - Invierno',
+                    'Otono - Inivierno',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: kTextColor,
-                      fontSize: 13,
+                      fontSize: 12,
                     ),
                   ),
                 ],
