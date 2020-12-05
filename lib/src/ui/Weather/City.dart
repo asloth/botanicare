@@ -73,7 +73,7 @@ class _CityState extends State<City> {
                                 color: kPrimaryColor,
                               ),
                               onPressed: () {
-                                bloc.addCity(city);
+                                //bloc.addCity(city);
                               },
                             ),
                           );
