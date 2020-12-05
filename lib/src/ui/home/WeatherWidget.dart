@@ -61,7 +61,7 @@ class WeatherWidget extends StatelessWidget {
           ),
           Text(
             '18°C',
-            // weather.theTemp.toString(),
+            //weather.theTemp.toString(),
             //'21',
             style: TextStyle(
               fontSize: size.height * 0.02,
