@@ -22,8 +22,8 @@ class PlantCard extends StatelessWidget {
       margin: EdgeInsets.symmetric(
         horizontal: 10.0,
       ),
-      height: 200,
-      padding: EdgeInsets.all(15.0),
+      height: 160,
+      padding: EdgeInsets.fromLTRB(20, 5, 10, 10),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         borderRadius: BorderRadius.all(
@@ -46,7 +46,7 @@ class PlantCard extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontSize: size.height * 0.033,
+                        fontSize: size.height * 0.03,
                       ),
                     ),
                     TextSpan(
@@ -54,7 +54,7 @@ class PlantCard extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.grey,
                         fontWeight: FontWeight.bold,
-                        fontSize: size.height * 0.023,
+                        fontSize: size.height * 0.02,
                       ),
                     ),
                   ],
@@ -114,14 +114,14 @@ class PlantCard extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w600,
-                        fontSize: size.height * 0.024,
+                        fontSize: size.height * 0.02,
                       ),
                     ),
                     TextSpan(
                       text: plantName,
                       style: TextStyle(
                         color: kTextColor,
-                        fontSize: size.height * 0.024,
+                        fontSize: size.height * 0.02,
                       ),
                     )
                   ],
@@ -132,10 +132,7 @@ class PlantCard extends StatelessWidget {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 5,
-                  vertical: 2.0,
-                ),
+                padding: const EdgeInsets.fromLTRB(5, 2, 5, 2),
                 child: SvgPicture.asset(
                   'assets/icons/blue-calendar.svg',
                 ),
@@ -148,14 +145,14 @@ class PlantCard extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w600,
-                        fontSize: size.height * 0.024,
+                        fontSize: size.height * 0.02,
                       ),
                     ),
                     TextSpan(
                       text: seedtime,
                       style: TextStyle(
                         color: kTextColor,
-                        fontSize: size.height * 0.024,
+                        fontSize: size.height * 0.02,
                       ),
                     )
                   ],

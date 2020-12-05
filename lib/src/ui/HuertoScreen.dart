@@ -29,7 +29,7 @@ class HuertoScreen extends StatelessWidget {
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     color: kTextColor,
-                    fontSize: size.height * 0.05,
+                    fontSize: size.height * 0.042,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
