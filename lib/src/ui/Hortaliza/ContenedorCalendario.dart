@@ -14,9 +14,9 @@ class ContenedorCalendario extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: 320,
-        height: 410,
+        height: 430,
         margin: EdgeInsets.symmetric(horizontal: 10),
-        padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
+        padding: EdgeInsets.fromLTRB(0, 0, 0, 5),
         decoration: BoxDecoration(
           color: kBackgroundColor2,
           borderRadius: BorderRadius.all(
@@ -32,7 +32,23 @@ class ContenedorCalendario extends StatelessWidget {
             HeaderCalendario(),
             FechaTerreno(),
             FechaSiembra(),
-            BtnCalcularNaranja(),
+            Container(
+              width: 100,
+              height: 48,
+              margin: EdgeInsets.symmetric(vertical: 10),
+              decoration: BoxDecoration(
+                color: kNaranja,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  BtnCalcularNaranja(),
+                ],
+              ),
+            ),
             FechaProbable(),
           ],
         ),

@@ -1,5 +1,6 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
+import 'package:botanicare/src/ui/HuertoScreen.dart';
 
 class BtnCalcularAmarillo extends StatelessWidget {
   const BtnCalcularAmarillo({
@@ -10,7 +11,32 @@ class BtnCalcularAmarillo extends StatelessWidget {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
 
-    return Container(
+    return RaisedButton(
+      color: kAmarillo,
+      elevation: 15,
+      onPressed: () {
+        Navigator.pop(
+          context,
+          MaterialPageRoute(builder: (context) => HuertoScreen()),
+        );
+      },
+      child: Row(
+        children: [
+          Text(
+            'Calcular',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: size.width * 0.04,
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+/* 
+Container(
       width: 100,
       height: 40,
       padding: EdgeInsets.all(10.0),
@@ -33,10 +59,8 @@ class BtnCalcularAmarillo extends StatelessWidget {
         ],
       ),
     );
-  }
-}
 
-/* 
+
 child: FlatButton(
         color: Colors.white,
         onPressed: () {

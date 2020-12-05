@@ -17,7 +17,7 @@ class ContenedorEconomica extends StatelessWidget {
       child: Container(
         width: 320,
         height: 460,
-        margin: EdgeInsets.symmetric(horizontal: 10),
+        margin: EdgeInsets.symmetric(horizontal: 8),
         padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
         decoration: BoxDecoration(
           color: kBackgroundColor2,
@@ -33,7 +33,23 @@ class ContenedorEconomica extends StatelessWidget {
           children: [
             HeaderEconomica(),
             PrecioVentaUni(),
-            BtnCalcularAmarillo(),
+            Container(
+              width: 100,
+              height: 48,
+              margin: EdgeInsets.symmetric(vertical: 10),
+              decoration: BoxDecoration(
+                color: kAmarillo,
+                borderRadius: BorderRadius.all(
+                  Radius.circular(10),
+                ),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  BtnCalcularAmarillo(),
+                ],
+              ),
+            ),
             Row(
               children: [
                 CostoConsu(),
@@ -52,3 +68,5 @@ class ContenedorEconomica extends StatelessWidget {
     );
   }
 }
+
+//
