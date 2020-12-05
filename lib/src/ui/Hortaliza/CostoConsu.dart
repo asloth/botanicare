@@ -16,7 +16,7 @@ class CostoConsu extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.symmetric(vertical: 20),
-      padding: EdgeInsets.symmetric(horizontal: 20),
+      padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
       width: size.width * 0.4,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

@@ -16,7 +16,7 @@ class ContenedorEconomica extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: 320,
-        height: 440,
+        height: 460,
         margin: EdgeInsets.symmetric(horizontal: 10),
         padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
         decoration: BoxDecoration(
