@@ -5,9 +5,11 @@ import 'package:botanicare/src/ui/ModificarHortalizaScreen.dart';
 
 class BackDescripcion extends StatelessWidget {
   final Widget child;
+  final String id;
   const BackDescripcion({
     Key key,
     @required this.child,
+    @required this.id,
   }) : super(key: key);
 
   @override
@@ -40,7 +42,9 @@ class BackDescripcion extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ModificarHortalizaScreen(),
+                    builder: (context) => ModificarHortalizaScreen(
+                      id: id,
+                    ),
                   ),
                 );
               },

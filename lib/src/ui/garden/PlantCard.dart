@@ -115,6 +115,7 @@ class PlantCard extends StatelessWidget {
                               nick: plantNickname,
                               season: station,
                               type: type,
+                              id: uid,
                             )),
                   );
                 },

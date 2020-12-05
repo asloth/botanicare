@@ -1,38 +1,19 @@
-import 'package:botanicare/src/ui/Constants.dart';
-import 'package:flutter/material.dart';
-import 'package:botanicare/src/ui/Hortaliza/InputEpoca.dart';
+// import 'package:botanicare/src/ui/Constants.dart';
+// import 'package:flutter/material.dart';
+// import 'package:botanicare/src/ui/Hortaliza/InputEpoca.dart';
 
-class Epoca extends StatelessWidget {
-  final String hintText;
-  final TextEditingController controller;
-  const Epoca({
-    Key key,
-    this.hintText,
-    this.controller,
-  }) : super(key: key);
+// class Epoca extends StatelessWidget {
+//   final String hintText;
+//   final TextEditingController controller;
+//   const Epoca({
+//     Key key,
+//     this.hintText,
+//     this.controller,
+//   }) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      //margin: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
-      padding: EdgeInsets.symmetric(horizontal: 10),
-      width: size.width * 0.9,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            'Época del Año',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: kNegro,
-              fontSize: size.width * 0.04,
-            ),
-          ),
-          SizedBox(height: size.height * 0.01),
-          InputEpoca(),
-        ],
-      ),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     Size size = MediaQuery.of(context).size;
+//     return ;
+//   }
+// }
