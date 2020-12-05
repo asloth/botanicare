@@ -43,7 +43,7 @@ class BitacoraHistoria extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
-                        fontSize: size.height * 0.028,
+                        fontSize: size.height * 0.025,
                       ),
                     ),
                   ],

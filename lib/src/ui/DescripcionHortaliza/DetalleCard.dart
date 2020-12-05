@@ -14,10 +14,7 @@ class DetalleCard extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
 
     return Container(
-      margin: EdgeInsets.symmetric(
-        vertical: 40.0,
-        horizontal: 6,
-      ),
+      margin: EdgeInsets.fromLTRB(6, 40, 6, 20),
       padding: EdgeInsets.all(15.0),
       decoration: BoxDecoration(
         color: kBackgroundColor2,
@@ -34,14 +31,14 @@ class DetalleCard extends StatelessWidget {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(2, 4, 8, 2),
+                padding: const EdgeInsets.fromLTRB(4, 4, 8, 6),
                 child: Icon(
                   Icons.circle,
                   size: 8,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(2, 4, 80, 3),
+                padding: const EdgeInsets.fromLTRB(4, 4, 8, 6),
                 child: RichText(
                   text: TextSpan(
                     children: [
@@ -50,46 +47,33 @@ class DetalleCard extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w500,
-                          fontSize: size.height * 0.024,
+                          fontSize: size.height * 0.02,
                         ),
                       ),
                       TextSpan(
                         text: 'Sophia', //nombHortaliza,
                         style: TextStyle(
                           color: kTextColor,
-                          fontSize: size.height * 0.021,
+                          fontSize: size.height * 0.02,
                         ),
                       ),
                     ],
                   ),
                 ),
               ),
-              FloatingActionButton(
-                child: Icon(Icons.edit),
-                elevation: 15.0,
-                backgroundColor: kVerde,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ModificarHortalizaScreen(),
-                    ),
-                  );
-                },
-              ),
             ],
           ),
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(2, 4, 8, 2),
+                padding: const EdgeInsets.fromLTRB(4, 4, 8, 6),
                 child: Icon(
                   Icons.circle,
                   size: 8,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(2, 4, 8, 3),
+                padding: const EdgeInsets.fromLTRB(4, 4, 8, 6),
                 child: RichText(
                   text: TextSpan(
                     children: [
@@ -98,14 +82,14 @@ class DetalleCard extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w500,
-                          fontSize: size.height * 0.024,
+                          fontSize: size.height * 0.02,
                         ),
                       ),
                       TextSpan(
                         text: 'Frutos', //nombHortaliza,
                         style: TextStyle(
                           color: kTextColor,
-                          fontSize: size.height * 0.021,
+                          fontSize: size.height * 0.02,
                         ),
                       ),
                     ],
@@ -117,14 +101,14 @@ class DetalleCard extends StatelessWidget {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(2, 4, 8, 2),
+                padding: const EdgeInsets.fromLTRB(4, 4, 8, 6),
                 child: Icon(
                   Icons.circle,
                   size: 8,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(2, 4, 8, 3),
+                padding: const EdgeInsets.fromLTRB(4, 4, 8, 6),
                 child: RichText(
                   text: TextSpan(
                     children: [
@@ -133,14 +117,14 @@ class DetalleCard extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w500,
-                          fontSize: size.height * 0.024,
+                          fontSize: size.height * 0.02,
                         ),
                       ),
                       TextSpan(
                         text: 'Primavera - Verano', //nombHortaliza,
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: size.height * 0.021,
+                          fontSize: size.height * 0.02,
                         ),
                       ),
                     ],
@@ -152,14 +136,14 @@ class DetalleCard extends StatelessWidget {
           Row(
             children: [
               Padding(
-                padding: const EdgeInsets.fromLTRB(2, 4, 8, 2),
+                padding: const EdgeInsets.fromLTRB(4, 4, 8, 6),
                 child: Icon(
                   Icons.circle,
                   size: 8,
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(2, 4, 8, 3),
+                padding: const EdgeInsets.fromLTRB(4, 4, 8, 6),
                 child: RichText(
                   text: TextSpan(
                     children: [
@@ -168,14 +152,14 @@ class DetalleCard extends StatelessWidget {
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w500,
-                          fontSize: size.height * 0.024,
+                          fontSize: size.height * 0.02,
                         ),
                       ),
                       TextSpan(
                         text: '2m', //nombHortaliza,
                         style: TextStyle(
                           color: Colors.black,
-                          fontSize: size.height * 0.021,
+                          fontSize: size.height * 0.02,
                         ),
                       ),
                     ],

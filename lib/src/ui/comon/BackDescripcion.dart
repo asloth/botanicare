@@ -1,6 +1,7 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:botanicare/src/ui/ModificarHortalizaScreen.dart';
 
 class BackDescripcion extends StatelessWidget {
   final Widget child;
@@ -28,6 +29,23 @@ class BackDescripcion extends StatelessWidget {
             ),
           ),
           child,
+          Positioned(
+            top: 112,
+            left: size.width - 110,
+            child: FloatingActionButton(
+              child: Icon(Icons.edit),
+              elevation: 15.0,
+              backgroundColor: kVerde,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ModificarHortalizaScreen(),
+                  ),
+                );
+              },
+            ),
+          ),
         ],
       ),
     );

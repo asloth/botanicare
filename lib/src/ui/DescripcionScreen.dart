@@ -4,6 +4,7 @@ import 'package:botanicare/src/ui/comon/BackDescripcion.dart';
 import 'package:botanicare/src/ui/DescripcionHortaliza/Header.dart';
 import 'package:botanicare/src/ui/DescripcionHortaliza/DetalleCard.dart';
 import 'package:botanicare/src/ui/DescripcionHortaliza/BitácoraScreen.dart';
+import 'package:botanicare/src/ui/ModificarHortalizaScreen.dart';
 
 class DescripcionScreen extends StatelessWidget {
   const DescripcionScreen({Key key}) : super(key: key);
