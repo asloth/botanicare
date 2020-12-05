@@ -41,7 +41,7 @@ class ModificarHortalizaScreen extends StatelessWidget {
                   SizedBox(height: size.height * 0.03),
                   Nombre(),
                   SizedBox(height: size.height * 0.02),
-                  TipoHortaliza(),
+                  //TipoHortaliza(),
                   SizedBox(height: size.height * 0.02),
                   Apodo(),
                   SizedBox(height: size.height * 0.02),
@@ -57,11 +57,11 @@ class ModificarHortalizaScreen extends StatelessWidget {
                   SizedBox(height: size.height * 0.05),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    /*children: [
                       BtnCancelar(),
                       SizedBox(width: size.width * 0.04),
                       BtnGuardar(),
-                    ],
+                    ],*/
                   ),
                 ],
               ),
