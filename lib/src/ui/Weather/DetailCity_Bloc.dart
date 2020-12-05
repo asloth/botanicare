@@ -23,6 +23,15 @@ class DetailCityBloc extends ChangeNotifier {
     );
   }
 
+  void setCity() async {
+    final url = api;
+    final response = await http.get(url);
+    final data = jsonDecode(response.body) as List;
+
+    cities = data.map((e) => DetailCity.fromJson(e)).toList();
+    print(cities);
+  }
+
   void requestSearch(String text) async {
     //interpolacion de cadenas
     //loading = true;
@@ -38,7 +47,7 @@ class DetailCityBloc extends ChangeNotifier {
   }
 
   void addCity(DetailCity city) async {
-    final url = '$api${city.id}';
+    final url = api;
     final response = await http.get(url);
     final data = jsonDecode(response.body);
     final weatherData = data['consolidated_weather'] as List;
@@ -46,7 +55,7 @@ class DetailCityBloc extends ChangeNotifier {
     final newCity = city.fromWeathers(weathers);
     storage.saveCity(newCity);
 
-    notifyListeners();
+    //notifyListeners();
     print(newCity.toJson());
   }
 }
