@@ -3,25 +3,37 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class RegisterPlant {
-  FirebaseFirestore firestore = FirebaseFirestore.instance;
-  CollectionReference vegetable =
-      FirebaseFirestore.instance.collection('vegetable');
+class Plant {
+  CollectionReference vegetable;
 
-  Future<void> addPlant(String name, String nick, int quantity,
-      String sowingtime, String metrics, String other, String type) {
-    return vegetable
-        .add({
-          'name': name,
-          'nick': nick,
-          'sowingtime': sowingtime,
-          'quantity': quantity,
-          'metrics': metrics,
-          'other': other,
-          'state': true,
-          'VEGETABLETYPE': type,
-        })
-        .then((value) => print("Planta añadida"))
-        .catchError((error) => print("Error al añadir planta: $error"));
+  Plant(
+    this.vegetable,
+  );
+
+  Future<void> addPlant(
+      {String name,
+      String nick,
+      String quantity,
+      int sowingtime,
+      String metrics,
+      String other,
+      int type}) async {
+    try {
+      await vegetable
+          .add({
+            'name': name,
+            'nick': nick,
+            'quantity': quantity,
+            'metrics': metrics,
+            'sowingtime': metrics,
+            'other': other,
+            'state': true,
+            'vegetabletype': type, //acá no estoy segura
+          })
+          .then((value) => print("Planta añadida"))
+          .catchError((error) => print("Error al añadir planta: $error"));
+    } on FirebaseException catch (e) {
+      print(e.message);
+    }
   }
 }

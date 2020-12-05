@@ -11,20 +11,21 @@
     },
     "USER":{
         "1":{
-        "username":"Panchitdevita",
-        "email": "panchito@gmail.com",
-        "address": "los pinos 123",
-        "password": "carroslocossiii",
-        "ub": "lim",
-        "woeid": "123",
-        "photo": "c:/carpetita",
-        "ORCHARDTYPE":{"id":"1","name":"Cultivo casero"},
-        "VEGETABLE":
-        {
-            "1":{"name":"Lechuga Serrana"},
-            "2":{"name":"Yuca Costeña"}
+            "username":"Panchitdevita",
+            "email": "panchito@gmail.com",
+            "address": "los pinos 123",
+            "password": "carroslocossiii",
+            "ub": "lim",
+            "woeid": "123",
+            "photo": "c:/carpetita",
+            "ORCHARDTYPE":{"id":"1","name":"Cultivo casero"},
+            "VEGETABLE":
+            {
+                "1":{"name":"Lechuga Serrana"},
+                "2":{"name":"Yuca Costeña"}
+            }
+            
         }
-        
     },
     "VEGETABLETYPE":{
         "1":{
@@ -65,14 +66,7 @@
             "metrics":"Balde",
             "other":"Taper",
             "state":true,
-            "VEGETABLETYPE":{"id":"1","name":"Hortaliza"},
-            "ACTIVITY":{
-                "1": {"name":"Fertilización"},
-                "3": {"name":"Fertilización"}
-        },
-            "PRODUCTION":{"id":"1"},
-            "ECONOMIC":{"id":"1"},
-            "CALENDAR":{"id":"1"}
+            "VEGETABLETYPE":{"id":"1"}
         },
         "2":{
             "name":"Yuca Costeña",
@@ -171,7 +165,5 @@
             "harvest":"20/12/2020",
             "VEGETABLE":{"id":"2","name":"Yuca Costeña"}
         }
-
-       }   
-    }
+    }   
 }

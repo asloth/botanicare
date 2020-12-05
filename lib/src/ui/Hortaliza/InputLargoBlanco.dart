@@ -15,8 +15,9 @@ class InputLargoBlanco extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 1),
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
       width: size.width * 0.9,
+      height: size.height * 0.06,
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         borderRadius: BorderRadius.circular(16),

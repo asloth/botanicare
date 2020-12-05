@@ -26,12 +26,13 @@ class Apodo extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: kNegro,
-              fontSize: size.width * 0.045,
+              fontSize: size.width * 0.04,
             ),
           ),
           SizedBox(height: size.height * 0.01),
           InputLargoBlanco(
-            hintText: 'Ingrese el apodo de su hortaliza',
+            hintText: hintText,
+            controller: controller,
           ),
         ],
       ),

@@ -20,7 +20,7 @@ class Modificar extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Padding(padding: const EdgeInsets.all(6)),
+          Padding(padding: const EdgeInsets.fromLTRB(6, 0, 6, 4)),
           SvgPicture.asset(
             imgUrl,
           ),
@@ -29,7 +29,7 @@ class Modificar extends StatelessWidget {
               'Modificar',
               style: TextStyle(
                 color: Color(0xFF291C84),
-                fontSize: 20,
+                fontSize: 18,
               ),
             ),
             onPressed: null,

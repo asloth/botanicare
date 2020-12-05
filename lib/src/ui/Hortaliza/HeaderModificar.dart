@@ -11,7 +11,7 @@ class Header extends StatelessWidget {
     return FlatButton(
       color: Colors.white,
       onPressed: () {
-        Navigator.push(
+        Navigator.pop(
           context,
           MaterialPageRoute(builder: (context) => HomeScreen()),
         );
@@ -27,7 +27,7 @@ class Header extends StatelessWidget {
             'Modificar Hortaliza',
             style: TextStyle(
               color: Colors.black,
-              fontSize: size.width * 0.06,
+              fontSize: size.width * 0.05,
             ),
           )
         ],

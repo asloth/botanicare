@@ -28,7 +28,7 @@ class AddPlantWidget extends StatelessWidget {
             'Añadir',
             style: TextStyle(
               color: Colors.white,
-              fontSize: size.width * 0.05,
+              fontSize: size.width * 0.04,
             ),
           )
         ],

@@ -18,7 +18,7 @@ class ContenedorProduccion extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: 320,
-        height: 821,
+        height: 846,
         margin: EdgeInsets.symmetric(horizontal: 10),
         padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
         decoration: BoxDecoration(

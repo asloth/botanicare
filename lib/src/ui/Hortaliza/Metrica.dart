@@ -17,7 +17,6 @@ class Metrica extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 8, horizontal: 0),
       padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-      width: size.width * 0.35,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -26,10 +25,13 @@ class Metrica extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: kNegro,
-              fontSize: size.width * 0.045,
+              fontSize: size.width * 0.04,
             ),
           ),
-          InputLista(),
+          InputLista(
+            hintText: '-',
+            controller: controller,
+          ),
         ],
       ),
     );

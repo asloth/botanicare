@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
               'Clima',
               style: TextStyle(
                 color: kTextColor,
-                fontSize: size.height * 0.05,
+                fontSize: size.height * 0.042,
                 fontWeight: FontWeight.w600,
               ),
             ),

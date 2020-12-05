@@ -26,7 +26,7 @@ class TotalProd extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: kCeleste,
-              fontSize: size.width * 0.045,
+              fontSize: size.width * 0.04,
             ),
           ),
           InputLargoCeleste(

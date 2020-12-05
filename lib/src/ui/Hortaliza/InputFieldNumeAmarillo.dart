@@ -16,7 +16,7 @@ class InputFieldNumeAmarillo extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 5, horizontal: 0),
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 1),
-      width: size.width * 0.3,
+      width: size.width * 0.35,
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         borderRadius: BorderRadius.circular(16),

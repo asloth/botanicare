@@ -6,9 +6,16 @@ import 'package:botanicare/src/ui/Hortaliza/Metrica.dart';
 import 'package:botanicare/src/ui/Hortaliza/Otro.dart';
 
 class ContenedorArea extends StatelessWidget {
-  final TextEditingController cantidadController = TextEditingController();
-  final TextEditingController metricaController = TextEditingController();
-  final TextEditingController otroController = TextEditingController();
+  final TextEditingController cantidadController;
+  final TextEditingController metricaController;
+  final TextEditingController otroController;
+  const ContenedorArea({
+    Key key,
+    this.metricaController,
+    this.cantidadController,
+    this.otroController,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     //Size size = MediaQuery.of(context).size;
@@ -16,7 +23,7 @@ class ContenedorArea extends StatelessWidget {
     return SingleChildScrollView(
       child: Container(
         width: 320,
-        height: 270,
+        height: 260,
         margin: EdgeInsets.symmetric(horizontal: 10),
         padding: EdgeInsets.fromLTRB(0, 0, 0, 10),
         decoration: BoxDecoration(
@@ -34,11 +41,24 @@ class ContenedorArea extends StatelessWidget {
             HeaderArea(),
             Row(
               children: [
-                Cantidad(),
-                Metrica(),
+                Flexible(
+                  flex: 1,
+                  child: Cantidad(
+                    controller: cantidadController,
+                    hintText: '0',
+                  ),
+                ),
+                Flexible(
+                  flex: 1,
+                  child: Metrica(
+                    controller: metricaController,
+                  ),
+                ),
               ],
             ),
-            Otro(),
+            Otro(
+              controller: otroController,
+            ),
           ],
         ),
       ),

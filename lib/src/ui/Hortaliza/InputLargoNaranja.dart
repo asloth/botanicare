@@ -17,6 +17,7 @@ class InputLargoNaranja extends StatelessWidget {
       margin: EdgeInsets.symmetric(vertical: 5),
       padding: EdgeInsets.symmetric(horizontal: 15, vertical: 1),
       width: size.width * 0.9,
+      height: size.height * 0.06,
       decoration: BoxDecoration(
         color: kBackgroundColor2,
         borderRadius: BorderRadius.circular(16),

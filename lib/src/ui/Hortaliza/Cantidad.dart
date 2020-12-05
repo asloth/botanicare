@@ -17,7 +17,6 @@ class Cantidad extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(vertical: 8, horizontal: 0),
       padding: EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-      width: size.width * 0.4,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -26,11 +25,12 @@ class Cantidad extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: kNegro,
-              fontSize: size.width * 0.045,
+              fontSize: size.width * 0.04,
             ),
           ),
           InputFieldNume(
-            hintText: '0',
+            hintText: hintText,
+            controller: controller,
           ),
         ],
       ),

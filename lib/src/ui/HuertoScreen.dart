@@ -1,6 +1,7 @@
 import 'package:botanicare/src/ui/Constants.dart';
 import 'package:botanicare/src/ui/comon/Background.dart';
 import 'package:botanicare/src/ui/garden/PlantCard.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class HuertoScreen extends StatelessWidget {
@@ -29,16 +30,40 @@ class HuertoScreen extends StatelessWidget {
                   textAlign: TextAlign.left,
                   style: TextStyle(
                     color: kTextColor,
-                    fontSize: size.height * 0.05,
+                    fontSize: size.height * 0.042,
                     fontWeight: FontWeight.w600,
                   ),
                 ),
                 SizedBox(height: size.height * 0.03),
-                PlantCard(
-                  plantNickname: 'Sophie',
-                  plantName: 'Bonsai',
-                  seedtime: '18/12/2020',
-                  station: 'Primavera-Verano',
+                StreamBuilder(
+                  stream: FirebaseFirestore.instance
+                      .collection('vegetable')
+                      .snapshots(),
+                  builder: (context, AsyncSnapshot<QuerySnapshot> snapshot) {
+                    if (!snapshot.hasData) {
+                      return Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    }
+                    List<DocumentSnapshot> docs = snapshot.data.docs;
+                    return SizedBox(
+                      height: 700.0,
+                      child: ListView.builder(
+                        itemCount: docs.length,
+                        scrollDirection: Axis.vertical,
+                        shrinkWrap: true,
+                        itemBuilder: (context, index) {
+                          Map<String, dynamic> data = docs[index].data();
+                          return new PlantCard(
+                            plantNickname: data['nick'],
+                            plantName: data['name'],
+                            seedtime: data['quantity'],
+                            station: data['sowingtime'],
+                          );
+                        },
+                      ),
+                    );
+                  },
                 ),
               ],
             ),

@@ -29,7 +29,7 @@ class Ayuda extends StatelessWidget {
               'Ayuda',
               style: TextStyle(
                 color: Color(0xFF66B821),
-                fontSize: 20,
+                fontSize: 18,
               ),
             ),
             onPressed: null,

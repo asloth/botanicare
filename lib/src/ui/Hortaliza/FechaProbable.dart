@@ -26,7 +26,7 @@ class FechaProbable extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
               color: kNaranja,
-              fontSize: size.width * 0.045,
+              fontSize: size.width * 0.04,
             ),
           ),
           InputLargoNaranja(
